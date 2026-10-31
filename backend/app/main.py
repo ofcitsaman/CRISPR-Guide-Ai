@@ -7,6 +7,8 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from fastapi.staticfiles import StaticFiles
+
 from backend.app.api.endpoints import router as api_router
 from backend.app.models.predictor import predictor
 
@@ -43,17 +45,22 @@ app.add_middleware(
 # Mount API router
 app.include_router(api_router, prefix="/api")
 
-
-@app.get("/")
-def root():
-    return {
-        "service": "CRISPR Guide AI",
-        "description": "Computational prediction of CRISPR-Cas9 single-guide RNA knockout efficiency",
-        "version": "1.0.0",
-        "docs_url": "/docs"
-    }
+# Serve frontend build if available (e.g., in unified Docker or production deployment)
+FRONTEND_DIST = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "frontend", "dist"))
+if os.path.isdir(FRONTEND_DIST):
+    app.mount("/", StaticFiles(directory=FRONTEND_DIST, html=True), name="frontend")
+else:
+    @app.get("/")
+    def root():
+        return {
+            "service": "CRISPR Guide AI",
+            "description": "Computational prediction of CRISPR-Cas9 single-guide RNA knockout efficiency",
+            "version": "1.0.0",
+            "docs_url": "/docs"
+        }
 
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("backend.app.main:app", host="0.0.0.0", port=8000, reload=True)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("backend.app.main:app", host="0.0.0.0", port=port, reload=True)

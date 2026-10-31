@@ -1,0 +1,29 @@
+# Version control
+.git
+.github
+
+# Python caches and environments
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node / Frontend local artifacts
+frontend/node_modules/
+frontend/dist/
+
+# Local experimental and audit scratch
+experiments/
+publication_audit/
+SCIENTIFIC_VALIDATION.md
+
+# OS files
+.DS_Store
+Thumbs.db
