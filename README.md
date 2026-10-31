@@ -1,5 +1,6 @@
 # CRISPR Guide AI: A Cell-Line-Specific Software Framework for Dual-Task Regression and Classification of SpCas9 sgRNA Activity
 
+[![CI](https://github.com/ofcitsaman/CRISPR-Guide-Ai/actions/workflows/ci.yml/badge.svg)](https://github.com/ofcitsaman/CRISPR-Guide-Ai/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-brightgreen.svg)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI-teal.svg)](https://fastapi.tiangolo.com/)
@@ -104,8 +105,8 @@ The repository includes a complete publication package prepared for *BMC Bioinfo
 
 ### 1. Clone & Set Up Backend Environment
 ```bash
-git clone https://github.com/example/crispr-guide-ai.git
-cd crispr-guide-ai
+git clone https://github.com/ofcitsaman/CRISPR-Guide-Ai.git
+cd CRISPR-Guide-Ai
 
 # Install Python dependencies
 python -m pip install -r backend/requirements.txt

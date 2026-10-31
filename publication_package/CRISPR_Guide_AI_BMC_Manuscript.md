@@ -28,7 +28,7 @@ CRISPR Guide AI combines an exhaustive 600-dimensional sequence-derived feature 
 The software framework was evaluated across four benchmark datasets comprising 16,749 experimental records: HeLa ($N = 8,101$), HCT116 ($N = 4,239$), HL60 ($N = 2,076$), and A375 ($N = 2,333$, from Doench et al. 2016). Across 100-fold stratified cross-validation on the development pool, the strongest regression performance was achieved in HCT116 (Ridge Pearson $r = 0.3562 \pm 0.0398$) and HeLa ($r = 0.3507 \pm 0.0291$), while HL60 yielded the strongest classification discrimination (XGBoost $\text{ROC-AUC} = 0.7955 \pm 0.0207$). A 50-kb genomic-window-grouped cross-validation confirmed that genome-wide models generalize to unseen genomic targets without locus leakage ($r = 0.3475$ vs $0.3507$ in HeLa; $r = 0.3600$ vs $0.3562$ in HCT116). In contrast, the A375 dataset exhibited lower predictive performance ($r = 0.1748$, $\text{ROC-AUC} = 0.5578$), which we show corresponds to its dataset composition as a dense tiling screen across only 8 genes rather than a genome-wide screen. Cross-cell-line transfer experiments revealed that HeLa and HCT116 share 4,181 guide sequences (98.6% of HCT116) from a common library; transfer correlation on shared sequences was $r = 0.4470$, while transfer to novel unseen sequences achieved $r = 0.2470$. Software profiling confirmed a 600-feature extraction throughput of 1,817 sequences/second and linear model inference at 1,043 guides/second.
 
 ### Conclusions
-CRISPR Guide AI provides a transparent, methodologically audited, and reproducible software platform for SpCas9 guide design. By separating continuous efficacy scoring from binary active/inactive calls, reporting empirical ensemble disagreement, establishing zero-leakage cross-locus generalization, and providing high-throughput software interfaces, the framework establishes a reliable foundation for experimental guide RNA selection and design automation. The complete source code, trained model artifacts, test suites, and documentation are freely available under the MIT License at https://github.com/example/crispr-guide-ai.
+CRISPR Guide AI provides a transparent, methodologically audited, and reproducible software platform for SpCas9 guide design. By separating continuous efficacy scoring from binary active/inactive calls, reporting empirical ensemble disagreement, establishing zero-leakage cross-locus generalization, and providing high-throughput software interfaces, the framework establishes a reliable foundation for experimental guide RNA selection and design automation. The complete source code, trained model artifacts, test suites, and documentation are freely available under the MIT License at https://github.com/ofcitsaman/CRISPR-Guide-Ai.
 
 **Keywords:** CRISPR-Cas9, sgRNA on-target efficacy, Machine learning, Dual-task prediction, Software engineering, Reproducible bioinformatics, Cross-validation integrity.
 
@@ -251,7 +251,7 @@ Not applicable.
 
 ### Availability of Data and Materials
 All source code, documentation, test suites, and model training scripts are deposited in an open-source GitHub repository under the MIT License at:
-https://github.com/example/crispr-guide-ai
+https://github.com/ofcitsaman/CRISPR-Guide-Ai
 All raw and processed datasets, feature dictionaries, cross-validation metrics, out-of-fold predictions, and reproducibility manifests are available in the repository `publication_audit/` directory.
 
 ### Competing Interests
