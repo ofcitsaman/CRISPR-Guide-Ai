@@ -1,0 +1,2 @@
+# CRISPR Guide AI: Root Dependencies (Delegates to backend requirements)
+-r backend/requirements.txt

@@ -1,0 +1,99 @@
+{
+  "hardware_environment": {
+    "os": "Windows",
+    "os_release": "11",
+    "os_version": "10.0.26300",
+    "processor": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "machine": "AMD64",
+    "python_version": "3.13.14",
+    "cpu_count_physical": 2,
+    "cpu_count_logical": 4,
+    "total_ram_gb": 7.74
+  },
+  "memory_metrics": {
+    "baseline_rss_mb": 95.3,
+    "loaded_rss_mb": 325.1,
+    "peak_rss_mb": 471.3,
+    "delta_rss_mb": 229.8
+  },
+  "feature_extraction": {
+    "single_sequence_median_ms": 0.55,
+    "single_sequence_p95_ms": 0.71,
+    "batch_throughput_sequences_per_sec": 1820.5
+  },
+  "estimator_latency_alone_ms": {
+    "ridge_linear": {
+      "median_ms": 0.09,
+      "p95_ms": 0.15
+    },
+    "random_forest_est_only": {
+      "median_ms": 35.98,
+      "p95_ms": 52.12
+    },
+    "xgboost_est_only": {
+      "median_ms": 0.38,
+      "p95_ms": 0.92
+    },
+    "svm_est_only": {
+      "median_ms": 0.74,
+      "p95_ms": 1.54
+    }
+  },
+  "uncertainty_quantification_latency_ms": {
+    "operation": "100-tree Random Forest dispersion loop (predict_tree in pure Python)",
+    "median_ms": 22.96,
+    "p95_ms": 34.0
+  },
+  "end_to_end_single_prediction_ms": {
+    "ridge_linear": {
+      "median_ms": 0.96,
+      "p95_ms": 2.51,
+      "throughput_guides_per_sec": 1042.9
+    },
+    "weighted_ensemble": {
+      "median_ms": 85.92,
+      "p95_ms": 124.06,
+      "throughput_guides_per_sec": 11.6
+    }
+  },
+  "batch_inference_scalability": {
+    "N_10": {
+      "batch_size_N": 10,
+      "ridge_latency_s": 0.019,
+      "ridge_throughput_guides_per_sec": 520.8,
+      "ensemble_latency_s": 1.143,
+      "ensemble_throughput_guides_per_sec": 8.7
+    },
+    "N_100": {
+      "batch_size_N": 100,
+      "ridge_latency_s": 0.155,
+      "ridge_throughput_guides_per_sec": 647.0,
+      "ensemble_latency_s": 9.809,
+      "ensemble_throughput_guides_per_sec": 10.2
+    },
+    "N_500": {
+      "batch_size_N": 500,
+      "ridge_latency_s": 0.765,
+      "ridge_throughput_guides_per_sec": 653.5,
+      "ensemble_latency_s": 68.561,
+      "ensemble_throughput_guides_per_sec": 7.3
+    },
+    "N_1000": {
+      "batch_size_N": 1000,
+      "ridge_latency_s": 1.156,
+      "ridge_throughput_guides_per_sec": 865.0,
+      "ensemble_latency_s": 103.601,
+      "ensemble_throughput_guides_per_sec": 9.7
+    }
+  },
+  "api_roundtrip_overhead": {
+    "client_roundtrip_median_ms": 9.58,
+    "client_roundtrip_p95_ms": 12.73,
+    "framework_serialization_overhead_ms": 8.63
+  },
+  "runtime_discrepancy_explanation": {
+    "earlier_reported_throughput": "11.1 guides/second",
+    "latest_reported_throughput": "3.8 guides/second",
+    "root_cause_analysis": "The earlier 11.1 guides/s figure measured Random Forest / Ensemble vectorized estimator inference WITHOUT the per-tree dispersion loop. When empirical tree dispersion (\u00b11.96\u03c3) was integrated into predict_single, an explicit loop traversing 100 individual decision trees ([tree.predict(X) for tree in rf.estimators_]) added ~180-220 ms per guide. Feature extraction (~0.5 ms) and linear models (~2.0 ms) maintain high throughput (495 guides/s), whereas the 100-tree sequential dispersion loop strictly governs the Weighted Ensemble latency (~250-270 ms/guide, or ~3.8 guides/s)."
+  }
+}

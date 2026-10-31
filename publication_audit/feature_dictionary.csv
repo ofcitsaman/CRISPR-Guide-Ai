@@ -1,0 +1,601 @@
+feature_index,feature_name,feature_category,sequence_region,data_type,theoretical_min,theoretical_max,biological_rationale
+0,seq_length,Compositional & Biophysical,Entire 23-mer (positions 1-23),Integer / Count,0.0,23.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+1,count_A,Compositional & Biophysical,Entire 23-mer (positions 1-23),Integer / Count,0.0,23.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+2,count_C,Compositional & Biophysical,Entire 23-mer (positions 1-23),Integer / Count,0.0,23.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+3,count_G,Compositional & Biophysical,Entire 23-mer (positions 1-23),Integer / Count,0.0,23.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+4,count_T,Compositional & Biophysical,Entire 23-mer (positions 1-23),Integer / Count,0.0,23.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+5,pct_A,Compositional & Biophysical,Entire 23-mer (positions 1-23),Float,0.0,1.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+6,pct_C,Compositional & Biophysical,Entire 23-mer (positions 1-23),Float,0.0,1.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+7,pct_G,Compositional & Biophysical,Entire 23-mer (positions 1-23),Float,0.0,1.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+8,pct_T,Compositional & Biophysical,Entire 23-mer (positions 1-23),Float,0.0,1.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+9,gc_content,Compositional & Biophysical,Entire 23-mer (positions 1-23),Float,0.0,1.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+10,at_content,Compositional & Biophysical,Entire 23-mer (positions 1-23),Float,0.0,1.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+11,distal_gc,Compositional & Biophysical,Distal protospacer (positions 1-10),Integer / Count,0.0,23.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+12,seed_gc,Compositional & Biophysical,Seed region (positions 11-20),Integer / Count,0.0,23.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+13,seed_purine_pct,Compositional & Biophysical,Seed region (positions 11-20),Float,0.0,1.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+14,poly_T_max_run,Compositional & Biophysical,"Protospacer & PAM (positions 1-23, Pol-III terminator check)",Integer / Count,0.0,23.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+15,has_terminator_TTTT,Compositional & Biophysical,"Protospacer & PAM (positions 1-23, Pol-III terminator check)",Binary (0/1),0.0,1.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+16,pam_is_NGG,Compositional & Biophysical,PAM region (positions 21-23),Binary (0/1),0.0,1.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+17,pam_base21,Compositional & Biophysical,PAM region (positions 21-23),Binary (0/1),0.0,1.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+18,pam_base22,Compositional & Biophysical,PAM region (positions 21-23),Binary (0/1),0.0,1.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+19,pam_base23,Compositional & Biophysical,PAM region (positions 21-23),Binary (0/1),0.0,1.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+20,cleavage_flank_gc,Compositional & Biophysical,Cleavage flank (positions 16-18),Integer / Count,0.0,23.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+21,seed_distal_gc_diff,Compositional & Biophysical,Distal protospacer (positions 1-10),Float,-1.0,2.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+22,cleavage_seed_gc_prod,Compositional & Biophysical,Seed region (positions 11-20),Float,0.0,1.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+23,core_seed_gc,Compositional & Biophysical,Seed region (positions 11-20),Integer / Count,0.0,23.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+24,homopolymer_G_max_run,Compositional & Biophysical,Entire 23-mer (positions 1-23),Integer / Count,0.0,23.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+25,homopolymer_C_max_run,Compositional & Biophysical,Entire 23-mer (positions 1-23),Integer / Count,0.0,23.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+26,homopolymer_A_max_run,Compositional & Biophysical,Entire 23-mer (positions 1-23),Integer / Count,0.0,23.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+27,shannon_entropy,Compositional & Biophysical,Entire 23-mer (positions 1-23),Float,0.0,2.0,"Biophysical parameter governing Cas9 R-loop formation, stability, or Pol-III transcription"
+28,pos_1_A,Positional 1-mers,Position 1 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 1
+29,pos_1_C,Positional 1-mers,Position 1 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 1
+30,pos_1_G,Positional 1-mers,Position 1 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 1
+31,pos_1_T,Positional 1-mers,Position 1 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 1
+32,pos_2_A,Positional 1-mers,Position 2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 2
+33,pos_2_C,Positional 1-mers,Position 2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 2
+34,pos_2_G,Positional 1-mers,Position 2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 2
+35,pos_2_T,Positional 1-mers,Position 2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 2
+36,pos_3_A,Positional 1-mers,Position 3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 3
+37,pos_3_C,Positional 1-mers,Position 3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 3
+38,pos_3_G,Positional 1-mers,Position 3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 3
+39,pos_3_T,Positional 1-mers,Position 3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 3
+40,pos_4_A,Positional 1-mers,Position 4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 4
+41,pos_4_C,Positional 1-mers,Position 4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 4
+42,pos_4_G,Positional 1-mers,Position 4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 4
+43,pos_4_T,Positional 1-mers,Position 4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 4
+44,pos_5_A,Positional 1-mers,Position 5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 5
+45,pos_5_C,Positional 1-mers,Position 5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 5
+46,pos_5_G,Positional 1-mers,Position 5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 5
+47,pos_5_T,Positional 1-mers,Position 5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 5
+48,pos_6_A,Positional 1-mers,Position 6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 6
+49,pos_6_C,Positional 1-mers,Position 6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 6
+50,pos_6_G,Positional 1-mers,Position 6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 6
+51,pos_6_T,Positional 1-mers,Position 6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 6
+52,pos_7_A,Positional 1-mers,Position 7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 7
+53,pos_7_C,Positional 1-mers,Position 7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 7
+54,pos_7_G,Positional 1-mers,Position 7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 7
+55,pos_7_T,Positional 1-mers,Position 7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 7
+56,pos_8_A,Positional 1-mers,Position 8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 8
+57,pos_8_C,Positional 1-mers,Position 8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 8
+58,pos_8_G,Positional 1-mers,Position 8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 8
+59,pos_8_T,Positional 1-mers,Position 8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 8
+60,pos_9_A,Positional 1-mers,Position 9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 9
+61,pos_9_C,Positional 1-mers,Position 9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 9
+62,pos_9_G,Positional 1-mers,Position 9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 9
+63,pos_9_T,Positional 1-mers,Position 9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 9
+64,pos_10_A,Positional 1-mers,Position 10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 10
+65,pos_10_C,Positional 1-mers,Position 10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 10
+66,pos_10_G,Positional 1-mers,Position 10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 10
+67,pos_10_T,Positional 1-mers,Position 10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 10
+68,pos_11_A,Positional 1-mers,Position 11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 11
+69,pos_11_C,Positional 1-mers,Position 11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 11
+70,pos_11_G,Positional 1-mers,Position 11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 11
+71,pos_11_T,Positional 1-mers,Position 11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 11
+72,pos_12_A,Positional 1-mers,Position 12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 12
+73,pos_12_C,Positional 1-mers,Position 12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 12
+74,pos_12_G,Positional 1-mers,Position 12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 12
+75,pos_12_T,Positional 1-mers,Position 12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 12
+76,pos_13_A,Positional 1-mers,Position 13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 13
+77,pos_13_C,Positional 1-mers,Position 13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 13
+78,pos_13_G,Positional 1-mers,Position 13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 13
+79,pos_13_T,Positional 1-mers,Position 13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 13
+80,pos_14_A,Positional 1-mers,Position 14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 14
+81,pos_14_C,Positional 1-mers,Position 14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 14
+82,pos_14_G,Positional 1-mers,Position 14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 14
+83,pos_14_T,Positional 1-mers,Position 14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 14
+84,pos_15_A,Positional 1-mers,Position 15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 15
+85,pos_15_C,Positional 1-mers,Position 15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 15
+86,pos_15_G,Positional 1-mers,Position 15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 15
+87,pos_15_T,Positional 1-mers,Position 15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 15
+88,pos_16_A,Positional 1-mers,Position 16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 16
+89,pos_16_C,Positional 1-mers,Position 16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 16
+90,pos_16_G,Positional 1-mers,Position 16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 16
+91,pos_16_T,Positional 1-mers,Position 16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 16
+92,pos_17_A,Positional 1-mers,Position 17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 17
+93,pos_17_C,Positional 1-mers,Position 17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 17
+94,pos_17_G,Positional 1-mers,Position 17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 17
+95,pos_17_T,Positional 1-mers,Position 17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 17
+96,pos_18_A,Positional 1-mers,Position 18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 18
+97,pos_18_C,Positional 1-mers,Position 18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 18
+98,pos_18_G,Positional 1-mers,Position 18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 18
+99,pos_18_T,Positional 1-mers,Position 18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 18
+100,pos_19_A,Positional 1-mers,Position 19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 19
+101,pos_19_C,Positional 1-mers,Position 19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 19
+102,pos_19_G,Positional 1-mers,Position 19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 19
+103,pos_19_T,Positional 1-mers,Position 19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 19
+104,pos_20_A,Positional 1-mers,Position 20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 20
+105,pos_20_C,Positional 1-mers,Position 20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 20
+106,pos_20_G,Positional 1-mers,Position 20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 20
+107,pos_20_T,Positional 1-mers,Position 20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 20
+108,pos_21_A,Positional 1-mers,Position 21 (PAM),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 21
+109,pos_21_C,Positional 1-mers,Position 21 (PAM),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 21
+110,pos_21_G,Positional 1-mers,Position 21 (PAM),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 21
+111,pos_21_T,Positional 1-mers,Position 21 (PAM),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 21
+112,pos_22_A,Positional 1-mers,Position 22 (PAM),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 22
+113,pos_22_C,Positional 1-mers,Position 22 (PAM),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 22
+114,pos_22_G,Positional 1-mers,Position 22 (PAM),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 22
+115,pos_22_T,Positional 1-mers,Position 22 (PAM),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 22
+116,pos_23_A,Positional 1-mers,Position 23 (PAM),Binary (0/1),0.0,1.0,Indicator for base A at nucleotide position 23
+117,pos_23_C,Positional 1-mers,Position 23 (PAM),Binary (0/1),0.0,1.0,Indicator for base C at nucleotide position 23
+118,pos_23_G,Positional 1-mers,Position 23 (PAM),Binary (0/1),0.0,1.0,Indicator for base G at nucleotide position 23
+119,pos_23_T,Positional 1-mers,Position 23 (PAM),Binary (0/1),0.0,1.0,Indicator for base T at nucleotide position 23
+120,pos_1_AA,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 1-2
+121,pos_1_AC,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 1-2
+122,pos_1_AG,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 1-2
+123,pos_1_AT,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 1-2
+124,pos_1_CA,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 1-2
+125,pos_1_CC,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 1-2
+126,pos_1_CG,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 1-2
+127,pos_1_CT,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 1-2
+128,pos_1_GA,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 1-2
+129,pos_1_GC,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 1-2
+130,pos_1_GG,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 1-2
+131,pos_1_GT,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 1-2
+132,pos_1_TA,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 1-2
+133,pos_1_TC,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 1-2
+134,pos_1_TG,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 1-2
+135,pos_1_TT,Positional 2-mers,Positions 1-2 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 1-2
+136,pos_2_AA,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 2-3
+137,pos_2_AC,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 2-3
+138,pos_2_AG,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 2-3
+139,pos_2_AT,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 2-3
+140,pos_2_CA,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 2-3
+141,pos_2_CC,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 2-3
+142,pos_2_CG,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 2-3
+143,pos_2_CT,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 2-3
+144,pos_2_GA,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 2-3
+145,pos_2_GC,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 2-3
+146,pos_2_GG,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 2-3
+147,pos_2_GT,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 2-3
+148,pos_2_TA,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 2-3
+149,pos_2_TC,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 2-3
+150,pos_2_TG,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 2-3
+151,pos_2_TT,Positional 2-mers,Positions 2-3 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 2-3
+152,pos_3_AA,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 3-4
+153,pos_3_AC,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 3-4
+154,pos_3_AG,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 3-4
+155,pos_3_AT,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 3-4
+156,pos_3_CA,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 3-4
+157,pos_3_CC,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 3-4
+158,pos_3_CG,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 3-4
+159,pos_3_CT,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 3-4
+160,pos_3_GA,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 3-4
+161,pos_3_GC,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 3-4
+162,pos_3_GG,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 3-4
+163,pos_3_GT,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 3-4
+164,pos_3_TA,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 3-4
+165,pos_3_TC,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 3-4
+166,pos_3_TG,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 3-4
+167,pos_3_TT,Positional 2-mers,Positions 3-4 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 3-4
+168,pos_4_AA,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 4-5
+169,pos_4_AC,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 4-5
+170,pos_4_AG,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 4-5
+171,pos_4_AT,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 4-5
+172,pos_4_CA,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 4-5
+173,pos_4_CC,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 4-5
+174,pos_4_CG,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 4-5
+175,pos_4_CT,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 4-5
+176,pos_4_GA,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 4-5
+177,pos_4_GC,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 4-5
+178,pos_4_GG,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 4-5
+179,pos_4_GT,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 4-5
+180,pos_4_TA,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 4-5
+181,pos_4_TC,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 4-5
+182,pos_4_TG,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 4-5
+183,pos_4_TT,Positional 2-mers,Positions 4-5 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 4-5
+184,pos_5_AA,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 5-6
+185,pos_5_AC,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 5-6
+186,pos_5_AG,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 5-6
+187,pos_5_AT,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 5-6
+188,pos_5_CA,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 5-6
+189,pos_5_CC,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 5-6
+190,pos_5_CG,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 5-6
+191,pos_5_CT,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 5-6
+192,pos_5_GA,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 5-6
+193,pos_5_GC,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 5-6
+194,pos_5_GG,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 5-6
+195,pos_5_GT,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 5-6
+196,pos_5_TA,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 5-6
+197,pos_5_TC,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 5-6
+198,pos_5_TG,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 5-6
+199,pos_5_TT,Positional 2-mers,Positions 5-6 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 5-6
+200,pos_6_AA,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 6-7
+201,pos_6_AC,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 6-7
+202,pos_6_AG,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 6-7
+203,pos_6_AT,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 6-7
+204,pos_6_CA,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 6-7
+205,pos_6_CC,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 6-7
+206,pos_6_CG,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 6-7
+207,pos_6_CT,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 6-7
+208,pos_6_GA,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 6-7
+209,pos_6_GC,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 6-7
+210,pos_6_GG,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 6-7
+211,pos_6_GT,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 6-7
+212,pos_6_TA,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 6-7
+213,pos_6_TC,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 6-7
+214,pos_6_TG,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 6-7
+215,pos_6_TT,Positional 2-mers,Positions 6-7 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 6-7
+216,pos_7_AA,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 7-8
+217,pos_7_AC,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 7-8
+218,pos_7_AG,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 7-8
+219,pos_7_AT,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 7-8
+220,pos_7_CA,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 7-8
+221,pos_7_CC,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 7-8
+222,pos_7_CG,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 7-8
+223,pos_7_CT,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 7-8
+224,pos_7_GA,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 7-8
+225,pos_7_GC,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 7-8
+226,pos_7_GG,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 7-8
+227,pos_7_GT,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 7-8
+228,pos_7_TA,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 7-8
+229,pos_7_TC,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 7-8
+230,pos_7_TG,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 7-8
+231,pos_7_TT,Positional 2-mers,Positions 7-8 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 7-8
+232,pos_8_AA,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 8-9
+233,pos_8_AC,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 8-9
+234,pos_8_AG,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 8-9
+235,pos_8_AT,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 8-9
+236,pos_8_CA,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 8-9
+237,pos_8_CC,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 8-9
+238,pos_8_CG,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 8-9
+239,pos_8_CT,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 8-9
+240,pos_8_GA,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 8-9
+241,pos_8_GC,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 8-9
+242,pos_8_GG,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 8-9
+243,pos_8_GT,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 8-9
+244,pos_8_TA,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 8-9
+245,pos_8_TC,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 8-9
+246,pos_8_TG,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 8-9
+247,pos_8_TT,Positional 2-mers,Positions 8-9 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 8-9
+248,pos_9_AA,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 9-10
+249,pos_9_AC,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 9-10
+250,pos_9_AG,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 9-10
+251,pos_9_AT,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 9-10
+252,pos_9_CA,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 9-10
+253,pos_9_CC,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 9-10
+254,pos_9_CG,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 9-10
+255,pos_9_CT,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 9-10
+256,pos_9_GA,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 9-10
+257,pos_9_GC,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 9-10
+258,pos_9_GG,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 9-10
+259,pos_9_GT,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 9-10
+260,pos_9_TA,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 9-10
+261,pos_9_TC,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 9-10
+262,pos_9_TG,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 9-10
+263,pos_9_TT,Positional 2-mers,Positions 9-10 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 9-10
+264,pos_10_AA,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 10-11
+265,pos_10_AC,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 10-11
+266,pos_10_AG,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 10-11
+267,pos_10_AT,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 10-11
+268,pos_10_CA,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 10-11
+269,pos_10_CC,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 10-11
+270,pos_10_CG,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 10-11
+271,pos_10_CT,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 10-11
+272,pos_10_GA,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 10-11
+273,pos_10_GC,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 10-11
+274,pos_10_GG,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 10-11
+275,pos_10_GT,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 10-11
+276,pos_10_TA,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 10-11
+277,pos_10_TC,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 10-11
+278,pos_10_TG,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 10-11
+279,pos_10_TT,Positional 2-mers,Positions 10-11 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 10-11
+280,pos_11_AA,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 11-12
+281,pos_11_AC,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 11-12
+282,pos_11_AG,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 11-12
+283,pos_11_AT,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 11-12
+284,pos_11_CA,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 11-12
+285,pos_11_CC,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 11-12
+286,pos_11_CG,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 11-12
+287,pos_11_CT,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 11-12
+288,pos_11_GA,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 11-12
+289,pos_11_GC,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 11-12
+290,pos_11_GG,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 11-12
+291,pos_11_GT,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 11-12
+292,pos_11_TA,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 11-12
+293,pos_11_TC,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 11-12
+294,pos_11_TG,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 11-12
+295,pos_11_TT,Positional 2-mers,Positions 11-12 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 11-12
+296,pos_12_AA,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 12-13
+297,pos_12_AC,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 12-13
+298,pos_12_AG,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 12-13
+299,pos_12_AT,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 12-13
+300,pos_12_CA,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 12-13
+301,pos_12_CC,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 12-13
+302,pos_12_CG,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 12-13
+303,pos_12_CT,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 12-13
+304,pos_12_GA,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 12-13
+305,pos_12_GC,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 12-13
+306,pos_12_GG,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 12-13
+307,pos_12_GT,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 12-13
+308,pos_12_TA,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 12-13
+309,pos_12_TC,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 12-13
+310,pos_12_TG,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 12-13
+311,pos_12_TT,Positional 2-mers,Positions 12-13 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 12-13
+312,pos_13_AA,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 13-14
+313,pos_13_AC,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 13-14
+314,pos_13_AG,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 13-14
+315,pos_13_AT,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 13-14
+316,pos_13_CA,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 13-14
+317,pos_13_CC,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 13-14
+318,pos_13_CG,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 13-14
+319,pos_13_CT,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 13-14
+320,pos_13_GA,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 13-14
+321,pos_13_GC,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 13-14
+322,pos_13_GG,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 13-14
+323,pos_13_GT,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 13-14
+324,pos_13_TA,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 13-14
+325,pos_13_TC,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 13-14
+326,pos_13_TG,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 13-14
+327,pos_13_TT,Positional 2-mers,Positions 13-14 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 13-14
+328,pos_14_AA,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 14-15
+329,pos_14_AC,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 14-15
+330,pos_14_AG,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 14-15
+331,pos_14_AT,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 14-15
+332,pos_14_CA,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 14-15
+333,pos_14_CC,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 14-15
+334,pos_14_CG,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 14-15
+335,pos_14_CT,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 14-15
+336,pos_14_GA,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 14-15
+337,pos_14_GC,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 14-15
+338,pos_14_GG,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 14-15
+339,pos_14_GT,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 14-15
+340,pos_14_TA,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 14-15
+341,pos_14_TC,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 14-15
+342,pos_14_TG,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 14-15
+343,pos_14_TT,Positional 2-mers,Positions 14-15 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 14-15
+344,pos_15_AA,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 15-16
+345,pos_15_AC,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 15-16
+346,pos_15_AG,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 15-16
+347,pos_15_AT,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 15-16
+348,pos_15_CA,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 15-16
+349,pos_15_CC,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 15-16
+350,pos_15_CG,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 15-16
+351,pos_15_CT,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 15-16
+352,pos_15_GA,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 15-16
+353,pos_15_GC,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 15-16
+354,pos_15_GG,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 15-16
+355,pos_15_GT,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 15-16
+356,pos_15_TA,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 15-16
+357,pos_15_TC,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 15-16
+358,pos_15_TG,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 15-16
+359,pos_15_TT,Positional 2-mers,Positions 15-16 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 15-16
+360,pos_16_AA,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 16-17
+361,pos_16_AC,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 16-17
+362,pos_16_AG,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 16-17
+363,pos_16_AT,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 16-17
+364,pos_16_CA,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 16-17
+365,pos_16_CC,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 16-17
+366,pos_16_CG,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 16-17
+367,pos_16_CT,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 16-17
+368,pos_16_GA,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 16-17
+369,pos_16_GC,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 16-17
+370,pos_16_GG,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 16-17
+371,pos_16_GT,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 16-17
+372,pos_16_TA,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 16-17
+373,pos_16_TC,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 16-17
+374,pos_16_TG,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 16-17
+375,pos_16_TT,Positional 2-mers,Positions 16-17 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 16-17
+376,pos_17_AA,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 17-18
+377,pos_17_AC,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 17-18
+378,pos_17_AG,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 17-18
+379,pos_17_AT,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 17-18
+380,pos_17_CA,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 17-18
+381,pos_17_CC,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 17-18
+382,pos_17_CG,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 17-18
+383,pos_17_CT,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 17-18
+384,pos_17_GA,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 17-18
+385,pos_17_GC,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 17-18
+386,pos_17_GG,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 17-18
+387,pos_17_GT,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 17-18
+388,pos_17_TA,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 17-18
+389,pos_17_TC,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 17-18
+390,pos_17_TG,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 17-18
+391,pos_17_TT,Positional 2-mers,Positions 17-18 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 17-18
+392,pos_18_AA,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 18-19
+393,pos_18_AC,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 18-19
+394,pos_18_AG,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 18-19
+395,pos_18_AT,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 18-19
+396,pos_18_CA,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 18-19
+397,pos_18_CC,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 18-19
+398,pos_18_CG,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 18-19
+399,pos_18_CT,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 18-19
+400,pos_18_GA,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 18-19
+401,pos_18_GC,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 18-19
+402,pos_18_GG,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 18-19
+403,pos_18_GT,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 18-19
+404,pos_18_TA,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 18-19
+405,pos_18_TC,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 18-19
+406,pos_18_TG,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 18-19
+407,pos_18_TT,Positional 2-mers,Positions 18-19 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 18-19
+408,pos_19_AA,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 19-20
+409,pos_19_AC,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 19-20
+410,pos_19_AG,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 19-20
+411,pos_19_AT,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 19-20
+412,pos_19_CA,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 19-20
+413,pos_19_CC,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 19-20
+414,pos_19_CG,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 19-20
+415,pos_19_CT,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 19-20
+416,pos_19_GA,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 19-20
+417,pos_19_GC,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 19-20
+418,pos_19_GG,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 19-20
+419,pos_19_GT,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 19-20
+420,pos_19_TA,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 19-20
+421,pos_19_TC,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 19-20
+422,pos_19_TG,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 19-20
+423,pos_19_TT,Positional 2-mers,Positions 19-20 (Protospacer),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 19-20
+424,pos_20_AA,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 20-21
+425,pos_20_AC,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 20-21
+426,pos_20_AG,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 20-21
+427,pos_20_AT,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 20-21
+428,pos_20_CA,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 20-21
+429,pos_20_CC,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 20-21
+430,pos_20_CG,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 20-21
+431,pos_20_CT,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 20-21
+432,pos_20_GA,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 20-21
+433,pos_20_GC,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 20-21
+434,pos_20_GG,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 20-21
+435,pos_20_GT,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 20-21
+436,pos_20_TA,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 20-21
+437,pos_20_TC,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 20-21
+438,pos_20_TG,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 20-21
+439,pos_20_TT,Positional 2-mers,Positions 20-21 (Junction),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 20-21
+440,pos_21_AA,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 21-22
+441,pos_21_AC,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 21-22
+442,pos_21_AG,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 21-22
+443,pos_21_AT,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 21-22
+444,pos_21_CA,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 21-22
+445,pos_21_CC,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 21-22
+446,pos_21_CG,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 21-22
+447,pos_21_CT,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 21-22
+448,pos_21_GA,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 21-22
+449,pos_21_GC,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 21-22
+450,pos_21_GG,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 21-22
+451,pos_21_GT,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 21-22
+452,pos_21_TA,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 21-22
+453,pos_21_TC,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 21-22
+454,pos_21_TG,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 21-22
+455,pos_21_TT,Positional 2-mers,Positions 21-22 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 21-22
+456,pos_22_AA,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AA spanning positions 22-23
+457,pos_22_AC,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AC spanning positions 22-23
+458,pos_22_AG,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AG spanning positions 22-23
+459,pos_22_AT,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide AT spanning positions 22-23
+460,pos_22_CA,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CA spanning positions 22-23
+461,pos_22_CC,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CC spanning positions 22-23
+462,pos_22_CG,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CG spanning positions 22-23
+463,pos_22_CT,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide CT spanning positions 22-23
+464,pos_22_GA,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GA spanning positions 22-23
+465,pos_22_GC,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GC spanning positions 22-23
+466,pos_22_GG,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GG spanning positions 22-23
+467,pos_22_GT,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide GT spanning positions 22-23
+468,pos_22_TA,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TA spanning positions 22-23
+469,pos_22_TC,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TC spanning positions 22-23
+470,pos_22_TG,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TG spanning positions 22-23
+471,pos_22_TT,Positional 2-mers,Positions 22-23 (PAM),Binary (0/1),0.0,1.0,Indicator for adjacent dinucleotide TT spanning positions 22-23
+472,count_AA,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif AA across the entire 23-mer sequence
+473,count_AC,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif AC across the entire 23-mer sequence
+474,count_AG,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif AG across the entire 23-mer sequence
+475,count_AT,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif AT across the entire 23-mer sequence
+476,count_CA,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif CA across the entire 23-mer sequence
+477,count_CC,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif CC across the entire 23-mer sequence
+478,count_CG,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif CG across the entire 23-mer sequence
+479,count_CT,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif CT across the entire 23-mer sequence
+480,count_GA,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif GA across the entire 23-mer sequence
+481,count_GC,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif GC across the entire 23-mer sequence
+482,count_GG,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif GG across the entire 23-mer sequence
+483,count_GT,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif GT across the entire 23-mer sequence
+484,count_TA,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif TA across the entire 23-mer sequence
+485,count_TC,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif TC across the entire 23-mer sequence
+486,count_TG,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif TG across the entire 23-mer sequence
+487,count_TT,Global Dinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,22.0,Frequency of dinucleotide motif TT across the entire 23-mer sequence
+488,count_AAA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif AAA across the entire 23-mer sequence
+489,count_AAC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif AAC across the entire 23-mer sequence
+490,count_AAG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif AAG across the entire 23-mer sequence
+491,count_AAT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif AAT across the entire 23-mer sequence
+492,count_ACA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif ACA across the entire 23-mer sequence
+493,count_ACC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif ACC across the entire 23-mer sequence
+494,count_ACG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif ACG across the entire 23-mer sequence
+495,count_ACT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif ACT across the entire 23-mer sequence
+496,count_AGA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif AGA across the entire 23-mer sequence
+497,count_AGC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif AGC across the entire 23-mer sequence
+498,count_AGG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif AGG across the entire 23-mer sequence
+499,count_AGT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif AGT across the entire 23-mer sequence
+500,count_ATA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif ATA across the entire 23-mer sequence
+501,count_ATC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif ATC across the entire 23-mer sequence
+502,count_ATG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif ATG across the entire 23-mer sequence
+503,count_ATT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif ATT across the entire 23-mer sequence
+504,count_CAA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CAA across the entire 23-mer sequence
+505,count_CAC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CAC across the entire 23-mer sequence
+506,count_CAG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CAG across the entire 23-mer sequence
+507,count_CAT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CAT across the entire 23-mer sequence
+508,count_CCA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CCA across the entire 23-mer sequence
+509,count_CCC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CCC across the entire 23-mer sequence
+510,count_CCG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CCG across the entire 23-mer sequence
+511,count_CCT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CCT across the entire 23-mer sequence
+512,count_CGA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CGA across the entire 23-mer sequence
+513,count_CGC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CGC across the entire 23-mer sequence
+514,count_CGG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CGG across the entire 23-mer sequence
+515,count_CGT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CGT across the entire 23-mer sequence
+516,count_CTA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CTA across the entire 23-mer sequence
+517,count_CTC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CTC across the entire 23-mer sequence
+518,count_CTG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CTG across the entire 23-mer sequence
+519,count_CTT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif CTT across the entire 23-mer sequence
+520,count_GAA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GAA across the entire 23-mer sequence
+521,count_GAC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GAC across the entire 23-mer sequence
+522,count_GAG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GAG across the entire 23-mer sequence
+523,count_GAT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GAT across the entire 23-mer sequence
+524,count_GCA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GCA across the entire 23-mer sequence
+525,count_GCC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GCC across the entire 23-mer sequence
+526,count_GCG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GCG across the entire 23-mer sequence
+527,count_GCT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GCT across the entire 23-mer sequence
+528,count_GGA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GGA across the entire 23-mer sequence
+529,count_GGC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GGC across the entire 23-mer sequence
+530,count_GGG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GGG across the entire 23-mer sequence
+531,count_GGT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GGT across the entire 23-mer sequence
+532,count_GTA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GTA across the entire 23-mer sequence
+533,count_GTC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GTC across the entire 23-mer sequence
+534,count_GTG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GTG across the entire 23-mer sequence
+535,count_GTT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif GTT across the entire 23-mer sequence
+536,count_TAA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TAA across the entire 23-mer sequence
+537,count_TAC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TAC across the entire 23-mer sequence
+538,count_TAG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TAG across the entire 23-mer sequence
+539,count_TAT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TAT across the entire 23-mer sequence
+540,count_TCA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TCA across the entire 23-mer sequence
+541,count_TCC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TCC across the entire 23-mer sequence
+542,count_TCG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TCG across the entire 23-mer sequence
+543,count_TCT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TCT across the entire 23-mer sequence
+544,count_TGA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TGA across the entire 23-mer sequence
+545,count_TGC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TGC across the entire 23-mer sequence
+546,count_TGG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TGG across the entire 23-mer sequence
+547,count_TGT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TGT across the entire 23-mer sequence
+548,count_TTA,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TTA across the entire 23-mer sequence
+549,count_TTC,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TTC across the entire 23-mer sequence
+550,count_TTG,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TTG across the entire 23-mer sequence
+551,count_TTT,Global Trinucleotide Counts,Entire 23-mer (positions 1-23),Integer,0.0,21.0,Frequency of trinucleotide motif TTT across the entire 23-mer sequence
+552,gap1_AA,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair A...A separated by 1 nucleotide(s)
+553,gap1_AC,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair A...C separated by 1 nucleotide(s)
+554,gap1_AG,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair A...G separated by 1 nucleotide(s)
+555,gap1_AT,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair A...T separated by 1 nucleotide(s)
+556,gap1_CA,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair C...A separated by 1 nucleotide(s)
+557,gap1_CC,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair C...C separated by 1 nucleotide(s)
+558,gap1_CG,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair C...G separated by 1 nucleotide(s)
+559,gap1_CT,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair C...T separated by 1 nucleotide(s)
+560,gap1_GA,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair G...A separated by 1 nucleotide(s)
+561,gap1_GC,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair G...C separated by 1 nucleotide(s)
+562,gap1_GG,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair G...G separated by 1 nucleotide(s)
+563,gap1_GT,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair G...T separated by 1 nucleotide(s)
+564,gap1_TA,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair T...A separated by 1 nucleotide(s)
+565,gap1_TC,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair T...C separated by 1 nucleotide(s)
+566,gap1_TG,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair T...G separated by 1 nucleotide(s)
+567,gap1_TT,n-Gapped Dinucleotides,Entire 23-mer (with 1-nucleotide intermediate spacer),Integer,0.0,21.0,Frequency of non-adjacent base pair T...T separated by 1 nucleotide(s)
+568,gap2_AA,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair A...A separated by 2 nucleotide(s)
+569,gap2_AC,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair A...C separated by 2 nucleotide(s)
+570,gap2_AG,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair A...G separated by 2 nucleotide(s)
+571,gap2_AT,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair A...T separated by 2 nucleotide(s)
+572,gap2_CA,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair C...A separated by 2 nucleotide(s)
+573,gap2_CC,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair C...C separated by 2 nucleotide(s)
+574,gap2_CG,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair C...G separated by 2 nucleotide(s)
+575,gap2_CT,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair C...T separated by 2 nucleotide(s)
+576,gap2_GA,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair G...A separated by 2 nucleotide(s)
+577,gap2_GC,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair G...C separated by 2 nucleotide(s)
+578,gap2_GG,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair G...G separated by 2 nucleotide(s)
+579,gap2_GT,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair G...T separated by 2 nucleotide(s)
+580,gap2_TA,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair T...A separated by 2 nucleotide(s)
+581,gap2_TC,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair T...C separated by 2 nucleotide(s)
+582,gap2_TG,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair T...G separated by 2 nucleotide(s)
+583,gap2_TT,n-Gapped Dinucleotides,Entire 23-mer (with 2-nucleotide intermediate spacer),Integer,0.0,20.0,Frequency of non-adjacent base pair T...T separated by 2 nucleotide(s)
+584,gap3_AA,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair A...A separated by 3 nucleotide(s)
+585,gap3_AC,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair A...C separated by 3 nucleotide(s)
+586,gap3_AG,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair A...G separated by 3 nucleotide(s)
+587,gap3_AT,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair A...T separated by 3 nucleotide(s)
+588,gap3_CA,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair C...A separated by 3 nucleotide(s)
+589,gap3_CC,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair C...C separated by 3 nucleotide(s)
+590,gap3_CG,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair C...G separated by 3 nucleotide(s)
+591,gap3_CT,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair C...T separated by 3 nucleotide(s)
+592,gap3_GA,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair G...A separated by 3 nucleotide(s)
+593,gap3_GC,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair G...C separated by 3 nucleotide(s)
+594,gap3_GG,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair G...G separated by 3 nucleotide(s)
+595,gap3_GT,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair G...T separated by 3 nucleotide(s)
+596,gap3_TA,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair T...A separated by 3 nucleotide(s)
+597,gap3_TC,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair T...C separated by 3 nucleotide(s)
+598,gap3_TG,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair T...G separated by 3 nucleotide(s)
+599,gap3_TT,n-Gapped Dinucleotides,Entire 23-mer (with 3-nucleotide intermediate spacer),Integer,0.0,19.0,Frequency of non-adjacent base pair T...T separated by 3 nucleotide(s)

@@ -1,0 +1,94 @@
+{
+  "audit_title": "CRISPR Guide AI: Cross-Cell-Line Transfer & Sequence Overlap Audit",
+  "description": "Quantifies exact guide sequence sharing between cell line datasets arising from common screening libraries (Toronto KnockOut v1 library from Hart et al. 2015). Reclassifies cross-cell evaluation as cross-cell transfer rather than independent external validation, and decomposes transfer into seen vs unseen guide sequences.",
+  "pairwise_sequence_overlap_matrix": {
+    "HeLa_vs_HCT116": {
+      "shared_sequences_N": 4181,
+      "percentage_of_HeLa_N_8101": 51.61,
+      "percentage_of_HCT116_N_4239": 98.63,
+      "screening_library_provenance": "Toronto KnockOut (TKO) v1 library (Hart et al. 2015)"
+    },
+    "HeLa_vs_HL60": {
+      "shared_sequences_N": 103,
+      "percentage_of_HeLa": 1.27,
+      "percentage_of_HL60": 4.96,
+      "screening_library_provenance": "Distinct libraries (TKO v1 vs Wang et al. 2014 ribosomal library)"
+    },
+    "HeLa_vs_A375": {
+      "shared_sequences_N": 0,
+      "percentage_of_HeLa": 0.0,
+      "percentage_of_A375": 0.0,
+      "screening_library_provenance": "Completely disjoint (Genome-wide dropout vs Doench 2016 8-gene tiling)"
+    },
+    "HCT116_vs_HL60": {
+      "shared_sequences_N": 67,
+      "percentage_of_HCT116": 1.58,
+      "percentage_of_HL60": 3.23
+    },
+    "HCT116_vs_A375": {
+      "shared_sequences_N": 0,
+      "percentage_of_HCT116": 0.0,
+      "percentage_of_A375": 0.0
+    },
+    "HL60_vs_A375": {
+      "shared_sequences_N": 0,
+      "percentage_of_HL60": 0.0,
+      "percentage_of_A375": 0.0
+    }
+  },
+  "transfer_decomposition_HeLa_to_HCT116_holdout": {
+    "target_evaluation_holdout": "HCT116 (Fixed Historical Holdout, seed 42)",
+    "total_evaluated_holdout_records_N": 848,
+    "subset_seen_in_source_training_dev_pool": {
+      "category_label": "Guide sequences observed in source training set (HeLa dev pool)",
+      "count_N": 667,
+      "percentage_of_holdout": 78.66,
+      "pearson_r": 0.447,
+      "interpretation": "Strong correlation driven by sequence memorization/re-encounter across cell lines."
+    },
+    "subset_not_seen_in_source_training_dev_pool": {
+      "category_label": "Guide sequences not observed in source training set (HeLa dev pool)",
+      "count_N": 181,
+      "percentage_of_holdout": 21.34,
+      "pearson_r": 0.247,
+      "interpretation": "True generalization correlation on novel guide sequences without sequence memorization."
+    },
+    "overall_aggregate_holdout": {
+      "count_N": 848,
+      "pearson_r": 0.4069,
+      "classification_roc_auc": 0.7473,
+      "classification_pr_auc": 0.812
+    },
+    "subsets_are_disjoint": true,
+    "subsets_sum_equals_total": true
+  },
+  "transfer_decomposition_HCT116_to_HeLa_holdout": {
+    "target_evaluation_holdout": "HeLa (Fixed Historical Holdout, seed 42)",
+    "total_evaluated_holdout_records_N": 1621,
+    "subset_seen_in_source_training_dev_pool": {
+      "category_label": "Guide sequences observed in source training set (HCT116 dev pool)",
+      "count_N": 640,
+      "percentage_of_holdout": 39.48,
+      "pearson_r": 0.4587
+    },
+    "subset_not_seen_in_source_training_dev_pool": {
+      "category_label": "Guide sequences not observed in source training set (HCT116 dev pool)",
+      "count_N": 981,
+      "percentage_of_holdout": 60.52,
+      "pearson_r": 0.3032
+    },
+    "overall_aggregate_holdout": {
+      "count_N": 1621,
+      "pearson_r": 0.3575,
+      "classification_roc_auc": 0.7369,
+      "classification_pr_auc": 0.795
+    },
+    "subsets_are_disjoint": true,
+    "subsets_sum_equals_total": true
+  },
+  "scientific_cautions": [
+    "Unseen guide sequences do NOT necessarily represent unseen genes; many belong to the same core essential gene set screened in TKO v1.",
+    "Cross-cell transfer MUST NOT be described as independent external validation.",
+    "The apparent cross-cell transfer correlation (r = 0.4069) is predominantly driven by the 78.66% seen guide sequences (r = 0.4470); novel unseen sequences achieve r = 0.2470."
+  ]
+}

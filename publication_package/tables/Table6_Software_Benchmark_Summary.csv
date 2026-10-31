@@ -1,0 +1,10 @@
+Metric,Value
+Single-Sequence Mean Latency,123.13 ms
+Single-Sequence Median Latency,88.35 ms
+Single-Sequence 95th Percentile Latency,133.35 ms
+600-Feature Extraction Throughput,1860.0 seq/sec
+Ridge Inference Throughput (Batch N=100),495.3 guides/sec
+SVM Inference Throughput (Batch N=100),346.4 guides/sec
+XGBoost Inference Throughput (Batch N=100),269.7 guides/sec
+Weighted Ensemble Throughput (Batch N=100),11.1 guides/sec
+RAM Footprint Post-Load,95.1 MB

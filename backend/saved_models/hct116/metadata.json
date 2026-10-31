@@ -1,0 +1,13 @@
+{
+  "cell_line": "hct116",
+  "display_name": "HCT116",
+  "total_samples": 4239,
+  "unique_sequences": 4239,
+  "positive_labels": 2718,
+  "negative_labels": 1521,
+  "development_pool_count": 3391,
+  "final_holdout_count": 848,
+  "cv_folds": 100,
+  "sequence_overlap_count": 0,
+  "random_seed": 42
+}

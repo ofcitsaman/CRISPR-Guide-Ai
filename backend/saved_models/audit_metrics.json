@@ -1,0 +1,256 @@
+{
+  "metadata": {
+    "random_seed": 42,
+    "dataset_version": "DeepCRISPR & CRISPRpred(SEQ) 2018/2020 Multi-Cell Benchmark",
+    "total_records": 16749,
+    "total_unique_sgrnas": 12465,
+    "evaluated_models": [
+      "Linear Regression",
+      "Random Forest",
+      "XGBoost",
+      "1D CNN"
+    ],
+    "primary_benchmark": "Sequence-Disjoint Split"
+  },
+  "sequence_disjoint_split": {
+    "description": "Primary benchmark with strictly 0 sequence overlap between train and test partitions.",
+    "split_statistics": {
+      "total_unique_sequences": 12465,
+      "train_unique_sequences": 9972,
+      "test_unique_sequences": 2493,
+      "train_row_count": 13434,
+      "test_row_count": 3315,
+      "sequence_overlap_count": 0
+    },
+    "best_model": "XGBoost",
+    "models": {
+      "Linear Regression": {
+        "mae": 0.1256,
+        "mse": 0.0261,
+        "rmse": 0.1614,
+        "r2": 0.1059,
+        "pearson": 0.3279,
+        "pearson_p": 0.0,
+        "spearman": 0.3139,
+        "spearman_p": 1.0247194715466374e-76,
+        "accuracy": 0.6181,
+        "precision": 0.7461,
+        "recall": 0.5941,
+        "f1": 0.6615,
+        "roc_auc": 0.6736,
+        "pr_auc": 0.7637
+      },
+      "Random Forest": {
+        "mae": 0.1254,
+        "mse": 0.0258,
+        "rmse": 0.1608,
+        "r2": 0.1132,
+        "pearson": 0.3406,
+        "pearson_p": 7.750731459800581e-91,
+        "spearman": 0.3342,
+        "spearman_p": 2.694998053188701e-87,
+        "accuracy": 0.6413,
+        "precision": 0.7691,
+        "recall": 0.6129,
+        "f1": 0.6822,
+        "roc_auc": 0.6921,
+        "pr_auc": 0.7654
+      },
+      "XGBoost": {
+        "mae": 0.1241,
+        "mse": 0.0256,
+        "rmse": 0.1599,
+        "r2": 0.1228,
+        "pearson": 0.3516,
+        "pearson_p": 0.0,
+        "spearman": 0.332,
+        "spearman_p": 3.908915214706924e-86,
+        "accuracy": 0.635,
+        "precision": 0.763,
+        "recall": 0.6076,
+        "f1": 0.6765,
+        "roc_auc": 0.6907,
+        "pr_auc": 0.773
+      },
+      "1D CNN": {
+        "mae": 0.1255,
+        "mse": 0.0278,
+        "rmse": 0.1667,
+        "r2": 0.0466,
+        "pearson": 0.2775,
+        "pearson_p": 0.0,
+        "spearman": 0.2533,
+        "spearman_p": 1.0530162595382928e-49,
+        "accuracy": 0.5967,
+        "precision": 0.7245,
+        "recall": 0.5773,
+        "f1": 0.6426,
+        "roc_auc": 0.6457,
+        "pr_auc": 0.7462
+      }
+    }
+  },
+  "naive_random_split": {
+    "description": "Naive random 75/25 split demonstrating sequence leakage due to shared sgRNA libraries across cell lines.",
+    "leakage_statistics": {
+      "total_test_rows": 4188,
+      "unique_test_sequences": 3910,
+      "overlapping_sequences_in_train": 1626,
+      "sequence_leakage_percentage": 41.59
+    },
+    "models": {
+      "Random Forest": {
+        "mae": 0.111,
+        "mse": 0.0203,
+        "rmse": 0.1427,
+        "r2": 0.2287,
+        "pearson": 0.4938,
+        "pearson_p": 2.0840644361567143e-256,
+        "spearman": 0.4743,
+        "spearman_p": 6.197475663808526e-234,
+        "accuracy": 0.6602,
+        "precision": 0.8013,
+        "recall": 0.625,
+        "f1": 0.7022,
+        "roc_auc": 0.7452,
+        "pr_auc": 0.8309
+      },
+      "XGBoost": {
+        "mae": 0.1171,
+        "mse": 0.0221,
+        "rmse": 0.1488,
+        "r2": 0.161,
+        "pearson": 0.4022,
+        "pearson_p": 0.0,
+        "spearman": 0.3874,
+        "spearman_p": 5.214205083688242e-150,
+        "accuracy": 0.6402,
+        "precision": 0.7813,
+        "recall": 0.6093,
+        "f1": 0.6847,
+        "roc_auc": 0.7139,
+        "pr_auc": 0.8056
+      },
+      "Linear Regression": {
+        "mae": 0.1233,
+        "mse": 0.0243,
+        "rmse": 0.156,
+        "r2": 0.0779,
+        "pearson": 0.2955,
+        "pearson_p": 0.0,
+        "spearman": 0.2907,
+        "spearman_p": 2.2951530696140118e-82,
+        "accuracy": 0.611,
+        "precision": 0.7521,
+        "recall": 0.5866,
+        "f1": 0.6591,
+        "roc_auc": 0.6708,
+        "pr_auc": 0.7731
+      },
+      "leakage_statistics": {
+        "total_test_rows": 4188,
+        "unique_test_sequences": 3910,
+        "overlapping_sequences_in_train": 1626,
+        "sequence_leakage_percentage": 41.59,
+        "interpretation": "42.06% of test sequences appeared in training data tested in another cell line. Performance is moderately higher due to memorization of sequence features."
+      }
+    }
+  },
+  "leave_one_cell_out": {
+    "description": "Cross-cell-line cross-validation explicitly tracking sequence overlap percentage.",
+    "cell_lines": {
+      "hct116": {
+        "held_out_samples": 4239,
+        "unique_held_out_sequences": 4239,
+        "overlapping_sequences_in_train": 4181,
+        "sequence_overlap_percentage": 98.63,
+        "generalization_category": "Cross-cell-line with high sequence overlap",
+        "metrics": {
+          "mae": 0.1177,
+          "mse": 0.0217,
+          "rmse": 0.1473,
+          "r2": 0.2647,
+          "pearson": 0.5742,
+          "pearson_p": 0.0,
+          "spearman": 0.5492,
+          "spearman_p": 0.0,
+          "accuracy": 0.6943,
+          "precision": 0.8354,
+          "recall": 0.6516,
+          "f1": 0.7321,
+          "roc_auc": 0.7835,
+          "pr_auc": 0.8611
+        }
+      },
+      "hela": {
+        "held_out_samples": 8101,
+        "unique_held_out_sequences": 8101,
+        "overlapping_sequences_in_train": 4217,
+        "sequence_overlap_percentage": 52.06,
+        "generalization_category": "Cross-cell-line with high sequence overlap",
+        "metrics": {
+          "mae": 0.1285,
+          "mse": 0.0271,
+          "rmse": 0.1646,
+          "r2": 0.1824,
+          "pearson": 0.4772,
+          "pearson_p": 0.0,
+          "spearman": 0.466,
+          "spearman_p": 0.0,
+          "accuracy": 0.6831,
+          "precision": 0.8077,
+          "recall": 0.6466,
+          "f1": 0.7183,
+          "roc_auc": 0.7612,
+          "pr_auc": 0.8324
+        }
+      },
+      "hl60": {
+        "held_out_samples": 2076,
+        "unique_held_out_sequences": 2076,
+        "overlapping_sequences_in_train": 103,
+        "sequence_overlap_percentage": 4.96,
+        "generalization_category": "Cross-cell-line with low/zero sequence overlap",
+        "metrics": {
+          "mae": 0.0917,
+          "mse": 0.0132,
+          "rmse": 0.115,
+          "r2": -0.0267,
+          "pearson": 0.2221,
+          "pearson_p": 1.285025226751535e-24,
+          "spearman": 0.1986,
+          "spearman_p": 6.505630830053964e-20,
+          "accuracy": 0.552,
+          "precision": 0.762,
+          "recall": 0.5366,
+          "f1": 0.6298,
+          "roc_auc": 0.6126,
+          "pr_auc": 0.7849
+        }
+      },
+      "hek293": {
+        "held_out_samples": 2333,
+        "unique_held_out_sequences": 2333,
+        "overlapping_sequences_in_train": 0,
+        "sequence_overlap_percentage": 0.0,
+        "generalization_category": "Cross-cell-line with low/zero sequence overlap",
+        "metrics": {
+          "mae": 0.1127,
+          "mse": 0.0203,
+          "rmse": 0.1424,
+          "r2": -0.4139,
+          "pearson": -0.1964,
+          "pearson_p": 1.0179247055676696e-21,
+          "spearman": -0.1531,
+          "spearman_p": 1.061367313787654e-13,
+          "accuracy": 0.4569,
+          "precision": 0.5458,
+          "recall": 0.4636,
+          "f1": 0.5014,
+          "roc_auc": 0.448,
+          "pr_auc": 0.5648
+        }
+      }
+    }
+  }
+}

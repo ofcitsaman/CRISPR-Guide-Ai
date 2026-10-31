@@ -1,0 +1,10 @@
+{
+  "model_name": "Weighted Ensemble",
+  "weights": {
+    "Ridge Linear Regression": 0.3802,
+    "Random Forest": 0.3145,
+    "XGBoost": 0.1639,
+    "SVM": 0.1414
+  },
+  "description": "Non-negative constrained ensemble weights learned strictly on development out-of-fold predictions."
+}

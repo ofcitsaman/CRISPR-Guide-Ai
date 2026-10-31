@@ -1,0 +1,177 @@
+dataset,experiment_id,model,feature_count,target_transform,pearson_r,spearman_rho,rmse,mae,r2,roc_auc,pr_auc,accuracy,precision,recall,specificity,f1,threshold,notes
+hela,feat_k_50,Ridge (screening),50,none,0.3324,0.3229,0.1725,0.1374,0.1098,0.6883,0.7681,0.6495,0.7411,0.6747,0.6077,0.7063,0.2444,Feature selection evaluation k=50
+hela,feat_k_75,Ridge (screening),75,none,0.3458,0.339,0.1717,0.1364,0.1184,0.6988,0.7741,0.6429,0.7661,0.6166,0.6867,0.6833,0.2565,Feature selection evaluation k=75
+hela,feat_k_100,Ridge (screening),100,none,0.3459,0.3385,0.1718,0.1365,0.1172,0.6993,0.7749,0.6673,0.7395,0.7216,0.5769,0.7304,0.2369,Feature selection evaluation k=100
+hela,feat_k_150,Ridge (screening),150,none,0.3447,0.3374,0.1721,0.1365,0.1147,0.6992,0.777,0.6477,0.7505,0.6532,0.6386,0.6985,0.2486,Feature selection evaluation k=150
+hela,feat_k_200,Ridge (screening),200,none,0.3379,0.3304,0.1728,0.1369,0.107,0.695,0.7754,0.6427,0.7527,0.6376,0.6513,0.6904,0.2508,Feature selection evaluation k=200
+hela,feat_k_300,Ridge (screening),300,none,0.3372,0.329,0.1732,0.1371,0.1035,0.6929,0.7761,0.6472,0.745,0.6618,0.6229,0.7009,0.2463,Feature selection evaluation k=300
+hela,feat_k_all,Ridge (screening),593,none,0.3338,0.3252,0.1736,0.1374,0.0986,0.6911,0.7748,0.6395,0.7491,0.6359,0.6456,0.6879,0.25,Feature selection evaluation k=all
+hela,feat_ext_k_100,Ridge (screening),100,none,0.3467,0.34,0.1718,0.1363,0.118,0.7005,0.7764,0.6722,0.7336,0.7463,0.5489,0.7399,0.233,Extended biological features k=100
+hela,feat_ext_k_150,Ridge (screening),150,none,0.3463,0.3402,0.172,0.1363,0.1159,0.701,0.7781,0.6569,0.7455,0.6845,0.611,0.7137,0.2427,Extended biological features k=150
+hela,feat_ext_k_200,Ridge (screening),200,none,0.3401,0.3336,0.1726,0.1368,0.109,0.6968,0.7761,0.6443,0.7595,0.6302,0.6678,0.6888,0.2526,Extended biological features k=200
+hela,feat_ext_k_all,Ridge (screening),600,none,0.3349,0.3262,0.1736,0.1373,0.0993,0.6912,0.7752,0.6295,0.7566,0.5998,0.6789,0.6691,0.2575,Extended biological features k=all
+hela,target_direct_clip_True,Ridge (target test),100,direct,0.3467,0.34,0.1718,0.1363,0.118,0.7005,0.7764,0.6722,0.7336,0.7463,0.5489,0.7399,0.233,"Target test mode=direct, clip=True"
+hela,target_direct_clip_False,Ridge (target test),100,direct,0.3467,0.34,0.1718,0.1363,0.118,0.7005,0.7764,0.6722,0.7336,0.7463,0.5489,0.7399,0.233,"Target test mode=direct, clip=False"
+hela,target_logit_clip_True,Ridge (target test),100,logit,0.3438,0.3401,0.1768,0.1338,0.0657,0.7026,0.776,0.6526,0.7527,0.6611,0.6386,0.7039,0.2003,"Target test mode=logit, clip=True"
+hela,target_logit_clip_False,Ridge (target test),100,logit,0.3438,0.3401,0.1768,0.1338,0.0657,0.7026,0.776,0.6526,0.7527,0.6611,0.6386,0.7039,0.2003,"Target test mode=logit, clip=False"
+hela,ridge_alpha_0.1,Ridge Linear Regression,100,direct,0.3457,0.3391,0.1719,0.1363,0.1163,0.7002,0.7765,0.6569,0.7447,0.686,0.6086,0.7142,0.2443,Ridge alpha=0.1
+hela,ridge_alpha_1.0,Ridge Linear Regression,100,direct,0.3457,0.3391,0.1719,0.1363,0.1164,0.7002,0.7765,0.6574,0.7445,0.6875,0.6073,0.7149,0.2439,Ridge alpha=1.0
+hela,ridge_alpha_3.0,Ridge Linear Regression,100,direct,0.3458,0.3392,0.1719,0.1363,0.1164,0.7003,0.7765,0.6573,0.7448,0.6865,0.6086,0.7145,0.2442,Ridge alpha=3.0
+hela,ridge_alpha_10.0,Ridge Linear Regression,100,direct,0.3459,0.3393,0.1719,0.1363,0.1166,0.7003,0.7765,0.6568,0.7441,0.6868,0.6069,0.7143,0.244,Ridge alpha=10.0
+hela,ridge_alpha_30.0,Ridge Linear Regression,100,direct,0.3462,0.3396,0.1718,0.1363,0.117,0.7004,0.7766,0.6517,0.7476,0.668,0.6246,0.7055,0.2473,Ridge alpha=30.0
+hela,ridge_alpha_100.0,Ridge Linear Regression,100,direct,0.3467,0.34,0.1718,0.1363,0.118,0.7005,0.7764,0.6722,0.7336,0.7463,0.5489,0.7399,0.233,Ridge alpha=100.0
+hela,ridge_alpha_200.0,Ridge Linear Regression,100,direct,0.3469,0.3402,0.1717,0.1363,0.1186,0.7005,0.7761,0.6667,0.7403,0.7184,0.5806,0.7292,0.2385,Ridge alpha=200.0
+hela,ridge_alpha_300.0,Ridge Linear Regression,100,direct,0.3468,0.3402,0.1717,0.1364,0.119,0.7004,0.7759,0.6716,0.7377,0.7359,0.5646,0.7368,0.2356,Ridge alpha=300.0
+hela,ridge_alpha_500.0,Ridge Linear Regression,100,direct,0.3466,0.3399,0.1716,0.1364,0.1193,0.7001,0.7754,0.6762,0.7351,0.7532,0.5481,0.744,0.2326,Ridge alpha=500.0
+hela,ridge_alpha_1000.0,Ridge Linear Regression,100,direct,0.3457,0.3389,0.1716,0.1366,0.1193,0.6992,0.7747,0.6698,0.7384,0.73,0.5695,0.7342,0.2373,Ridge alpha=1000.0
+hela,xgb_tune_1,XGBoost,100,direct,0.3481,0.3391,0.1715,0.1366,0.1207,0.7014,0.7742,0.6602,0.75,0.684,0.6205,0.7155,0.2432,"XGB tune: depth=3, lr=0.05, n_est=150"
+hela,xgb_tune_2,XGBoost,100,direct,0.3513,0.3446,0.1712,0.1362,0.1233,0.704,0.7769,0.6634,0.7546,0.6835,0.6299,0.7173,0.2431,"XGB tune: depth=4, lr=0.04, n_est=200"
+hela,xgb_tune_3,XGBoost,100,direct,0.3527,0.3457,0.1711,0.1361,0.1244,0.7052,0.7769,0.6583,0.7593,0.6633,0.6501,0.7081,0.247,"XGB tune: depth=4, lr=0.03, n_est=250"
+hela,xgb_tune_4,XGBoost,100,direct,0.3571,0.3492,0.1708,0.1358,0.1274,0.7065,0.7792,0.6582,0.7596,0.6625,0.6509,0.7077,0.2471,"XGB tune: depth=5, lr=0.03, n_est=200"
+hela,xgb_tune_5,XGBoost,100,direct,0.3475,0.3406,0.1715,0.1366,0.1207,0.7032,0.7765,0.6622,0.7563,0.6776,0.6365,0.7148,0.2452,"XGB tune: depth=3, lr=0.03, n_est=300"
+hela,xgb_tune_6,XGBoost,100,direct,0.3541,0.3479,0.171,0.1359,0.1254,0.7065,0.7795,0.6525,0.7729,0.6282,0.6928,0.6931,0.2522,"XGB tune: depth=6, lr=0.025, n_est=200"
+hela,rf_tune_1,Random Forest,100,direct,0.342,0.3358,0.1719,0.1371,0.1164,0.7021,0.7712,0.6656,0.7537,0.6902,0.6246,0.7206,0.2425,"RF tune: n_est=200, depth=10, feat=0.3"
+hela,rf_tune_2,Random Forest,100,direct,0.342,0.337,0.1719,0.1369,0.1168,0.7011,0.7716,0.667,0.7476,0.7048,0.604,0.7256,0.2406,"RF tune: n_est=250, depth=12, feat=0.3"
+hela,rf_tune_3,Random Forest,100,direct,0.3408,0.3346,0.1721,0.1373,0.1149,0.6991,0.7697,0.6806,0.7327,0.7693,0.5329,0.7505,0.2317,"RF tune: n_est=250, depth=14, feat=sqrt"
+hela,rf_tune_4,Random Forest,100,direct,0.3456,0.3402,0.1717,0.1368,0.119,0.703,0.7731,0.667,0.7513,0.6979,0.6155,0.7236,0.2422,"RF tune: n_est=300, depth=12, feat=0.25"
+hela,rf_tune_5,Random Forest,100,direct,0.3299,0.3251,0.1728,0.1379,0.1072,0.6952,0.7688,0.6628,0.7481,0.6939,0.611,0.72,0.2452,"RF tune: n_est=250, depth=16, feat=0.35"
+hela,svr_tune_1,SVM,100,direct,0.2799,0.2812,0.1824,0.1438,0.0055,0.6705,0.7551,0.6315,0.7378,0.6361,0.6238,0.6832,0.2471,"SVR tune: kernel=rbf, C=1.0, eps=0.05"
+hela,svr_tune_2,SVM,100,direct,0.2751,0.2772,0.1841,0.1459,-0.0138,0.6662,0.7511,0.6086,0.7505,0.5595,0.6904,0.6411,0.27,"SVR tune: kernel=rbf, C=1.5, eps=0.05"
+hela,svr_tune_3,SVM,100,direct,0.2713,0.2682,0.1838,0.1453,-0.0099,0.665,0.748,0.6295,0.7377,0.6314,0.6262,0.6804,0.2497,"SVR tune: kernel=rbf, C=2.0, eps=0.08"
+hela,svr_tune_4,SVM,100,direct,0.2577,0.2534,0.1856,0.1463,-0.0296,0.6534,0.7418,0.615,0.7212,0.6255,0.5975,0.6699,0.2401,"SVR tune: kernel=rbf, C=2.5, eps=0.06"
+hela,svr_tune_5,SVM,100,direct,0.2684,0.2728,0.1854,0.1471,-0.0278,0.6644,0.7495,0.6139,0.7476,0.5766,0.676,0.651,0.2703,"SVR tune: kernel=rbf, C=3.0, eps=0.05"
+hela,svr_tune_6,SVM,100,direct,0.0166,0.0144,0.2479,0.1965,-0.8368,0.5009,0.6264,0.5927,0.6309,0.8387,0.1834,0.7201,0.0707,"SVR tune: kernel=linear, C=0.5, eps=0.05"
+hela,ensemble_simple_mean,Ensemble (Simple Mean),100,direct,0.3549,0.3524,0.171,0.1357,0.1256,0.7101,0.7808,0.6593,0.77,0.6482,0.6776,0.7039,0.2521,"Equal weight (0.25 each) across Ridge, RF, XGB, SVR"
+hela,ensemble_optimal_weighted,Ensemble (Optimal Weighted),100,direct,0.3628,0.3564,0.1704,0.1355,0.1314,0.7111,0.782,0.6685,0.7566,0.6919,0.6295,0.7228,0.2437,"Weights: Ridge=0.345, RF=0.241, XGB=0.368, SVR=0.045"
+hct116,feat_k_50,Ridge (screening),50,none,0.3468,0.3436,0.1611,0.1284,0.1179,0.6973,0.7852,0.6585,0.7532,0.695,0.5933,0.723,0.2367,Feature selection evaluation k=50
+hct116,feat_k_75,Ridge (screening),75,none,0.3704,0.3658,0.1596,0.1268,0.1345,0.705,0.7945,0.6656,0.7642,0.6918,0.6187,0.7262,0.2377,Feature selection evaluation k=75
+hct116,feat_k_100,Ridge (screening),100,none,0.3664,0.3586,0.1601,0.1272,0.1291,0.7015,0.791,0.6656,0.7567,0.7052,0.5949,0.73,0.236,Feature selection evaluation k=100
+hct116,feat_k_150,Ridge (screening),150,none,0.3668,0.3596,0.1604,0.1271,0.1258,0.7018,0.7891,0.6364,0.7843,0.5971,0.7067,0.678,0.2549,Feature selection evaluation k=150
+hct116,feat_k_200,Ridge (screening),200,none,0.3713,0.36,0.1603,0.1273,0.1267,0.7015,0.7895,0.6579,0.7677,0.6688,0.6385,0.7148,0.2419,Feature selection evaluation k=200
+hct116,feat_k_300,Ridge (screening),300,none,0.3616,0.3498,0.1615,0.1281,0.1135,0.6951,0.7834,0.6505,0.7672,0.6532,0.6459,0.7056,0.2428,Feature selection evaluation k=300
+hct116,feat_k_all,Ridge (screening),593,none,0.3544,0.3433,0.1626,0.1289,0.1017,0.6906,0.7796,0.624,0.7787,0.5777,0.7067,0.6633,0.2582,Feature selection evaluation k=all
+hct116,feat_ext_k_100,Ridge (screening),100,none,0.367,0.3587,0.1601,0.1271,0.1295,0.7024,0.7919,0.6738,0.7502,0.7364,0.562,0.7433,0.2286,Extended biological features k=100
+hct116,feat_ext_k_150,Ridge (screening),150,none,0.3663,0.3584,0.1604,0.1271,0.1253,0.7019,0.7897,0.6615,0.7644,0.6822,0.6245,0.721,0.2397,Extended biological features k=150
+hct116,feat_ext_k_200,Ridge (screening),200,none,0.37,0.3594,0.1604,0.1274,0.1257,0.7013,0.7897,0.6582,0.7661,0.672,0.6335,0.716,0.2406,Extended biological features k=200
+hct116,feat_ext_k_all,Ridge (screening),600,none,0.356,0.3456,0.1625,0.1288,0.1029,0.6917,0.7805,0.6526,0.7599,0.6697,0.622,0.712,0.2399,Extended biological features k=all
+hct116,target_direct_clip_True,Ridge (target test),200,direct,0.3713,0.36,0.1603,0.1273,0.1267,0.7015,0.7895,0.6579,0.7677,0.6688,0.6385,0.7148,0.2419,"Target test mode=direct, clip=True"
+hct116,target_direct_clip_False,Ridge (target test),200,direct,0.3712,0.36,0.1603,0.1273,0.1267,0.7015,0.7895,0.6579,0.7677,0.6688,0.6385,0.7148,0.2419,"Target test mode=direct, clip=False"
+hct116,target_logit_clip_True,Ridge (target test),200,logit,0.3593,0.3549,0.1651,0.1259,0.0742,0.7021,0.7894,0.6503,0.7735,0.6426,0.6639,0.702,0.2029,"Target test mode=logit, clip=True"
+hct116,target_logit_clip_False,Ridge (target test),200,logit,0.3593,0.3549,0.1651,0.1259,0.0742,0.7021,0.7894,0.6503,0.7735,0.6426,0.6639,0.702,0.2029,"Target test mode=logit, clip=False"
+hct116,ridge_alpha_0.1,Ridge Linear Regression,200,direct,0.3662,0.3536,0.1611,0.1279,0.1177,0.6981,0.787,0.6656,0.76,0.6992,0.6056,0.7283,0.2343,Ridge alpha=0.1
+hct116,ridge_alpha_1.0,Ridge Linear Regression,200,direct,0.3662,0.3537,0.1611,0.1279,0.1179,0.6982,0.787,0.6656,0.76,0.6992,0.6056,0.7283,0.2343,Ridge alpha=1.0
+hct116,ridge_alpha_3.0,Ridge Linear Regression,200,direct,0.3664,0.3539,0.1611,0.1279,0.1181,0.6983,0.7871,0.6659,0.7591,0.7015,0.6023,0.7291,0.2335,Ridge alpha=3.0
+hct116,ridge_alpha_10.0,Ridge Linear Regression,200,direct,0.3669,0.3546,0.161,0.1279,0.1191,0.6987,0.7874,0.6615,0.7615,0.6872,0.6154,0.7224,0.2372,Ridge alpha=10.0
+hct116,ridge_alpha_30.0,Ridge Linear Regression,200,direct,0.3683,0.3562,0.1608,0.1277,0.1215,0.6995,0.7881,0.6553,0.7657,0.6661,0.636,0.7124,0.2422,Ridge alpha=30.0
+hct116,ridge_alpha_100.0,Ridge Linear Regression,200,direct,0.3713,0.36,0.1603,0.1273,0.1267,0.7015,0.7895,0.6579,0.7677,0.6688,0.6385,0.7148,0.2419,Ridge alpha=100.0
+hct116,ridge_alpha_200.0,Ridge Linear Regression,200,direct,0.3734,0.3627,0.1599,0.1269,0.1311,0.7028,0.7905,0.6623,0.7656,0.6822,0.627,0.7215,0.2394,Ridge alpha=200.0
+hct116,ridge_alpha_300.0,Ridge Linear Regression,200,direct,0.3746,0.3644,0.1597,0.1268,0.1339,0.7036,0.7912,0.6559,0.7682,0.6633,0.6426,0.7119,0.2431,Ridge alpha=300.0
+hct116,ridge_alpha_500.0,Ridge Linear Regression,200,direct,0.376,0.3663,0.1593,0.1265,0.1375,0.7045,0.7918,0.6479,0.7765,0.6329,0.6746,0.6974,0.2485,Ridge alpha=500.0
+hct116,ridge_alpha_1000.0,Ridge Linear Regression,200,direct,0.3771,0.3684,0.159,0.1263,0.1413,0.7051,0.7923,0.6606,0.766,0.6776,0.6302,0.7191,0.2408,Ridge alpha=1000.0
+hct116,xgb_tune_1,XGBoost,200,direct,0.3646,0.3632,0.1598,0.1271,0.1322,0.7021,0.7835,0.6559,0.7668,0.6656,0.6385,0.7126,0.243,"XGB tune: depth=3, lr=0.05, n_est=150"
+hct116,xgb_tune_2,XGBoost,200,direct,0.3601,0.3613,0.1601,0.1267,0.1292,0.7024,0.7824,0.6777,0.7553,0.7355,0.5744,0.7453,0.2284,"XGB tune: depth=4, lr=0.04, n_est=200"
+hct116,xgb_tune_3,XGBoost,200,direct,0.3736,0.3737,0.1591,0.126,0.1395,0.7098,0.7888,0.6632,0.7724,0.673,0.6459,0.7193,0.2403,"XGB tune: depth=4, lr=0.03, n_est=250"
+hct116,xgb_tune_4,XGBoost,200,direct,0.3681,0.3671,0.1595,0.1265,0.1355,0.7061,0.7862,0.6965,0.7456,0.7994,0.5127,0.7716,0.2184,"XGB tune: depth=5, lr=0.03, n_est=200"
+hct116,xgb_tune_5,XGBoost,200,direct,0.3696,0.3687,0.1594,0.1267,0.1364,0.7048,0.7849,0.6753,0.7596,0.7222,0.5916,0.7404,0.2332,"XGB tune: depth=3, lr=0.03, n_est=300"
+hct116,xgb_tune_6,XGBoost,200,direct,0.3695,0.3682,0.1594,0.1264,0.1365,0.7041,0.7841,0.6691,0.763,0.7019,0.6105,0.7312,0.2364,"XGB tune: depth=6, lr=0.025, n_est=200"
+hct116,rf_tune_1,Random Forest,200,direct,0.355,0.3555,0.1605,0.1277,0.1245,0.7004,0.7772,0.6836,0.7559,0.7479,0.5686,0.7519,0.2316,"RF tune: n_est=200, depth=10, feat=0.3"
+hct116,rf_tune_2,Random Forest,200,direct,0.3569,0.3564,0.1603,0.1278,0.1264,0.7018,0.7796,0.6871,0.7556,0.7567,0.5629,0.7561,0.2302,"RF tune: n_est=250, depth=12, feat=0.3"
+hct116,rf_tune_3,Random Forest,200,direct,0.3638,0.3581,0.1607,0.1288,0.1228,0.7016,0.7832,0.6703,0.7629,0.7047,0.6089,0.7327,0.2414,"RF tune: n_est=250, depth=14, feat=sqrt"
+hct116,rf_tune_4,Random Forest,200,direct,0.3583,0.3563,0.1603,0.1278,0.1267,0.6993,0.7782,0.6836,0.7583,0.7433,0.5768,0.7508,0.2334,"RF tune: n_est=300, depth=12, feat=0.25"
+hct116,rf_tune_5,Random Forest,200,direct,0.3519,0.3516,0.1606,0.1284,0.1232,0.7001,0.7797,0.6839,0.7537,0.753,0.5604,0.7533,0.2331,"RF tune: n_est=250, depth=16, feat=0.35"
+hct116,svr_tune_1,SVM,200,direct,0.3526,0.3448,0.1625,0.1293,0.1027,0.6897,0.7804,0.6196,0.7815,0.5644,0.7182,0.6554,0.2673,"SVR tune: kernel=rbf, C=1.0, eps=0.05"
+hct116,svr_tune_2,SVM,200,direct,0.3519,0.3437,0.1626,0.1294,0.1018,0.6895,0.7804,0.6205,0.7802,0.5681,0.7141,0.6574,0.2672,"SVR tune: kernel=rbf, C=1.5, eps=0.05"
+hct116,svr_tune_3,SVM,200,direct,0.3519,0.3449,0.1622,0.1298,0.1065,0.6911,0.7809,0.6438,0.768,0.6366,0.6565,0.6962,0.2594,"SVR tune: kernel=rbf, C=2.0, eps=0.08"
+hct116,svr_tune_4,SVM,200,direct,0.3466,0.3389,0.1637,0.1303,0.0895,0.6871,0.779,0.6202,0.7793,0.5685,0.7124,0.6574,0.2685,"SVR tune: kernel=rbf, C=2.5, eps=0.06"
+hct116,svr_tune_5,SVM,200,direct,0.3518,0.3439,0.1626,0.1294,0.1016,0.6895,0.7803,0.6219,0.7816,0.5695,0.7157,0.6589,0.2673,"SVR tune: kernel=rbf, C=3.0, eps=0.05"
+hct116,svr_tune_6,SVM,200,direct,0.1849,0.1743,0.2032,0.1611,-0.4032,0.5927,0.7066,0.5733,0.7003,0.5846,0.553,0.6373,0.2298,"SVR tune: kernel=linear, C=0.5, eps=0.05"
+hct116,ensemble_simple_mean,Ensemble (Simple Mean),200,direct,0.3877,0.381,0.1582,0.1258,0.1496,0.712,0.7936,0.6862,0.7532,0.7594,0.5555,0.7563,0.2302,"Equal weight (0.25 each) across Ridge, RF, XGB, SVR"
+hct116,ensemble_optimal_weighted,Ensemble (Optimal Weighted),200,direct,0.3891,0.3817,0.1582,0.1259,0.1498,0.7127,0.7947,0.688,0.755,0.7599,0.5596,0.7575,0.2308,"Weights: Ridge=0.380, RF=0.315, XGB=0.164, SVR=0.141"
+hek293,feat_k_50,Ridge (screening),50,none,0.244,0.1886,0.1161,0.0943,0.0508,0.5754,0.6664,0.5332,0.6827,0.3876,0.7419,0.4945,0.2508,Feature selection evaluation k=50
+hek293,feat_k_75,Ridge (screening),75,none,0.2154,0.1657,0.1177,0.0957,0.0249,0.5559,0.6436,0.5225,0.652,0.4058,0.6897,0.5003,0.2484,Feature selection evaluation k=75
+hek293,feat_k_100,Ridge (screening),100,none,0.212,0.1696,0.1182,0.0961,0.015,0.5632,0.6444,0.5606,0.6385,0.5851,0.5254,0.6106,0.232,Feature selection evaluation k=100
+hek293,feat_k_150,Ridge (screening),150,none,0.2004,0.1604,0.12,0.0971,-0.0144,0.5562,0.6356,0.5402,0.6403,0.5005,0.5971,0.5618,0.2407,Feature selection evaluation k=150
+hek293,feat_k_200,Ridge (screening),200,none,0.1832,0.143,0.1218,0.0985,-0.0444,0.5505,0.632,0.5096,0.6474,0.3676,0.7132,0.4689,0.2586,Feature selection evaluation k=200
+hek293,feat_k_300,Ridge (screening),300,none,0.1923,0.1518,0.1224,0.0988,-0.0548,0.5566,0.6403,0.5568,0.6298,0.6005,0.4941,0.6148,0.2298,Feature selection evaluation k=300
+hek293,feat_k_all,Ridge (screening),593,none,0.1663,0.1283,0.1256,0.1015,-0.1122,0.5433,0.6283,0.5691,0.6183,0.7015,0.3794,0.6573,0.208,Feature selection evaluation k=all
+hek293,feat_ext_k_100,Ridge (screening),100,none,0.2115,0.1692,0.1183,0.0961,0.0148,0.5622,0.6442,0.5322,0.654,0.4368,0.6688,0.5237,0.2468,Extended biological features k=100
+hek293,feat_ext_k_150,Ridge (screening),150,none,0.2012,0.1606,0.12,0.0971,-0.0138,0.5558,0.6358,0.5322,0.6427,0.4631,0.631,0.5383,0.2454,Extended biological features k=150
+hek293,feat_ext_k_200,Ridge (screening),200,none,0.1829,0.1428,0.1218,0.0985,-0.0446,0.5517,0.6334,0.5831,0.6166,0.7725,0.3116,0.6858,0.2029,Extended biological features k=200
+hek293,feat_ext_k_all,Ridge (screening),600,none,0.172,0.1331,0.1254,0.1012,-0.1075,0.5456,0.6303,0.5456,0.6279,0.5605,0.5241,0.5923,0.2331,Extended biological features k=all
+hek293,target_direct_clip_True,Ridge (target test),50,direct,0.244,0.1886,0.1161,0.0943,0.0508,0.5754,0.6664,0.5332,0.6827,0.3876,0.7419,0.4945,0.2508,"Target test mode=direct, clip=True"
+hek293,target_direct_clip_False,Ridge (target test),50,direct,0.244,0.1886,0.1161,0.0943,0.0508,0.5754,0.6664,0.5332,0.6827,0.3876,0.7419,0.4945,0.2508,"Target test mode=direct, clip=False"
+hek293,target_logit_clip_True,Ridge (target test),50,logit,0.2411,0.1872,0.1173,0.0924,0.03,0.5762,0.665,0.5241,0.6929,0.3449,0.781,0.4605,0.2353,"Target test mode=logit, clip=True"
+hek293,target_logit_clip_False,Ridge (target test),50,logit,0.2411,0.1872,0.1173,0.0924,0.03,0.5762,0.665,0.5241,0.6929,0.3449,0.781,0.4605,0.2353,"Target test mode=logit, clip=False"
+hek293,ridge_alpha_0.1,Ridge Linear Regression,50,direct,0.2407,0.1881,0.1165,0.0945,0.043,0.5757,0.6671,0.5193,0.7158,0.3048,0.8266,0.4276,0.2628,Ridge alpha=0.1
+hek293,ridge_alpha_1.0,Ridge Linear Regression,50,direct,0.2407,0.1881,0.1165,0.0945,0.0431,0.5757,0.6671,0.5188,0.7143,0.3048,0.8253,0.4273,0.2628,Ridge alpha=1.0
+hek293,ridge_alpha_3.0,Ridge Linear Regression,50,direct,0.2409,0.1881,0.1165,0.0945,0.0434,0.5757,0.6672,0.5188,0.7143,0.3048,0.8253,0.4273,0.2628,Ridge alpha=3.0
+hek293,ridge_alpha_10.0,Ridge Linear Regression,50,direct,0.2413,0.1881,0.1165,0.0945,0.0442,0.5756,0.6671,0.5182,0.7119,0.3057,0.8227,0.4278,0.262,Ridge alpha=10.0
+hek293,ridge_alpha_30.0,Ridge Linear Regression,50,direct,0.2422,0.1884,0.1164,0.0944,0.0462,0.5755,0.6672,0.5284,0.6885,0.364,0.764,0.4762,0.2544,Ridge alpha=30.0
+hek293,ridge_alpha_100.0,Ridge Linear Regression,50,direct,0.244,0.1886,0.1161,0.0943,0.0508,0.5754,0.6664,0.5332,0.6827,0.3876,0.7419,0.4945,0.2508,Ridge alpha=100.0
+hek293,ridge_alpha_200.0,Ridge Linear Regression,50,direct,0.2449,0.1891,0.1159,0.0943,0.0542,0.5755,0.6664,0.5273,0.6824,0.3694,0.7536,0.4793,0.2514,Ridge alpha=200.0
+hek293,ridge_alpha_300.0,Ridge Linear Regression,50,direct,0.245,0.1893,0.1158,0.0942,0.0561,0.5756,0.6661,0.5188,0.7072,0.3121,0.8149,0.4331,0.2573,Ridge alpha=300.0
+hek293,ridge_alpha_500.0,Ridge Linear Regression,50,direct,0.2443,0.1894,0.1156,0.0943,0.0578,0.5759,0.6659,0.5204,0.7099,0.3139,0.8162,0.4353,0.2562,Ridge alpha=500.0
+hek293,ridge_alpha_1000.0,Ridge Linear Regression,50,direct,0.2411,0.1886,0.1156,0.0944,0.0579,0.5756,0.6647,0.5247,0.6941,0.3449,0.7823,0.4608,0.251,Ridge alpha=1000.0
+hek293,xgb_tune_1,XGBoost,50,direct,0.2549,0.1867,0.1155,0.0935,0.0602,0.5702,0.6604,0.5209,0.6895,0.3394,0.781,0.4549,0.2467,"XGB tune: depth=3, lr=0.05, n_est=150"
+hek293,xgb_tune_2,XGBoost,50,direct,0.2432,0.1746,0.1163,0.094,0.0467,0.5646,0.657,0.5145,0.7281,0.2803,0.8501,0.4047,0.2596,"XGB tune: depth=4, lr=0.04, n_est=200"
+hek293,xgb_tune_3,XGBoost,50,direct,0.2553,0.1863,0.1155,0.0938,0.06,0.5738,0.662,0.5139,0.7069,0.2985,0.8227,0.4197,0.255,"XGB tune: depth=4, lr=0.03, n_est=250"
+hek293,xgb_tune_4,XGBoost,50,direct,0.2398,0.1783,0.1158,0.0942,0.0547,0.5716,0.6597,0.5252,0.7052,0.333,0.8005,0.4524,0.251,"XGB tune: depth=5, lr=0.03, n_est=200"
+hek293,xgb_tune_5,XGBoost,50,direct,0.2558,0.1917,0.1156,0.0936,0.0588,0.575,0.6631,0.5134,0.7156,0.2884,0.8357,0.4112,0.2538,"XGB tune: depth=3, lr=0.03, n_est=300"
+hek293,xgb_tune_6,XGBoost,50,direct,0.254,0.1918,0.1154,0.0936,0.0614,0.577,0.6618,0.5413,0.6743,0.4277,0.704,0.5234,0.2407,"XGB tune: depth=6, lr=0.025, n_est=200"
+hek293,rf_tune_1,Random Forest,50,direct,0.2606,0.1894,0.115,0.0933,0.0677,0.5745,0.6615,0.5461,0.654,0.4868,0.631,0.5582,0.2321,"RF tune: n_est=200, depth=10, feat=0.3"
+hek293,rf_tune_2,Random Forest,50,direct,0.2642,0.1937,0.1149,0.0933,0.0691,0.5749,0.664,0.5348,0.6559,0.4422,0.6675,0.5283,0.2354,"RF tune: n_est=250, depth=12, feat=0.3"
+hek293,rf_tune_3,Random Forest,50,direct,0.2642,0.2,0.1149,0.0935,0.0697,0.5798,0.6652,0.5525,0.6658,0.4823,0.6532,0.5594,0.2347,"RF tune: n_est=250, depth=14, feat=sqrt"
+hek293,rf_tune_4,Random Forest,50,direct,0.2646,0.1972,0.1149,0.0935,0.0699,0.5776,0.6653,0.5177,0.7052,0.3112,0.8136,0.4318,0.25,"RF tune: n_est=300, depth=12, feat=0.25"
+hek293,rf_tune_5,Random Forest,50,direct,0.2693,0.1972,0.1149,0.0934,0.0699,0.5785,0.6666,0.5316,0.6657,0.4113,0.704,0.5084,0.2423,"RF tune: n_est=250, depth=16, feat=0.35"
+hek293,svr_tune_1,SVM,50,direct,0.2152,0.1694,0.1228,0.0996,-0.062,0.5614,0.657,0.5198,0.67,0.364,0.7432,0.4717,0.2678,"SVR tune: kernel=rbf, C=1.0, eps=0.05"
+hek293,svr_tune_2,SVM,50,direct,0.2118,0.1696,0.1239,0.1005,-0.081,0.5608,0.6547,0.5295,0.6545,0.4258,0.678,0.516,0.2589,"SVR tune: kernel=rbf, C=1.5, eps=0.05"
+hek293,svr_tune_3,SVM,50,direct,0.2311,0.1752,0.1201,0.097,-0.0166,0.5675,0.6542,0.5284,0.6642,0.4031,0.708,0.5017,0.2526,"SVR tune: kernel=rbf, C=2.0, eps=0.08"
+hek293,svr_tune_4,SVM,50,direct,0.2296,0.1692,0.121,0.0968,-0.0316,0.5615,0.6502,0.5123,0.676,0.3303,0.7731,0.4438,0.2565,"SVR tune: kernel=rbf, C=2.5, eps=0.06"
+hek293,svr_tune_5,SVM,50,direct,0.2062,0.1662,0.125,0.1012,-0.1013,0.5581,0.6493,0.5091,0.6661,0.3339,0.7601,0.4448,0.2762,"SVR tune: kernel=rbf, C=3.0, eps=0.05"
+hek293,svr_tune_6,SVM,50,direct,0.1293,0.1041,0.1424,0.1135,-0.4293,0.55,0.6378,0.5809,0.6138,0.778,0.2986,0.6862,0.1739,"SVR tune: kernel=linear, C=0.5, eps=0.05"
+hek293,ensemble_simple_mean,Ensemble (Simple Mean),50,direct,0.2771,0.208,0.1146,0.0932,0.0743,0.5831,0.6698,0.5563,0.6607,0.5068,0.6271,0.5736,0.2356,"Equal weight (0.25 each) across Ridge, RF, XGB, SVR"
+hek293,ensemble_optimal_weighted,Ensemble (Optimal Weighted),50,direct,0.2843,0.2119,0.1142,0.0931,0.0804,0.585,0.672,0.5557,0.6559,0.5168,0.6115,0.5781,0.2347,"Weights: Ridge=0.346, RF=0.542, XGB=0.000, SVR=0.112"
+hl60,feat_k_50,Ridge (screening),50,none,0.3326,0.3391,0.1063,0.0828,0.1042,0.7794,0.8724,0.7536,0.8431,0.8024,0.6341,0.8223,0.2156,Feature selection evaluation k=50
+hl60,feat_k_75,Ridge (screening),75,none,0.3547,0.3583,0.1056,0.0823,0.1163,0.7933,0.8869,0.7614,0.8556,0.799,0.6694,0.8263,0.2145,Feature selection evaluation k=75
+hl60,feat_k_100,Ridge (screening),100,none,0.367,0.3747,0.1053,0.082,0.1207,0.8005,0.892,0.7687,0.8597,0.8058,0.6778,0.8319,0.2115,Feature selection evaluation k=100
+hl60,feat_k_150,Ridge (screening),150,none,0.3594,0.3645,0.1063,0.0825,0.1042,0.7917,0.8853,0.7259,0.8755,0.7159,0.7505,0.7877,0.2237,Feature selection evaluation k=150
+hl60,feat_k_200,Ridge (screening),200,none,0.359,0.3603,0.1068,0.0829,0.0954,0.7823,0.8781,0.753,0.8492,0.793,0.6549,0.8202,0.2092,Feature selection evaluation k=200
+hl60,feat_k_300,Ridge (screening),300,none,0.3469,0.3496,0.1082,0.0837,0.0725,0.7787,0.8759,0.7428,0.8554,0.7676,0.6819,0.8091,0.2124,Feature selection evaluation k=300
+hl60,feat_k_all,Ridge (screening),593,none,0.3302,0.3319,0.1109,0.086,0.0253,0.764,0.8684,0.7289,0.8481,0.7532,0.6694,0.7978,0.2117,Feature selection evaluation k=all
+hl60,feat_ext_k_100,Ridge (screening),100,none,0.3659,0.3736,0.1053,0.0819,0.1201,0.8004,0.8925,0.7687,0.8597,0.8058,0.6778,0.8319,0.2119,Extended biological features k=100
+hl60,feat_ext_k_150,Ridge (screening),150,none,0.3595,0.364,0.1063,0.0825,0.1044,0.7912,0.8852,0.7271,0.8735,0.7201,0.7443,0.7894,0.2234,Extended biological features k=150
+hl60,feat_ext_k_200,Ridge (screening),200,none,0.3611,0.3629,0.1066,0.0827,0.0983,0.7851,0.8796,0.7524,0.8536,0.7863,0.6694,0.8185,0.2109,Extended biological features k=200
+hl60,feat_ext_k_all,Ridge (screening),600,none,0.3311,0.3328,0.1109,0.0858,0.0252,0.7643,0.8687,0.7319,0.8489,0.7574,0.6694,0.8005,0.2117,Extended biological features k=all
+hl60,target_direct_clip_True,Ridge (target test),100,direct,0.367,0.3747,0.1053,0.082,0.1207,0.8005,0.892,0.7687,0.8597,0.8058,0.6778,0.8319,0.2115,"Target test mode=direct, clip=True"
+hl60,target_direct_clip_False,Ridge (target test),100,direct,0.367,0.3747,0.1053,0.082,0.1207,0.8005,0.892,0.7687,0.8597,0.8058,0.6778,0.8319,0.2115,"Target test mode=direct, clip=False"
+hl60,target_logit_clip_True,Ridge (target test),100,logit,0.3682,0.378,0.1071,0.0817,0.091,0.799,0.8937,0.7175,0.8842,0.693,0.7775,0.777,0.2047,"Target test mode=logit, clip=True"
+hl60,target_logit_clip_False,Ridge (target test),100,logit,0.3682,0.378,0.1071,0.0817,0.091,0.799,0.8937,0.7175,0.8842,0.693,0.7775,0.777,0.2047,"Target test mode=logit, clip=False"
+hl60,ridge_alpha_0.1,Ridge Linear Regression,100,direct,0.3605,0.365,0.1063,0.0828,0.1044,0.7941,0.8899,0.7548,0.8628,0.7786,0.6965,0.8185,0.2147,Ridge alpha=0.1
+hl60,ridge_alpha_1.0,Ridge Linear Regression,100,direct,0.3607,0.3651,0.1063,0.0828,0.1047,0.7942,0.8899,0.7554,0.8629,0.7795,0.6965,0.8191,0.2146,Ridge alpha=1.0
+hl60,ridge_alpha_3.0,Ridge Linear Regression,100,direct,0.3609,0.3655,0.1062,0.0828,0.1054,0.7944,0.8901,0.7675,0.855,0.81,0.6632,0.8319,0.2092,Ridge alpha=3.0
+hl60,ridge_alpha_10.0,Ridge Linear Regression,100,direct,0.3617,0.3667,0.1061,0.0827,0.1074,0.7951,0.8902,0.7554,0.8629,0.7795,0.6965,0.8191,0.2151,Ridge alpha=10.0
+hl60,ridge_alpha_30.0,Ridge Linear Regression,100,direct,0.3634,0.3693,0.1059,0.0825,0.1116,0.7966,0.8907,0.7639,0.8594,0.7981,0.6798,0.8276,0.2121,Ridge alpha=30.0
+hl60,ridge_alpha_100.0,Ridge Linear Regression,100,direct,0.367,0.3747,0.1053,0.082,0.1207,0.8005,0.892,0.7687,0.8597,0.8058,0.6778,0.8319,0.2115,Ridge alpha=100.0
+hl60,ridge_alpha_200.0,Ridge Linear Regression,100,direct,0.3702,0.3791,0.1049,0.0815,0.1283,0.8037,0.8931,0.7747,0.8591,0.8168,0.6715,0.8374,0.2108,Ridge alpha=200.0
+hl60,ridge_alpha_300.0,Ridge Linear Regression,100,direct,0.3721,0.3818,0.1046,0.0813,0.1329,0.8057,0.894,0.7386,0.8836,0.7277,0.7651,0.7981,0.2249,Ridge alpha=300.0
+hl60,ridge_alpha_500.0,Ridge Linear Regression,100,direct,0.3743,0.3846,0.1043,0.081,0.138,0.8077,0.8942,0.7482,0.8809,0.7464,0.7526,0.8081,0.2228,Ridge alpha=500.0
+hl60,ridge_alpha_1000.0,Ridge Linear Regression,100,direct,0.3753,0.3848,0.1041,0.0808,0.1409,0.8081,0.893,0.741,0.8946,0.7201,0.7921,0.7979,0.2274,Ridge alpha=1000.0
+hl60,xgb_tune_1,XGBoost,100,direct,0.3613,0.3652,0.1048,0.0813,0.1293,0.7946,0.894,0.7386,0.8656,0.7481,0.7152,0.8025,0.222,"XGB tune: depth=3, lr=0.05, n_est=150"
+hl60,xgb_tune_2,XGBoost,100,direct,0.3615,0.3661,0.105,0.0817,0.1262,0.7945,0.8916,0.7476,0.8598,0.7701,0.6923,0.8125,0.2168,"XGB tune: depth=4, lr=0.04, n_est=200"
+hl60,xgb_tune_3,XGBoost,100,direct,0.3584,0.3645,0.105,0.0817,0.1261,0.7942,0.8929,0.7241,0.8736,0.715,0.7464,0.7864,0.2244,"XGB tune: depth=4, lr=0.03, n_est=250"
+hl60,xgb_tune_4,XGBoost,100,direct,0.354,0.3592,0.1051,0.0817,0.1247,0.7929,0.889,0.7259,0.874,0.7176,0.7464,0.7881,0.2244,"XGB tune: depth=5, lr=0.03, n_est=200"
+hl60,xgb_tune_5,XGBoost,100,direct,0.3586,0.3632,0.105,0.0818,0.1256,0.7942,0.894,0.7241,0.872,0.7167,0.7422,0.7868,0.2243,"XGB tune: depth=3, lr=0.03, n_est=300"
+hl60,xgb_tune_6,XGBoost,100,direct,0.3626,0.3682,0.1047,0.0814,0.1309,0.7998,0.8939,0.7542,0.8599,0.7812,0.6881,0.8187,0.2166,"XGB tune: depth=6, lr=0.025, n_est=200"
+hl60,rf_tune_1,Random Forest,100,direct,0.3602,0.3742,0.1049,0.0814,0.1283,0.7972,0.8884,0.7422,0.8774,0.7405,0.7464,0.8031,0.227,"RF tune: n_est=200, depth=10, feat=0.3"
+hl60,rf_tune_2,Random Forest,100,direct,0.3549,0.3664,0.105,0.0816,0.1253,0.7932,0.8905,0.7627,0.8533,0.8041,0.6611,0.8279,0.2198,"RF tune: n_est=250, depth=12, feat=0.3"
+hl60,rf_tune_3,Random Forest,100,direct,0.3563,0.364,0.1051,0.0817,0.1245,0.7939,0.8876,0.7602,0.8606,0.7905,0.6861,0.824,0.2231,"RF tune: n_est=250, depth=14, feat=sqrt"
+hl60,rf_tune_4,Random Forest,100,direct,0.364,0.3758,0.1047,0.0814,0.1309,0.798,0.8907,0.7512,0.8593,0.7769,0.6881,0.816,0.2219,"RF tune: n_est=300, depth=12, feat=0.25"
+hl60,rf_tune_5,Random Forest,100,direct,0.3555,0.3734,0.105,0.0817,0.1255,0.7944,0.8875,0.7434,0.8617,0.7608,0.7006,0.8081,0.2235,"RF tune: n_est=250, depth=16, feat=0.35"
+hl60,svr_tune_1,SVM,100,direct,0.3473,0.3583,0.1082,0.0854,0.0711,0.777,0.8871,0.6958,0.8804,0.6616,0.7796,0.7554,0.2317,"SVR tune: kernel=rbf, C=1.0, eps=0.05"
+hl60,svr_tune_2,SVM,100,direct,0.3463,0.3572,0.1084,0.0854,0.0687,0.777,0.8868,0.6976,0.8808,0.6641,0.7796,0.7573,0.231,"SVR tune: kernel=rbf, C=1.5, eps=0.05"
+hl60,svr_tune_3,SVM,100,direct,0.3407,0.3502,0.1103,0.0873,0.0362,0.7674,0.8811,0.7259,0.8494,0.7464,0.6757,0.7946,0.2188,"SVR tune: kernel=rbf, C=2.0, eps=0.08"
+hl60,svr_tune_4,SVM,100,direct,0.329,0.3328,0.1117,0.0886,0.0107,0.7555,0.8754,0.6687,0.8619,0.6353,0.7505,0.7314,0.232,"SVR tune: kernel=rbf, C=2.5, eps=0.06"
+hl60,svr_tune_5,SVM,100,direct,0.3459,0.357,0.1084,0.0855,0.0679,0.777,0.8868,0.6982,0.8818,0.6641,0.7817,0.7576,0.2309,"SVR tune: kernel=rbf, C=3.0, eps=0.05"
+hl60,svr_tune_6,SVM,100,direct,0.1366,0.1429,0.1474,0.1166,-0.7229,0.6045,0.77,0.653,0.7647,0.7388,0.4428,0.7515,0.175,"SVR tune: kernel=linear, C=0.5, eps=0.05"
+hl60,ensemble_simple_mean,Ensemble (Simple Mean),100,direct,0.3862,0.395,0.1036,0.0808,0.1488,0.8134,0.9027,0.7301,0.896,0.7014,0.8004,0.7869,0.2291,"Equal weight (0.25 each) across Ridge, RF, XGB, SVR"
+hl60,ensemble_optimal_weighted,Ensemble (Optimal Weighted),100,direct,0.3898,0.3992,0.1035,0.0806,0.1514,0.8157,0.9026,0.7711,0.8794,0.7854,0.736,0.8297,0.2216,"Weights: Ridge=0.491, RF=0.300, XGB=0.000, SVR=0.209"

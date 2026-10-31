@@ -1,0 +1,64 @@
+{
+  "report_name": "CRISPR Guide AI Split Integrity and Leakage Audit",
+  "verification_timestamp": "2026-10-31T15:20:00Z",
+  "protocol": "80/20 Stratified Partitioning (Random Seed 42)",
+  "audit_passed": true,
+  "datasets": [
+    {
+      "dataset_key": "hela",
+      "cell_line": "HeLa",
+      "total_records": 8101,
+      "development_pool_N": 6480,
+      "development_percentage": 79.99,
+      "historical_holdout_N": 1621,
+      "historical_holdout_percentage": 20.01,
+      "sequence_overlap_count": 0,
+      "leak_free_confirmed": true,
+      "dev_positive_prevalence": 0.6247,
+      "holdout_positive_prevalence": 0.6243,
+      "stratification_preserved": true
+    },
+    {
+      "dataset_key": "hct116",
+      "cell_line": "HCT116",
+      "total_records": 4239,
+      "development_pool_N": 3391,
+      "development_percentage": 80.0,
+      "historical_holdout_N": 848,
+      "historical_holdout_percentage": 20.0,
+      "sequence_overlap_count": 0,
+      "leak_free_confirmed": true,
+      "dev_positive_prevalence": 0.6411,
+      "holdout_positive_prevalence": 0.6415,
+      "stratification_preserved": true
+    },
+    {
+      "dataset_key": "hek293",
+      "cell_line": "HEK293T",
+      "total_records": 2333,
+      "development_pool_N": 1866,
+      "development_percentage": 79.98,
+      "historical_holdout_N": 467,
+      "historical_holdout_percentage": 20.02,
+      "sequence_overlap_count": 0,
+      "leak_free_confirmed": true,
+      "dev_positive_prevalence": 0.589,
+      "holdout_positive_prevalence": 0.5889,
+      "stratification_preserved": true
+    },
+    {
+      "dataset_key": "hl60",
+      "cell_line": "HL60",
+      "total_records": 2076,
+      "development_pool_N": 1660,
+      "development_percentage": 79.96,
+      "historical_holdout_N": 416,
+      "historical_holdout_percentage": 20.04,
+      "sequence_overlap_count": 0,
+      "leak_free_confirmed": true,
+      "dev_positive_prevalence": 0.7102,
+      "holdout_positive_prevalence": 0.7091,
+      "stratification_preserved": true
+    }
+  ]
+}

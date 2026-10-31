@@ -1,0 +1,7 @@
+{
+  "Logistic Regression": 0.7049,
+  "Random Forest Classifier": 0.6989,
+  "XGBoost Classifier": 0.6927,
+  "Support Vector Classifier (SVC)": 0.622,
+  "Ridge Classifier": 0.5876
+}

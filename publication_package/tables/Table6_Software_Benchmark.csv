@@ -1,0 +1,11 @@
+pipeline_component,modality_or_model,median_latency_ms,p95_latency_ms,throughput_guides_per_sec,notes
+Feature Extraction (600 features),Single Sequence,0.55,0.71,1817.4,Extracts full 600 nucleotide and structural features
+"Feature Extraction (Batch 1,000)",Batch Array,0.55,N/A,1820.5,Vectorized numpy array construction
+Estimator Alone (Ridge),Pre-computed Features,0.09,0.15,10770.1,Linear matrix dot product
+Estimator Alone (Random Forest),Pre-computed Features,35.98,52.12,27.8,Standard scikit-learn C-optimized ensemble inference
+Estimator Alone (XGBoost),Pre-computed Features,0.38,0.92,2605.9,Compiled gradient-boosted decision trees
+Estimator Alone (SVM),Pre-computed Features,0.74,1.54,1354.5,Support vector dual coefficient evaluation
+Uncertainty Dispersion,100 Trees in RF,22.96,34.0,43.6,Sequential Python traversal over individual tree estimators
+End-to-End Single (Ridge),predict_single,0.96,2.51,1042.9,Raw sequence -> featurization -> Ridge prediction -> formatting
+End-to-End Single (Ensemble),predict_single,85.92,124.06,11.6,Raw sequence -> featurization -> 4 models -> ensemble -> dispersion loop
+REST API Round-trip,FastAPI Client,9.58,12.73,104.3,"HTTP JSON request, Pydantic validation, serialization"

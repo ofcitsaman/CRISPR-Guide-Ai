@@ -1,0 +1,21 @@
+dataset_key,cell_line,model_name,cv_protocol,cv_pearson_mean,cv_pearson_std,cv_spearman_mean,cv_spearman_std,cv_r2_mean,cv_r2_std,cv_mae_mean,cv_mae_std,cv_rmse_mean,cv_rmse_std
+hela,HeLa,Ridge Linear Regression,100-Fold Stratified Cross-Validation,0.3652,0.0963,0.356,0.101,0.1205,0.0809,0.1352,0.0124,0.1698,0.0154
+hela,HeLa,Random Forest,100-Fold Stratified Cross-Validation,0.353,0.0962,0.346,0.1039,0.1127,0.0678,0.1364,0.0125,0.1707,0.0156
+hela,HeLa,XGBoost,100-Fold Stratified Cross-Validation,0.3633,0.092,0.353,0.0999,0.1147,0.0562,0.1368,0.0121,0.1706,0.0154
+hela,HeLa,SVM,100-Fold Stratified Cross-Validation,0.2874,0.1044,0.2874,0.1039,-0.0013,0.1318,0.1443,0.0132,0.1808,0.0155
+hela,HeLa,Weighted Ensemble,100-Fold Stratified Cross-Validation,0.3763,0.0927,0.3672,0.0975,0.1276,0.0651,0.1353,0.0122,0.1693,0.0153
+hct116,HCT116,Ridge Linear Regression,100-Fold Stratified Cross-Validation,0.3864,0.1423,0.3783,0.1482,0.1147,0.1673,0.1261,0.0163,0.1572,0.0206
+hct116,HCT116,Random Forest,100-Fold Stratified Cross-Validation,0.363,0.1571,0.3545,0.1618,0.0961,0.1207,0.1288,0.0167,0.1594,0.021
+hct116,HCT116,XGBoost,100-Fold Stratified Cross-Validation,0.3655,0.1517,0.3615,0.1584,0.0982,0.1188,0.1285,0.0167,0.1592,0.0213
+hct116,HCT116,SVM,100-Fold Stratified Cross-Validation,0.3727,0.1386,0.3616,0.1454,0.0836,0.1878,0.1285,0.0172,0.1595,0.0207
+hct116,HCT116,Weighted Ensemble,100-Fold Stratified Cross-Validation,0.4019,0.1427,0.3949,0.148,0.127,0.1386,0.126,0.0164,0.1564,0.0206
+hek293,HEK293T,Ridge Linear Regression,100-Fold Stratified Cross-Validation,0.218,0.2521,0.1665,0.2322,-0.0053,0.2154,0.0951,0.0171,0.1151,0.0189
+hek293,HEK293T,Random Forest,100-Fold Stratified Cross-Validation,0.246,0.2916,0.1753,0.2526,0.01,0.2998,0.0938,0.0173,0.1136,0.0197
+hek293,HEK293T,XGBoost,100-Fold Stratified Cross-Validation,0.2469,0.2956,0.1915,0.2582,0.0246,0.2168,0.0937,0.017,0.1134,0.019
+hek293,HEK293T,SVM,100-Fold Stratified Cross-Validation,0.1955,0.2586,0.1388,0.234,-0.1124,0.4247,0.0989,0.0182,0.1195,0.0204
+hek293,HEK293T,Weighted Ensemble,100-Fold Stratified Cross-Validation,0.2562,0.2805,0.187,0.2476,0.0203,0.2637,0.0937,0.0172,0.1133,0.0191
+hl60,HL60,Ridge Linear Regression,100-Fold Stratified Cross-Validation,0.3874,0.208,0.3791,0.2155,0.0979,0.1723,0.0805,0.0149,0.1021,0.0197
+hl60,HL60,Random Forest,100-Fold Stratified Cross-Validation,0.3622,0.2214,0.3507,0.2312,0.0792,0.1649,0.0819,0.0148,0.1033,0.02
+hl60,HL60,XGBoost,100-Fold Stratified Cross-Validation,0.3812,0.2155,0.3657,0.2256,0.0926,0.1476,0.0815,0.0151,0.1028,0.0206
+hl60,HL60,SVM,100-Fold Stratified Cross-Validation,0.3451,0.2228,0.3517,0.2299,-0.0368,0.3125,0.0862,0.0156,0.1079,0.0201
+hl60,HL60,Weighted Ensemble,100-Fold Stratified Cross-Validation,0.3975,0.2122,0.3982,0.2205,0.1026,0.1747,0.0807,0.0147,0.1018,0.0196

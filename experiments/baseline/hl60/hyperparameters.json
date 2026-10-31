@@ -1,0 +1,64 @@
+{
+  "cell_line": "hl60",
+  "display_name": "HL60",
+  "tuning_results": {
+    "feature_selection": {
+      "selected_k": 100,
+      "evaluation_scores": {
+        "all": 0.323203980922699,
+        "300": 0.3341097831726074,
+        "200": 0.34869247674942017,
+        "100": 0.3649810552597046
+      }
+    },
+    "target_transformation": {
+      "selected_mode": "direct",
+      "evaluation_scores": {
+        "direct": 0.323203980922699,
+        "logit": 0.31189772486686707
+      }
+    },
+    "models": {
+      "Ridge Linear Regression": {
+        "alpha": 300.0,
+        "tuning_scores": {
+          "0.01": 0.3219907879829407,
+          "0.1": 0.322002112865448,
+          "1.0": 0.322113037109375,
+          "3.0": 0.32235828042030334,
+          "10.0": 0.323203980922699,
+          "30.0": 0.3255178928375244,
+          "100.0": 0.33261117339134216,
+          "300.0": 0.34709078073501587
+        }
+      },
+      "Random Forest": {
+        "n_estimators": 150,
+        "max_depth": 14,
+        "max_features": 0.3,
+        "min_samples_leaf": 1
+      },
+      "XGBoost": {
+        "n_estimators": 150,
+        "max_depth": 3,
+        "learning_rate": 0.06,
+        "subsample": 0.8,
+        "colsample_bytree": 0.7,
+        "reg_alpha": 0.1,
+        "reg_lambda": 1.0
+      },
+      "SVM": {
+        "kernel": "rbf",
+        "C": 1.0,
+        "epsilon": 0.05,
+        "gamma": "scale"
+      }
+    }
+  },
+  "frozen_thresholds": {
+    "Ridge Linear Regression": 0.2147,
+    "Random Forest": 0.2292,
+    "XGBoost": 0.2173,
+    "SVM": 0.2299
+  }
+}

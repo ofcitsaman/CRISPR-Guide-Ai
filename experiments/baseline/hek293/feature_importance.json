@@ -1,0 +1,730 @@
+{
+  "Ridge Linear Regression": [
+    {
+      "feature": "pos_4_A",
+      "importance": 0.012556,
+      "normalized_importance": 0.0398,
+      "rank": 1
+    },
+    {
+      "feature": "pos_4_T",
+      "importance": 0.010519,
+      "normalized_importance": 0.0334,
+      "rank": 2
+    },
+    {
+      "feature": "pos_14_A",
+      "importance": 0.008446,
+      "normalized_importance": 0.0268,
+      "rank": 3
+    },
+    {
+      "feature": "pos_6_G",
+      "importance": 0.00732,
+      "normalized_importance": 0.0232,
+      "rank": 4
+    },
+    {
+      "feature": "pos_10_T",
+      "importance": 0.00688,
+      "normalized_importance": 0.0218,
+      "rank": 5
+    },
+    {
+      "feature": "pos_9_G",
+      "importance": 0.006603,
+      "normalized_importance": 0.021,
+      "rank": 6
+    },
+    {
+      "feature": "pos_3_T",
+      "importance": 0.006335,
+      "normalized_importance": 0.0201,
+      "rank": 7
+    },
+    {
+      "feature": "pos_4_C",
+      "importance": 0.006313,
+      "normalized_importance": 0.02,
+      "rank": 8
+    },
+    {
+      "feature": "pos_1_T",
+      "importance": 0.006184,
+      "normalized_importance": 0.0196,
+      "rank": 9
+    },
+    {
+      "feature": "pos_5_T",
+      "importance": 0.006086,
+      "normalized_importance": 0.0193,
+      "rank": 10
+    },
+    {
+      "feature": "pos_12_G",
+      "importance": 0.006007,
+      "normalized_importance": 0.0191,
+      "rank": 11
+    },
+    {
+      "feature": "pos_16_A",
+      "importance": 0.005923,
+      "normalized_importance": 0.0188,
+      "rank": 12
+    },
+    {
+      "feature": "pos_13_C",
+      "importance": 0.005827,
+      "normalized_importance": 0.0185,
+      "rank": 13
+    },
+    {
+      "feature": "pos_16_G",
+      "importance": 0.005766,
+      "normalized_importance": 0.0183,
+      "rank": 14
+    },
+    {
+      "feature": "pos_6_A",
+      "importance": 0.005646,
+      "normalized_importance": 0.0179,
+      "rank": 15
+    },
+    {
+      "feature": "pos_14_G",
+      "importance": 0.00564,
+      "normalized_importance": 0.0179,
+      "rank": 16
+    },
+    {
+      "feature": "pos_10_C",
+      "importance": 0.005468,
+      "normalized_importance": 0.0174,
+      "rank": 17
+    },
+    {
+      "feature": "pos_17_T",
+      "importance": 0.005452,
+      "normalized_importance": 0.0173,
+      "rank": 18
+    },
+    {
+      "feature": "pos_2_T",
+      "importance": 0.005397,
+      "normalized_importance": 0.0171,
+      "rank": 19
+    },
+    {
+      "feature": "pos_9_T",
+      "importance": 0.005224,
+      "normalized_importance": 0.0166,
+      "rank": 20
+    },
+    {
+      "feature": "pam_is_NGG",
+      "importance": 0.005115,
+      "normalized_importance": 0.0162,
+      "rank": 21
+    },
+    {
+      "feature": "cleavage_flank_gc",
+      "importance": 0.004928,
+      "normalized_importance": 0.0156,
+      "rank": 22
+    },
+    {
+      "feature": "pos_17_G",
+      "importance": 0.004818,
+      "normalized_importance": 0.0153,
+      "rank": 23
+    },
+    {
+      "feature": "seed_gc",
+      "importance": 0.004782,
+      "normalized_importance": 0.0152,
+      "rank": 24
+    },
+    {
+      "feature": "seq_length",
+      "importance": 0.004768,
+      "normalized_importance": 0.0151,
+      "rank": 25
+    },
+    {
+      "feature": "count_G",
+      "importance": 0.004768,
+      "normalized_importance": 0.0151,
+      "rank": 26
+    },
+    {
+      "feature": "pos_1_G",
+      "importance": 0.00458,
+      "normalized_importance": 0.0145,
+      "rank": 27
+    },
+    {
+      "feature": "distal_gc",
+      "importance": 0.004447,
+      "normalized_importance": 0.0141,
+      "rank": 28
+    },
+    {
+      "feature": "pos_2_G",
+      "importance": 0.004426,
+      "normalized_importance": 0.014,
+      "rank": 29
+    },
+    {
+      "feature": "pos_14_C",
+      "importance": 0.00435,
+      "normalized_importance": 0.0138,
+      "rank": 30
+    }
+  ],
+  "Random Forest": [
+    {
+      "feature": "pos_10_T",
+      "importance": 0.027879,
+      "normalized_importance": 0.0279,
+      "rank": 1
+    },
+    {
+      "feature": "pct_C",
+      "importance": 0.023543,
+      "normalized_importance": 0.0235,
+      "rank": 2
+    },
+    {
+      "feature": "pos_8_C",
+      "importance": 0.023431,
+      "normalized_importance": 0.0234,
+      "rank": 3
+    },
+    {
+      "feature": "pct_G",
+      "importance": 0.019777,
+      "normalized_importance": 0.0198,
+      "rank": 4
+    },
+    {
+      "feature": "seq_length",
+      "importance": 0.019315,
+      "normalized_importance": 0.0193,
+      "rank": 5
+    },
+    {
+      "feature": "pos_16_C",
+      "importance": 0.019081,
+      "normalized_importance": 0.0191,
+      "rank": 6
+    },
+    {
+      "feature": "pos_7_T",
+      "importance": 0.019027,
+      "normalized_importance": 0.019,
+      "rank": 7
+    },
+    {
+      "feature": "count_T",
+      "importance": 0.01881,
+      "normalized_importance": 0.0188,
+      "rank": 8
+    },
+    {
+      "feature": "count_G",
+      "importance": 0.018548,
+      "normalized_importance": 0.0185,
+      "rank": 9
+    },
+    {
+      "feature": "pos_4_A",
+      "importance": 0.018398,
+      "normalized_importance": 0.0184,
+      "rank": 10
+    },
+    {
+      "feature": "count_A",
+      "importance": 0.018142,
+      "normalized_importance": 0.0181,
+      "rank": 11
+    },
+    {
+      "feature": "pos_8_A",
+      "importance": 0.01729,
+      "normalized_importance": 0.0173,
+      "rank": 12
+    },
+    {
+      "feature": "pos_15_A",
+      "importance": 0.017217,
+      "normalized_importance": 0.0172,
+      "rank": 13
+    },
+    {
+      "feature": "pos_17_T",
+      "importance": 0.016837,
+      "normalized_importance": 0.0168,
+      "rank": 14
+    },
+    {
+      "feature": "pos_15_C",
+      "importance": 0.016524,
+      "normalized_importance": 0.0165,
+      "rank": 15
+    },
+    {
+      "feature": "pos_7_C",
+      "importance": 0.015657,
+      "normalized_importance": 0.0157,
+      "rank": 16
+    },
+    {
+      "feature": "pos_8_T",
+      "importance": 0.015215,
+      "normalized_importance": 0.0152,
+      "rank": 17
+    },
+    {
+      "feature": "count_C",
+      "importance": 0.015,
+      "normalized_importance": 0.015,
+      "rank": 18
+    },
+    {
+      "feature": "pos_20_A",
+      "importance": 0.014961,
+      "normalized_importance": 0.015,
+      "rank": 19
+    },
+    {
+      "feature": "pos_18_C",
+      "importance": 0.014895,
+      "normalized_importance": 0.0149,
+      "rank": 20
+    },
+    {
+      "feature": "pos_14_T",
+      "importance": 0.014735,
+      "normalized_importance": 0.0147,
+      "rank": 21
+    },
+    {
+      "feature": "pos_16_A",
+      "importance": 0.014528,
+      "normalized_importance": 0.0145,
+      "rank": 22
+    },
+    {
+      "feature": "pos_20_C",
+      "importance": 0.014442,
+      "normalized_importance": 0.0144,
+      "rank": 23
+    },
+    {
+      "feature": "pos_18_A",
+      "importance": 0.014349,
+      "normalized_importance": 0.0143,
+      "rank": 24
+    },
+    {
+      "feature": "pct_A",
+      "importance": 0.01414,
+      "normalized_importance": 0.0141,
+      "rank": 25
+    },
+    {
+      "feature": "pos_20_G",
+      "importance": 0.013986,
+      "normalized_importance": 0.014,
+      "rank": 26
+    },
+    {
+      "feature": "pos_17_A",
+      "importance": 0.013923,
+      "normalized_importance": 0.0139,
+      "rank": 27
+    },
+    {
+      "feature": "pos_18_G",
+      "importance": 0.013904,
+      "normalized_importance": 0.0139,
+      "rank": 28
+    },
+    {
+      "feature": "pos_17_G",
+      "importance": 0.013766,
+      "normalized_importance": 0.0138,
+      "rank": 29
+    },
+    {
+      "feature": "pos_19_C",
+      "importance": 0.013275,
+      "normalized_importance": 0.0133,
+      "rank": 30
+    }
+  ],
+  "XGBoost": [
+    {
+      "feature": "pos_10_T",
+      "importance": 0.027687,
+      "normalized_importance": 0.0277,
+      "rank": 1
+    },
+    {
+      "feature": "pos_4_A",
+      "importance": 0.024832,
+      "normalized_importance": 0.0248,
+      "rank": 2
+    },
+    {
+      "feature": "pos_5_T",
+      "importance": 0.022455,
+      "normalized_importance": 0.0225,
+      "rank": 3
+    },
+    {
+      "feature": "pos_6_G",
+      "importance": 0.017627,
+      "normalized_importance": 0.0176,
+      "rank": 4
+    },
+    {
+      "feature": "pos_11_C",
+      "importance": 0.015603,
+      "normalized_importance": 0.0156,
+      "rank": 5
+    },
+    {
+      "feature": "pos_8_C",
+      "importance": 0.015483,
+      "normalized_importance": 0.0155,
+      "rank": 6
+    },
+    {
+      "feature": "pct_T",
+      "importance": 0.01497,
+      "normalized_importance": 0.015,
+      "rank": 7
+    },
+    {
+      "feature": "pam_base21",
+      "importance": 0.014622,
+      "normalized_importance": 0.0146,
+      "rank": 8
+    },
+    {
+      "feature": "pos_3_T",
+      "importance": 0.014073,
+      "normalized_importance": 0.0141,
+      "rank": 9
+    },
+    {
+      "feature": "pos_4_C",
+      "importance": 0.014012,
+      "normalized_importance": 0.014,
+      "rank": 10
+    },
+    {
+      "feature": "pos_12_C",
+      "importance": 0.013876,
+      "normalized_importance": 0.0139,
+      "rank": 11
+    },
+    {
+      "feature": "pos_4_T",
+      "importance": 0.013284,
+      "normalized_importance": 0.0133,
+      "rank": 12
+    },
+    {
+      "feature": "has_terminator_TTTT",
+      "importance": 0.012862,
+      "normalized_importance": 0.0129,
+      "rank": 13
+    },
+    {
+      "feature": "pos_8_A",
+      "importance": 0.012672,
+      "normalized_importance": 0.0127,
+      "rank": 14
+    },
+    {
+      "feature": "pos_1_T",
+      "importance": 0.012636,
+      "normalized_importance": 0.0126,
+      "rank": 15
+    },
+    {
+      "feature": "pos_7_T",
+      "importance": 0.012186,
+      "normalized_importance": 0.0122,
+      "rank": 16
+    },
+    {
+      "feature": "pos_4_G",
+      "importance": 0.012076,
+      "normalized_importance": 0.0121,
+      "rank": 17
+    },
+    {
+      "feature": "pos_9_G",
+      "importance": 0.011776,
+      "normalized_importance": 0.0118,
+      "rank": 18
+    },
+    {
+      "feature": "pos_16_C",
+      "importance": 0.01176,
+      "normalized_importance": 0.0118,
+      "rank": 19
+    },
+    {
+      "feature": "pos_10_C",
+      "importance": 0.011708,
+      "normalized_importance": 0.0117,
+      "rank": 20
+    },
+    {
+      "feature": "pos_12_G",
+      "importance": 0.011491,
+      "normalized_importance": 0.0115,
+      "rank": 21
+    },
+    {
+      "feature": "pos_6_C",
+      "importance": 0.010984,
+      "normalized_importance": 0.011,
+      "rank": 22
+    },
+    {
+      "feature": "pos_18_T",
+      "importance": 0.010953,
+      "normalized_importance": 0.011,
+      "rank": 23
+    },
+    {
+      "feature": "pos_18_G",
+      "importance": 0.010729,
+      "normalized_importance": 0.0107,
+      "rank": 24
+    },
+    {
+      "feature": "pos_9_T",
+      "importance": 0.010589,
+      "normalized_importance": 0.0106,
+      "rank": 25
+    },
+    {
+      "feature": "pos_11_G",
+      "importance": 0.010559,
+      "normalized_importance": 0.0106,
+      "rank": 26
+    },
+    {
+      "feature": "pos_6_A",
+      "importance": 0.010546,
+      "normalized_importance": 0.0105,
+      "rank": 27
+    },
+    {
+      "feature": "pos_17_T",
+      "importance": 0.010464,
+      "normalized_importance": 0.0105,
+      "rank": 28
+    },
+    {
+      "feature": "pos_14_A",
+      "importance": 0.01045,
+      "normalized_importance": 0.0105,
+      "rank": 29
+    },
+    {
+      "feature": "pos_15_C",
+      "importance": 0.010424,
+      "normalized_importance": 0.0104,
+      "rank": 30
+    }
+  ],
+  "SVM": [
+    {
+      "feature": "pos_15_C",
+      "importance": 0.000902,
+      "normalized_importance": 0.0498,
+      "rank": 1
+    },
+    {
+      "feature": "pos_12_G",
+      "importance": 0.000533,
+      "normalized_importance": 0.0294,
+      "rank": 2
+    },
+    {
+      "feature": "pos_10_T",
+      "importance": 0.000418,
+      "normalized_importance": 0.0231,
+      "rank": 3
+    },
+    {
+      "feature": "pos_6_A",
+      "importance": 0.000394,
+      "normalized_importance": 0.0218,
+      "rank": 4
+    },
+    {
+      "feature": "pos_14_G",
+      "importance": 0.00039,
+      "normalized_importance": 0.0216,
+      "rank": 5
+    },
+    {
+      "feature": "pos_9_G",
+      "importance": 0.000372,
+      "normalized_importance": 0.0206,
+      "rank": 6
+    },
+    {
+      "feature": "pos_17_G",
+      "importance": 0.000362,
+      "normalized_importance": 0.02,
+      "rank": 7
+    },
+    {
+      "feature": "pos_5_T",
+      "importance": 0.000361,
+      "normalized_importance": 0.0199,
+      "rank": 8
+    },
+    {
+      "feature": "pos_18_C",
+      "importance": 0.000349,
+      "normalized_importance": 0.0193,
+      "rank": 9
+    },
+    {
+      "feature": "pos_3_A",
+      "importance": 0.000301,
+      "normalized_importance": 0.0166,
+      "rank": 10
+    },
+    {
+      "feature": "has_terminator_TTTT",
+      "importance": 0.0003,
+      "normalized_importance": 0.0166,
+      "rank": 11
+    },
+    {
+      "feature": "pos_15_A",
+      "importance": 0.000298,
+      "normalized_importance": 0.0165,
+      "rank": 12
+    },
+    {
+      "feature": "pos_10_C",
+      "importance": 0.000294,
+      "normalized_importance": 0.0162,
+      "rank": 13
+    },
+    {
+      "feature": "pos_14_A",
+      "importance": 0.00029,
+      "normalized_importance": 0.016,
+      "rank": 14
+    },
+    {
+      "feature": "pos_17_T",
+      "importance": 0.000281,
+      "normalized_importance": 0.0155,
+      "rank": 15
+    },
+    {
+      "feature": "pos_7_T",
+      "importance": 0.000278,
+      "normalized_importance": 0.0154,
+      "rank": 16
+    },
+    {
+      "feature": "pos_13_T",
+      "importance": 0.000262,
+      "normalized_importance": 0.0145,
+      "rank": 17
+    },
+    {
+      "feature": "pos_19_T",
+      "importance": 0.000261,
+      "normalized_importance": 0.0144,
+      "rank": 18
+    },
+    {
+      "feature": "pos_17_A",
+      "importance": 0.00026,
+      "normalized_importance": 0.0144,
+      "rank": 19
+    },
+    {
+      "feature": "distal_gc",
+      "importance": 0.00026,
+      "normalized_importance": 0.0143,
+      "rank": 20
+    },
+    {
+      "feature": "pos_2_T",
+      "importance": 0.000258,
+      "normalized_importance": 0.0142,
+      "rank": 21
+    },
+    {
+      "feature": "pct_C",
+      "importance": 0.000252,
+      "normalized_importance": 0.0139,
+      "rank": 22
+    },
+    {
+      "feature": "pos_16_G",
+      "importance": 0.000252,
+      "normalized_importance": 0.0139,
+      "rank": 23
+    },
+    {
+      "feature": "pos_14_C",
+      "importance": 0.000247,
+      "normalized_importance": 0.0136,
+      "rank": 24
+    },
+    {
+      "feature": "pos_1_A",
+      "importance": 0.000245,
+      "normalized_importance": 0.0135,
+      "rank": 25
+    },
+    {
+      "feature": "pos_4_C",
+      "importance": 0.000244,
+      "normalized_importance": 0.0135,
+      "rank": 26
+    },
+    {
+      "feature": "pos_3_G",
+      "importance": 0.000233,
+      "normalized_importance": 0.0129,
+      "rank": 27
+    },
+    {
+      "feature": "pos_18_A",
+      "importance": 0.000228,
+      "normalized_importance": 0.0126,
+      "rank": 28
+    },
+    {
+      "feature": "pos_16_C",
+      "importance": 0.000226,
+      "normalized_importance": 0.0125,
+      "rank": 29
+    },
+    {
+      "feature": "pos_10_A",
+      "importance": 0.000221,
+      "normalized_importance": 0.0122,
+      "rank": 30
+    }
+  ]
+}

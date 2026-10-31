@@ -1,0 +1,5 @@
+assigned_label,resolved_biological_identity,total_records_N,development_pool_N,fixed_historical_holdout_N,genomic_distribution_type,assay_type,primary_screening_publication
+HeLa,HeLa (Human Cervical Adenocarcinoma),8101,6480,1621,Genome-wide screen across 23 human chromosomes,Pooled lentiviral CRISPR-Cas9 negative selection essentiality dropout screen,"Hart et al. (Cell 2015, PMID: 26627737)"
+HCT116,HCT116 (Human Colorectal Carcinoma),4239,3391,848,Genome-wide screen across 23 human chromosomes,Pooled lentiviral CRISPR-Cas9 negative selection essentiality dropout screen,"Hart et al. (Cell 2015, PMID: 26627737)"
+HL60,HL60 (Human Acute Promyelocytic Leukemia),2076,1660,416,Genome-wide screen across 23 human chromosomes,Pooled lentiviral CRISPR-Cas9 negative selection essentiality dropout screen,"Wang et al. (Science 2014, PMID: 24336569)"
+A375 (Doench 2016),A375 (Human Melanoma),2333,1866,467,Dense targeted tiling screen across 8 genes (not genome-wide),High-throughput drug-resistance and viability tiling screen across 8 genes,"Doench et al. (Nature Biotechnology 2016, PMID: 26780180)"

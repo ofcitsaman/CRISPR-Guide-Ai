@@ -1,0 +1,190 @@
+{
+  "audit_name": "Controlled Feature Ablation Study",
+  "timestamp": "2026-10-11T19:29:55.204622",
+  "random_seed": 42,
+  "subsets": {
+    "full_600": 600,
+    "baseline_593": 593,
+    "basic_composition_only": 28,
+    "position_specific_only": 444,
+    "kmer_and_gapped_only": 128
+  },
+  "results": {
+    "hela": {
+      "full_600": {
+        "num_features": 600,
+        "cv_pearson_mean": 0.3358,
+        "cv_pearson_std": 0.0223,
+        "cv_roc_auc_mean": 0.7027,
+        "cv_roc_auc_std": 0.0136
+      },
+      "baseline_593": {
+        "num_features": 593,
+        "cv_pearson_mean": 0.3347,
+        "cv_pearson_std": 0.0235,
+        "cv_roc_auc_mean": 0.703,
+        "cv_roc_auc_std": 0.0134
+      },
+      "basic_composition_only": {
+        "num_features": 28,
+        "cv_pearson_mean": 0.1947,
+        "cv_pearson_std": 0.0362,
+        "cv_roc_auc_mean": 0.5996,
+        "cv_roc_auc_std": 0.007
+      },
+      "position_specific_only": {
+        "num_features": 444,
+        "cv_pearson_mean": 0.3299,
+        "cv_pearson_std": 0.0255,
+        "cv_roc_auc_mean": 0.6959,
+        "cv_roc_auc_std": 0.0141
+      },
+      "kmer_and_gapped_only": {
+        "num_features": 128,
+        "cv_pearson_mean": 0.2493,
+        "cv_pearson_std": 0.0357,
+        "cv_roc_auc_mean": 0.6543,
+        "cv_roc_auc_std": 0.0193
+      },
+      "selected_top_100_features": {
+        "num_features": 100,
+        "cv_pearson_mean": 0.3477,
+        "cv_pearson_std": 0.0316,
+        "cv_roc_auc_mean": 0.7081,
+        "cv_roc_auc_std": 0.0122
+      }
+    },
+    "hct116": {
+      "full_600": {
+        "num_features": 600,
+        "cv_pearson_mean": 0.3566,
+        "cv_pearson_std": 0.0313,
+        "cv_roc_auc_mean": 0.6902,
+        "cv_roc_auc_std": 0.0133
+      },
+      "baseline_593": {
+        "num_features": 593,
+        "cv_pearson_mean": 0.3549,
+        "cv_pearson_std": 0.0306,
+        "cv_roc_auc_mean": 0.6898,
+        "cv_roc_auc_std": 0.0139
+      },
+      "basic_composition_only": {
+        "num_features": 28,
+        "cv_pearson_mean": 0.193,
+        "cv_pearson_std": 0.0278,
+        "cv_roc_auc_mean": 0.5923,
+        "cv_roc_auc_std": 0.0131
+      },
+      "position_specific_only": {
+        "num_features": 444,
+        "cv_pearson_mean": 0.3417,
+        "cv_pearson_std": 0.033,
+        "cv_roc_auc_mean": 0.69,
+        "cv_roc_auc_std": 0.0138
+      },
+      "kmer_and_gapped_only": {
+        "num_features": 128,
+        "cv_pearson_mean": 0.2444,
+        "cv_pearson_std": 0.0196,
+        "cv_roc_auc_mean": 0.6443,
+        "cv_roc_auc_std": 0.0097
+      },
+      "selected_top_100_features": {
+        "num_features": 100,
+        "cv_pearson_mean": 0.3677,
+        "cv_pearson_std": 0.0199,
+        "cv_roc_auc_mean": 0.7099,
+        "cv_roc_auc_std": 0.0153
+      }
+    },
+    "hek293": {
+      "full_600": {
+        "num_features": 600,
+        "cv_pearson_mean": 0.1702,
+        "cv_pearson_std": 0.0711,
+        "cv_roc_auc_mean": 0.5226,
+        "cv_roc_auc_std": 0.0074
+      },
+      "baseline_593": {
+        "num_features": 593,
+        "cv_pearson_mean": 0.1648,
+        "cv_pearson_std": 0.0683,
+        "cv_roc_auc_mean": 0.5171,
+        "cv_roc_auc_std": 0.0093
+      },
+      "basic_composition_only": {
+        "num_features": 28,
+        "cv_pearson_mean": 0.1874,
+        "cv_pearson_std": 0.0689,
+        "cv_roc_auc_mean": 0.5514,
+        "cv_roc_auc_std": 0.0188
+      },
+      "position_specific_only": {
+        "num_features": 444,
+        "cv_pearson_mean": 0.1586,
+        "cv_pearson_std": 0.0703,
+        "cv_roc_auc_mean": 0.5147,
+        "cv_roc_auc_std": 0.0099
+      },
+      "kmer_and_gapped_only": {
+        "num_features": 128,
+        "cv_pearson_mean": 0.2213,
+        "cv_pearson_std": 0.0391,
+        "cv_roc_auc_mean": 0.5555,
+        "cv_roc_auc_std": 0.0196
+      },
+      "selected_top_100_features": {
+        "num_features": 100,
+        "cv_pearson_mean": 0.2133,
+        "cv_pearson_std": 0.0521,
+        "cv_roc_auc_mean": 0.5493,
+        "cv_roc_auc_std": 0.0105
+      }
+    },
+    "hl60": {
+      "full_600": {
+        "num_features": 600,
+        "cv_pearson_mean": 0.3332,
+        "cv_pearson_std": 0.052,
+        "cv_roc_auc_mean": 0.7955,
+        "cv_roc_auc_std": 0.0207
+      },
+      "baseline_593": {
+        "num_features": 593,
+        "cv_pearson_mean": 0.3326,
+        "cv_pearson_std": 0.0516,
+        "cv_roc_auc_mean": 0.796,
+        "cv_roc_auc_std": 0.0199
+      },
+      "basic_composition_only": {
+        "num_features": 28,
+        "cv_pearson_mean": 0.2343,
+        "cv_pearson_std": 0.0366,
+        "cv_roc_auc_mean": 0.7149,
+        "cv_roc_auc_std": 0.0165
+      },
+      "position_specific_only": {
+        "num_features": 444,
+        "cv_pearson_mean": 0.3417,
+        "cv_pearson_std": 0.0473,
+        "cv_roc_auc_mean": 0.7868,
+        "cv_roc_auc_std": 0.0184
+      },
+      "kmer_and_gapped_only": {
+        "num_features": 128,
+        "cv_pearson_mean": 0.265,
+        "cv_pearson_std": 0.0172,
+        "cv_roc_auc_mean": 0.7485,
+        "cv_roc_auc_std": 0.0253
+      },
+      "selected_top_100_features": {
+        "num_features": 100,
+        "cv_pearson_mean": 0.3696,
+        "cv_pearson_std": 0.0308,
+        "cv_roc_auc_mean": 0.811,
+        "cv_roc_auc_std": 0.018
+      }
+    }
+  }
+}

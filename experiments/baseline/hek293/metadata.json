@@ -1,0 +1,13 @@
+{
+  "cell_line": "hek293",
+  "display_name": "HEK293",
+  "total_samples": 2333,
+  "unique_sequences": 2333,
+  "positive_labels": 1374,
+  "negative_labels": 959,
+  "development_pool_count": 1866,
+  "final_holdout_count": 467,
+  "cv_folds": 100,
+  "sequence_overlap_count": 0,
+  "random_seed": 42
+}

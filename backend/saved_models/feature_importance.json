@@ -1,0 +1,182 @@
+[
+  {
+    "feature": "pos_18_C",
+    "importance": 0.014796,
+    "rf_importance": 0.052295,
+    "biological_context": "Cleavage site nucleotide preference (cleaves between 17 and 18)"
+  },
+  {
+    "feature": "pos_20_G",
+    "importance": 0.008116,
+    "rf_importance": 0.013789,
+    "biological_context": "PAM-proximal seed base (PAM anchoring & seed unwinding)"
+  },
+  {
+    "feature": "pos_18_G",
+    "importance": 0.006669,
+    "rf_importance": 0.001562,
+    "biological_context": "Cleavage site nucleotide preference (cleaves between 17 and 18)"
+  },
+  {
+    "feature": "pos_18_A",
+    "importance": 0.005952,
+    "rf_importance": 0.000941,
+    "biological_context": "Cleavage site nucleotide preference (cleaves between 17 and 18)"
+  },
+  {
+    "feature": "pos_20_C",
+    "importance": 0.005513,
+    "rf_importance": 0.005617,
+    "biological_context": "PAM-proximal seed base (PAM anchoring & seed unwinding)"
+  },
+  {
+    "feature": "pos_8_CT",
+    "importance": 0.005217,
+    "rf_importance": 0.000749,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "pos_17_AC",
+    "importance": 0.004979,
+    "rf_importance": 0.000739,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "pos_16_GG",
+    "importance": 0.004651,
+    "rf_importance": 0.003788,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "pos_18_AA",
+    "importance": 0.00461,
+    "rf_importance": 0.003719,
+    "biological_context": "Cleavage site nucleotide preference (cleaves between 17 and 18)"
+  },
+  {
+    "feature": "pos_18_GG",
+    "importance": 0.004429,
+    "rf_importance": 0.005678,
+    "biological_context": "Cleavage site nucleotide preference (cleaves between 17 and 18)"
+  },
+  {
+    "feature": "pos_14_G",
+    "importance": 0.004241,
+    "rf_importance": 0.005634,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "pos_19_CC",
+    "importance": 0.004061,
+    "rf_importance": 0.00256,
+    "biological_context": "PAM-proximal seed base (PAM anchoring & seed unwinding)"
+  },
+  {
+    "feature": "pos_14_TA",
+    "importance": 0.004045,
+    "rf_importance": 0.005728,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "pos_15_T",
+    "importance": 0.004039,
+    "rf_importance": 0.001828,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "pos_17_GC",
+    "importance": 0.004025,
+    "rf_importance": 0.000322,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "pos_18_AG",
+    "importance": 0.003994,
+    "rf_importance": 0.001976,
+    "biological_context": "Cleavage site nucleotide preference (cleaves between 17 and 18)"
+  },
+  {
+    "feature": "pos_19_T",
+    "importance": 0.003969,
+    "rf_importance": 0.000823,
+    "biological_context": "PAM-proximal seed base (PAM anchoring & seed unwinding)"
+  },
+  {
+    "feature": "count_TT",
+    "importance": 0.003928,
+    "rf_importance": 0.004979,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "count_TAC",
+    "importance": 0.003785,
+    "rf_importance": 0.004445,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "pos_10_CT",
+    "importance": 0.003768,
+    "rf_importance": 0.000712,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "pos_18_CC",
+    "importance": 0.00375,
+    "rf_importance": 0.000559,
+    "biological_context": "Cleavage site nucleotide preference (cleaves between 17 and 18)"
+  },
+  {
+    "feature": "pos_19_AC",
+    "importance": 0.003746,
+    "rf_importance": 0.001372,
+    "biological_context": "PAM-proximal seed base (PAM anchoring & seed unwinding)"
+  },
+  {
+    "feature": "pos_18_AC",
+    "importance": 0.003682,
+    "rf_importance": 0.002779,
+    "biological_context": "Cleavage site nucleotide preference (cleaves between 17 and 18)"
+  },
+  {
+    "feature": "pos_20_T",
+    "importance": 0.003644,
+    "rf_importance": 0.001694,
+    "biological_context": "PAM-proximal seed base (PAM anchoring & seed unwinding)"
+  },
+  {
+    "feature": "pos_16_TG",
+    "importance": 0.003635,
+    "rf_importance": 0.001793,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "pos_1_G",
+    "importance": 0.003633,
+    "rf_importance": 0.005497,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "pos_14_T",
+    "importance": 0.003605,
+    "rf_importance": 0.003892,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "pos_16_T",
+    "importance": 0.003602,
+    "rf_importance": 0.003017,
+    "biological_context": "Sequence composition & thermodynamics"
+  },
+  {
+    "feature": "pos_19_A",
+    "importance": 0.003594,
+    "rf_importance": 0.003403,
+    "biological_context": "PAM-proximal seed base (PAM anchoring & seed unwinding)"
+  },
+  {
+    "feature": "pos_4_G",
+    "importance": 0.003481,
+    "rf_importance": 0.002312,
+    "biological_context": "Sequence composition & thermodynamics"
+  }
+]

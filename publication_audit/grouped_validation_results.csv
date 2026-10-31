@@ -1,0 +1,9 @@
+dataset_key,cell_line,evaluation_scheme,n_splits,number_of_genomic_clusters,reg_model,reg_pearson_mean,reg_pearson_std,reg_spearman_mean,reg_spearman_std,reg_r2_mean,reg_r2_std,clf_model,clf_roc_auc_mean,clf_roc_auc_std,clf_pr_auc_mean,clf_pr_auc_std
+hela,HeLa,Locus-Grouped CV (Unseen Loci),10,771,Ridge (alpha=100.0),0.3475,0.0434,0.3384,0.0382,0.1086,0.043,Logistic Regression (C=0.1),0.7075,0.0195,0.7814,0.0182
+hela,HeLa,Standard K-Fold CV (Random Loci),10,771,Ridge (alpha=100.0),0.3507,0.0291,0.3408,0.0341,0.1125,0.0281,Logistic Regression (C=0.1),0.7063,0.0264,0.7808,0.0257
+hct116,HCT116,Locus-Grouped CV (Unseen Loci),10,761,Ridge (alpha=100.0),0.36,0.0403,0.3463,0.0326,0.1046,0.0447,Logistic Regression (C=0.1),0.6945,0.0257,0.7857,0.0212
+hct116,HCT116,Standard K-Fold CV (Random Loci),10,761,Ridge (alpha=100.0),0.3562,0.0398,0.3457,0.0477,0.1031,0.0354,Logistic Regression (C=0.1),0.69,0.0329,0.7824,0.0236
+hek293,HEK293T,Locus-Grouped CV (Unseen Loci),5,11,Ridge (alpha=100.0),0.1675,0.041,0.1124,0.058,-0.1507,0.1167,Logistic Regression (C=0.1),0.4962,0.0473,0.5831,0.0636
+hek293,HEK293T,Standard K-Fold CV (Random Loci),5,11,Ridge (alpha=100.0),0.184,0.035,0.1452,0.0312,-0.1,0.0552,Logistic Regression (C=0.1),0.5296,0.0188,0.6248,0.0172
+hl60,HL60,Locus-Grouped CV (Unseen Loci),10,236,Ridge (alpha=100.0),0.347,0.0597,0.353,0.058,0.0373,0.0913,Logistic Regression (C=0.1),0.7909,0.0347,0.8904,0.0294
+hl60,HL60,Standard K-Fold CV (Random Loci),10,236,Ridge (alpha=100.0),0.3373,0.0706,0.355,0.0678,0.0282,0.0955,Logistic Regression (C=0.1),0.7966,0.0323,0.894,0.0274

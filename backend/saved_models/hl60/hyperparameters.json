@@ -1,0 +1,54 @@
+{
+  "cell_line": "hl60",
+  "display_name": "HL60",
+  "selected_features_k": 100,
+  "hyperparameters": {
+    "selected_k": 100,
+    "ridge": {
+      "alpha": 1000.0
+    },
+    "rf": {
+      "n_estimators": 250,
+      "max_depth": 12,
+      "max_features": 0.25,
+      "min_samples_leaf": 3,
+      "min_samples_split": 6
+    },
+    "xgb": {
+      "n_estimators": 200,
+      "max_depth": 6,
+      "learning_rate": 0.025,
+      "subsample": 0.75,
+      "colsample_bytree": 0.6,
+      "min_child_weight": 5,
+      "reg_alpha": 0.5,
+      "reg_lambda": 3.0
+    },
+    "svr": {
+      "kernel": "rbf",
+      "C": 1.0,
+      "epsilon": 0.05,
+      "gamma": "scale"
+    },
+    "ensemble_weights": {
+      "Ridge Linear Regression": 0.4915,
+      "Random Forest": 0.3,
+      "XGBoost": 0.0,
+      "SVM": 0.2085
+    }
+  },
+  "frozen_thresholds": {
+    "Ridge Linear Regression": 0.2292,
+    "Random Forest": 0.2207,
+    "XGBoost": 0.2287,
+    "SVM": 0.2288,
+    "Weighted Ensemble": 0.229
+  },
+  "classifier_thresholds": {
+    "Logistic Regression": 0.7049,
+    "Random Forest Classifier": 0.6989,
+    "XGBoost Classifier": 0.6927,
+    "Support Vector Classifier (SVC)": 0.622,
+    "Ridge Classifier": 0.5876
+  }
+}
