@@ -167,19 +167,9 @@ python experiments/generate_publication_manuscript.py
 
 ---
 
-## Citation
+## Manuscript & Citation
 
-If you use CRISPR Guide AI in your research or applications, please cite:
-
-```bibtex
-@article{crisprguideai2026,
-  title={CRISPR Guide AI: A Cell-Line-Specific Software Framework for Dual-Task Regression and Classification of SpCas9 sgRNA Activity},
-  author={[Author Names Withheld for Blind Peer Review]},
-  journal={BMC Bioinformatics},
-  year={2026},
-  publisher={Springer Nature}
-}
-```
+A manuscript describing the methodology, experimental validation, and software architecture of CRISPR Guide AI is currently in preparation for submission to *BMC Bioinformatics* (Springer Nature). Formal citation details and DOI will be updated upon publication.
 
 ---
 
