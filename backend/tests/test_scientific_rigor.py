@@ -2,7 +2,7 @@
 Automated Scientific Rigor and Methodological Verification Test Suite.
 
 Verifies:
-1. Dataset isolation: Each of the 4 cell lines (HeLa, HCT116, HEK293, HL60) has independent artifacts and models.
+1. Dataset isolation: Each of the 4 cell lines (HeLa, HCT116, A375, HL60) has independent artifacts and models.
 2. Split integrity: Strict zero sequence overlap between 80% development pool and 20% untouched final validation holdout.
 3. 100-fold CV integrity: Exactly 100 stratified folds with zero sequence leakage and fold-specific scaling.
 4. Model set integrity: CNN is completely absent; SVM (SVR), Ridge, Random Forest, and XGBoost are present.

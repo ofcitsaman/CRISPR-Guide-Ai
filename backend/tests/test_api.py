@@ -6,7 +6,7 @@ Tests:
 - /api/batch-predict (dataset selection, ranking)
 - /api/metrics (dataset-specific metrics & ROC curves)
 - /api/model-info (Ridge, Random Forest, XGBoost, SVM/SVR)
-- /api/dataset-info (HeLa, HCT116, HEK293, HL60)
+- /api/dataset-info (HeLa, HCT116, A375, HL60)
 """
 
 import pytest

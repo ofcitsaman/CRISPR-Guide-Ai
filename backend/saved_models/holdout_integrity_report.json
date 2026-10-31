@@ -38,8 +38,8 @@
       "ensemble_weights_source": "development_oof_optimization_only"
     },
     {
-      "dataset": "hek293",
-      "display_name": "HEK293",
+      "dataset": "a375",
+      "display_name": "A375 (Doench 2016)",
       "total_N": 2333,
       "development_N": 1866,
       "holdout_N": 467,
@@ -52,7 +52,8 @@
       "scaler_source": "development_pool_only",
       "feature_selector_source": "development_pool_only",
       "hyperparameter_source": "development_inner_cv_only",
-      "ensemble_weights_source": "development_oof_optimization_only"
+      "ensemble_weights_source": "development_oof_optimization_only",
+      "legacy_alias": "hek293"
     },
     {
       "dataset": "hl60",

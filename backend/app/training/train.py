@@ -1251,7 +1251,7 @@ def generate_training_comparison(all_dataset_results: Dict[str, Any]):
             # Also record Weighted Ensemble
             ens_ho = all_dataset_results[cl]["models"]["Weighted Ensemble"]["final_validation_20"]
             ens_cv = all_dataset_results[cl]["models"]["Weighted Ensemble"]["cv_100_fold"]["mean"]
-            best_base_m = "XGBoost" if cl in ["hela", "hek293"] else "Random Forest"
+            best_base_m = "XGBoost" if cl in ["hela", "a375", "hek293"] else "Random Forest"
             old_best_ho = base_data.get("datasets", {}).get(cl, {}).get("models", {}).get(best_base_m, {}).get("final_validation_20", {})
             
             comparison_report[cl]["Weighted Ensemble"] = {

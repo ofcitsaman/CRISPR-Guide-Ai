@@ -58,7 +58,7 @@
       "actual": 0.2198,
       "predicted": 0.3185,
       "residual": -0.0987,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1767,
@@ -100,7 +100,7 @@
       "actual": 0.1676,
       "predicted": 0.2437,
       "residual": -0.0761,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.3497,
@@ -124,7 +124,7 @@
       "actual": 0.4911,
       "predicted": 0.2067,
       "residual": 0.2844,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.0013,
@@ -136,7 +136,7 @@
       "actual": 0.2913,
       "predicted": 0.2607,
       "residual": 0.0306,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.0958,
@@ -190,7 +190,7 @@
       "actual": 0.0949,
       "predicted": 0.2696,
       "residual": -0.1747,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.3224,
@@ -214,7 +214,7 @@
       "actual": 0.2766,
       "predicted": 0.2625,
       "residual": 0.0141,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.6232,
@@ -232,7 +232,7 @@
       "actual": 0.2441,
       "predicted": 0.2854,
       "residual": -0.0414,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1588,
@@ -268,7 +268,7 @@
       "actual": 0.1652,
       "predicted": 0.2716,
       "residual": -0.1064,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.0261,
@@ -334,13 +334,13 @@
       "actual": 0.2186,
       "predicted": 0.2859,
       "residual": -0.0673,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.523,
       "predicted": 0.2583,
       "residual": 0.2647,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1996,
@@ -364,7 +364,7 @@
       "actual": 0.4359,
       "predicted": 0.2377,
       "residual": 0.1982,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.3954,
@@ -424,7 +424,7 @@
       "actual": 0.4345,
       "predicted": 0.1936,
       "residual": 0.2409,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.3476,
@@ -466,7 +466,7 @@
       "actual": 0.215,
       "predicted": 0.2507,
       "residual": -0.0357,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.5233,
@@ -526,7 +526,7 @@
       "actual": 0.5173,
       "predicted": 0.253,
       "residual": 0.2643,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.0018,
@@ -550,13 +550,13 @@
       "actual": 0.1536,
       "predicted": 0.2978,
       "residual": -0.1441,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1356,
       "predicted": 0.2479,
       "residual": -0.1123,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1414,
@@ -574,13 +574,13 @@
       "actual": 0.2672,
       "predicted": 0.2487,
       "residual": 0.0186,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.4703,
       "predicted": 0.3201,
       "residual": 0.1503,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.2666,
@@ -688,7 +688,7 @@
       "actual": 0.1812,
       "predicted": 0.2809,
       "residual": -0.0997,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1103,
@@ -712,7 +712,7 @@
       "actual": 0.0789,
       "predicted": 0.2123,
       "residual": -0.1334,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.4696,
@@ -754,7 +754,7 @@
       "actual": 0.1242,
       "predicted": 0.3577,
       "residual": -0.2335,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1063,
@@ -856,7 +856,7 @@
       "actual": 0.1903,
       "predicted": 0.271,
       "residual": -0.0806,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.089,
@@ -928,7 +928,7 @@
       "actual": 0.2578,
       "predicted": 0.1924,
       "residual": 0.0654,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.5763,
@@ -1012,7 +1012,7 @@
       "actual": 0.1573,
       "predicted": 0.2249,
       "residual": -0.0676,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.2261,
@@ -1048,13 +1048,13 @@
       "actual": 0.1259,
       "predicted": 0.2279,
       "residual": -0.102,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.0968,
       "predicted": 0.2326,
       "residual": -0.1358,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1566,
@@ -1066,7 +1066,7 @@
       "actual": 0.3145,
       "predicted": 0.3328,
       "residual": -0.0182,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.4289,
@@ -1096,13 +1096,13 @@
       "actual": 0.2198,
       "predicted": 0.304,
       "residual": -0.0841,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.2448,
       "predicted": 0.212,
       "residual": 0.0328,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.4336,
@@ -1138,7 +1138,7 @@
       "actual": 0.4661,
       "predicted": 0.3304,
       "residual": 0.1357,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.2578,
@@ -1198,7 +1198,7 @@
       "actual": 0.1626,
       "predicted": 0.2715,
       "residual": -0.1089,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.0274,
@@ -1258,13 +1258,13 @@
       "actual": 0.0971,
       "predicted": 0.3457,
       "residual": -0.2487,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.4634,
       "predicted": 0.2193,
       "residual": 0.2441,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.2598,
@@ -1324,13 +1324,13 @@
       "actual": 0.463,
       "predicted": 0.2605,
       "residual": 0.2024,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.4206,
       "predicted": 0.2173,
       "residual": 0.2033,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.2191,
@@ -1534,7 +1534,7 @@
       "actual": 0.4216,
       "predicted": 0.2156,
       "residual": 0.206,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1261,
@@ -1546,7 +1546,7 @@
       "actual": 0.4985,
       "predicted": 0.2328,
       "residual": 0.2657,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.4317,
@@ -1558,7 +1558,7 @@
       "actual": 0.139,
       "predicted": 0.2406,
       "residual": -0.1017,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.4757,
@@ -1606,7 +1606,7 @@
       "actual": 0.0855,
       "predicted": 0.2053,
       "residual": -0.1198,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.6232,
@@ -1654,7 +1654,7 @@
       "actual": 0.1802,
       "predicted": 0.1931,
       "residual": -0.0129,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.7656,
@@ -1690,7 +1690,7 @@
       "actual": 0.1047,
       "predicted": 0.1969,
       "residual": -0.0923,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.3223,
@@ -1756,7 +1756,7 @@
       "actual": 0.2664,
       "predicted": 0.2916,
       "residual": -0.0251,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.3111,
@@ -1828,7 +1828,7 @@
       "actual": 0.3909,
       "predicted": 0.234,
       "residual": 0.1569,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1955,
@@ -1876,7 +1876,7 @@
       "actual": 0.2955,
       "predicted": 0.1992,
       "residual": 0.0963,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1234,
@@ -1900,13 +1900,13 @@
       "actual": 0.4966,
       "predicted": 0.2223,
       "residual": 0.2743,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.2472,
       "predicted": 0.2461,
       "residual": 0.0011,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1464,
@@ -1990,7 +1990,7 @@
       "actual": 0.1423,
       "predicted": 0.2269,
       "residual": -0.0846,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.2164,
@@ -2050,7 +2050,7 @@
       "actual": 0.0901,
       "predicted": 0.2059,
       "residual": -0.1158,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.2945,
@@ -2116,7 +2116,7 @@
       "actual": 0.1415,
       "predicted": 0.2593,
       "residual": -0.1178,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.3416,
@@ -2146,13 +2146,13 @@
       "actual": 0.0807,
       "predicted": 0.3047,
       "residual": -0.2239,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.4176,
       "predicted": 0.3216,
       "residual": 0.096,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.3056,
@@ -2182,13 +2182,13 @@
       "actual": 0.3475,
       "predicted": 0.2149,
       "residual": 0.1326,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1718,
       "predicted": 0.2311,
       "residual": -0.0593,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1612,
@@ -2212,7 +2212,7 @@
       "actual": 0.4536,
       "predicted": 0.2407,
       "residual": 0.2129,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.2915,
@@ -2242,13 +2242,13 @@
       "actual": 0.301,
       "predicted": 0.2456,
       "residual": 0.0555,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1153,
       "predicted": 0.2996,
       "residual": -0.1843,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.4687,
@@ -2386,7 +2386,7 @@
       "actual": 0.3428,
       "predicted": 0.259,
       "residual": 0.0837,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1729,
@@ -2494,7 +2494,7 @@
       "actual": 0.3647,
       "predicted": 0.2497,
       "residual": 0.115,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1202,
@@ -2542,7 +2542,7 @@
       "actual": 0.0756,
       "predicted": 0.2293,
       "residual": -0.1537,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.178,
@@ -2608,7 +2608,7 @@
       "actual": 0.1204,
       "predicted": 0.3251,
       "residual": -0.2047,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.2682,
@@ -2716,7 +2716,7 @@
       "actual": 0.2167,
       "predicted": 0.248,
       "residual": -0.0313,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1894,
@@ -2764,7 +2764,7 @@
       "actual": 0.2198,
       "predicted": 0.3001,
       "residual": -0.0803,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.1526,
@@ -2854,7 +2854,7 @@
       "actual": 0.1279,
       "predicted": 0.227,
       "residual": -0.099,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.0896,
@@ -2872,7 +2872,7 @@
       "actual": 0.503,
       "predicted": 0.206,
       "residual": 0.297,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.3112,
@@ -2914,7 +2914,7 @@
       "actual": 0.1563,
       "predicted": 0.2718,
       "residual": -0.1156,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.634,
@@ -2926,7 +2926,7 @@
       "actual": 0.2709,
       "predicted": 0.2014,
       "residual": 0.0695,
-      "cell_line": "hek293"
+      "cell_line": "a375"
     },
     {
       "actual": 0.4106,

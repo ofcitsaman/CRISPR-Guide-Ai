@@ -1,6 +1,6 @@
 {
-  "cell_line": "hek293",
-  "display_name": "HEK293",
+  "cell_line": "a375",
+  "display_name": "A375 (Doench 2016)",
   "selected_features_k": 50,
   "hyperparameters": {
     "selected_k": 50,
@@ -50,5 +50,6 @@
     "XGBoost Classifier": 0.555,
     "Support Vector Classifier (SVC)": 0.6268,
     "Ridge Classifier": 0.5107
-  }
+  },
+  "legacy_alias": "hek293"
 }

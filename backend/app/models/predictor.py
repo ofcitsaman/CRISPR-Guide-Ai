@@ -2,7 +2,7 @@
 Inference & Prediction Service for CRISPR Guide AI.
 
 Features:
-- Dataset-specific models (HeLa, HCT116, HEK293, HL60)
+- Dataset-specific models (HeLa, HCT116, A375, HL60)
 - 4 Production Architectures: Ridge Linear Regression, Random Forest, XGBoost, Support Vector Regression (SVM/SVR)
 - Scientific terminology: Relative Efficacy Score (0-100 normalized activity)
 - Empirical Ensemble Dispersion (Random Forest tree dispersion ±1.96σ)

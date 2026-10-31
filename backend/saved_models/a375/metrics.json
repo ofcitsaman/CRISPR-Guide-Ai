@@ -12248,5 +12248,8 @@
       },
       "positive_prevalence": 0.5889
     }
-  }
+  },
+  "cell_line": "a375",
+  "display_name": "A375 (Doench 2016)",
+  "legacy_alias": "hek293"
 }

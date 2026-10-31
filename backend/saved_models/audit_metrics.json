@@ -250,6 +250,29 @@
           "roc_auc": 0.448,
           "pr_auc": 0.5648
         }
+      },
+      "a375": {
+        "held_out_samples": 2333,
+        "unique_held_out_sequences": 2333,
+        "overlapping_sequences_in_train": 0,
+        "sequence_overlap_percentage": 0.0,
+        "generalization_category": "Cross-cell-line with low/zero sequence overlap",
+        "metrics": {
+          "mae": 0.1127,
+          "mse": 0.0203,
+          "rmse": 0.1424,
+          "r2": -0.4139,
+          "pearson": -0.1964,
+          "pearson_p": 1.0179247055676696e-21,
+          "spearman": -0.1531,
+          "spearman_p": 1.061367313787654e-13,
+          "accuracy": 0.4569,
+          "precision": 0.5458,
+          "recall": 0.4636,
+          "f1": 0.5014,
+          "roc_auc": 0.448,
+          "pr_auc": 0.5648
+        }
       }
     }
   }

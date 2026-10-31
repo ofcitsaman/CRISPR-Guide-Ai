@@ -1,5 +1,5 @@
 {
-  "cell_line": "hek293",
+  "cell_line": "a375",
   "total_samples": 2333,
   "unique_sequences": 2333,
   "development_pool_count": 1866,
@@ -4683,5 +4683,6 @@
   "split_info": {
     "sequence_overlap_count": 0,
     "cv_folds": 100
-  }
+  },
+  "legacy_alias": "hek293"
 }

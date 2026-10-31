@@ -61,7 +61,7 @@ nb1_cells = [
 Inspect the legitimate human sgRNA on-target knockout efficacy benchmark dataset from the **DeepCRISPR** and **CRISPRpred(SEQ)** studies (Hart et al., Doench et al., Xu et al.).
 
 Key aspects:
-- 16,749 experimentally validated sgRNA screening records across 4 human cell lines: HCT116, HEK293, HeLa, HL60
+- 16,749 experimentally validated sgRNA screening records across 4 human cell lines: HCT116, A375 (Doench 2016), HeLa, HL60
 - Distribution of continuous normalized knockout scores and binary active/inactive labels
 - Nucleotide composition, GC-content variation, and PAM frequency analysis"""),
     code_cell("""import os

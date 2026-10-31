@@ -6473,7 +6473,7 @@ L 856.853252 25.68
 " style="fill: none; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_65">
-    <!-- HEK293T Holdout ROC -->
+    <!-- A375 Holdout ROC -->
     <g transform="translate(666.901187 19.68) scale(0.12 -0.12)">
      <defs>
       <path id="Arial-BoldMT-28" d="M 466 0 
@@ -13818,7 +13818,7 @@ L 856.853252 308.28
 " style="fill: none; stroke: #000000; stroke-width: 1.2; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_164">
-    <!-- HEK293T Holdout PR -->
+    <!-- A375 Holdout PR -->
     <g transform="translate(671.898999 302.28) scale(0.12 -0.12)">
      <use xlink:href="#Arial-BoldMT-2b"/>
      <use xlink:href="#Arial-BoldMT-28" transform="translate(72.21875 0)"/>

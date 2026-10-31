@@ -264,7 +264,7 @@ z
       </g>
      </g>
      <g id="text_2">
-      <!-- HEK293T -->
+      <!-- A375 (Doench 2016) -->
       <g transform="translate(146.58852 332.982715) scale(0.09 -0.09)">
        <defs>
         <path id="ArialMT-28" d="M 506 0 
@@ -781,7 +781,7 @@ L -3.5 0
       </g>
      </g>
      <g id="text_7">
-      <!-- HEK293T -->
+      <!-- A375 (Doench 2016) -->
       <g transform="translate(31.675488 155.345332) rotate(-90) scale(0.09 -0.09)">
        <use xlink:href="#ArialMT-2b"/>
        <use xlink:href="#ArialMT-28" transform="translate(72.21875 0)"/>
@@ -1656,7 +1656,7 @@ L 754.345322 245.992852
       </g>
      </g>
      <g id="text_29">
-      <!-- HEK293T -->
+      <!-- A375 (Doench 2016) -->
       <g transform="translate(609.30852 332.982715) scale(0.09 -0.09)">
        <use xlink:href="#ArialMT-2b"/>
        <use xlink:href="#ArialMT-28" transform="translate(72.21875 0)"/>
@@ -1762,7 +1762,7 @@ L 754.345322 245.992852
       </g>
      </g>
      <g id="text_34">
-      <!-- HEK293T -->
+      <!-- A375 (Doench 2016) -->
       <g transform="translate(494.395488 155.345332) rotate(-90) scale(0.09 -0.09)">
        <use xlink:href="#ArialMT-2b"/>
        <use xlink:href="#ArialMT-28" transform="translate(72.21875 0)"/>

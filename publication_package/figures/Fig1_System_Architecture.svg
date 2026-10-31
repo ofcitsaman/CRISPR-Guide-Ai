@@ -3288,7 +3288,7 @@ L 502 179.968437
 " style="fill: none; stroke: #2c3e50; stroke-width: 2; stroke-linecap: round"/>
    </g>
    <g id="text_12">
-    <!-- 3. Cell-Line Specific Dual-Task Predictive Engine (HeLa, HCT116, HEK293T, HL60) -->
+    <!-- 3. Cell-Line Specific Dual-Task Predictive Engine (HeLa, HCT116, A375, HL60) -->
     <g style="fill: #512e5f" transform="translate(254.571563 213.241852) scale(0.11 -0.11)">
      <defs>
       <path id="DejaVuSans-Bold-16" d="M 2981 2516 

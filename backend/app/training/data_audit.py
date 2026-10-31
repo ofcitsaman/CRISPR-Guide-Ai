@@ -1,6 +1,6 @@
 """
 Data Quality and Target Audit for CRISPR Guide AI.
-Audits all raw and processed benchmark datasets for HeLa, HCT116, HEK293, and HL60.
+Audits all raw and processed benchmark datasets for HeLa, HCT116, A375, and HL60.
 Checks:
 - File existence and schema integrity
 - Sequence validity: length 23, valid DNA characters (A, C, G, T), NGG PAM motifs

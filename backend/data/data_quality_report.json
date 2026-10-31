@@ -84,7 +84,8 @@
         "inf_count": 0,
         "bounds_valid_0_to_1": true
       },
-      "audit_passed": true
+      "audit_passed": true,
+      "note": "Legacy alias for A375 (Doench 2016)"
     },
     "hl60": {
       "total_records": 2076,
@@ -113,6 +114,36 @@
         "bounds_valid_0_to_1": true
       },
       "audit_passed": true
+    },
+    "a375": {
+      "total_records": 2333,
+      "unique_sequences": 2333,
+      "duplicate_sequences_count": 0,
+      "invalid_length_count": 0,
+      "invalid_character_count": 0,
+      "canonical_ngg_pam_count": 2333,
+      "non_canonical_pam_count": 0,
+      "raw_rep_total_records": 4566,
+      "raw_rep_unique_sequences": 2333,
+      "alignment_matched_count": 2333,
+      "alignment_missing_count": 0,
+      "binary_class_balance": {
+        "positive_active_1": 1374,
+        "negative_inactive_0": 959,
+        "positive_prevalence_pct": 58.89
+      },
+      "continuous_efficiency_distribution": {
+        "min": 0.0369,
+        "max": 0.5903,
+        "mean": 0.2376,
+        "std": 0.1198,
+        "nan_count": 0,
+        "inf_count": 0,
+        "bounds_valid_0_to_1": true
+      },
+      "audit_passed": true,
+      "canonical_name": "A375 (Doench 2016)",
+      "legacy_alias": "hek293"
     }
   },
   "overall_audit_passed": true

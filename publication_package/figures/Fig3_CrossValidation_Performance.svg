@@ -460,7 +460,7 @@ z
       </g>
      </g>
      <g id="text_3">
-      <!-- HEK293T -->
+      <!-- A375 (Doench 2016) -->
       <g transform="translate(310.82231 368.982715) scale(0.09 -0.09)">
        <defs>
         <path id="ArialMT-28" d="M 506 0 
@@ -2515,7 +2515,7 @@ z
       </g>
      </g>
      <g id="text_25">
-      <!-- HEK293T -->
+      <!-- A375 (Doench 2016) -->
       <g transform="translate(809.42231 368.982715) scale(0.09 -0.09)">
        <use xlink:href="#ArialMT-2b"/>
        <use xlink:href="#ArialMT-28" transform="translate(72.21875 0)"/>
