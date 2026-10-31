@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SAVED_MODELS_DIR = os.path.join(BASE_DIR, "backend", "saved_models")
 PROCESSED_DATA_DIR = os.path.join(BASE_DIR, "backend", "data", "processed")
 
-CELL_LINES = ["hela", "hct116", "hek293", "hl60"]
+CELL_LINES = ["hela", "hct116", "a375", "hl60"]
 EXPECTED_MODELS = ["Ridge Linear Regression", "Random Forest", "XGBoost", "SVM"]
 
 
@@ -131,16 +131,22 @@ def test_dataset_isolation_in_predictor():
     from backend.app.models.predictor import predictor
     predictor.load_artifacts()
 
-    # Predict with HeLa vs HCT116 with same sequence
+    # Predict with HeLa vs HCT116 vs A375 vs HL60 with same sequence
     res_hela = predictor.predict_single("CTTGCTCGCGCAGGACGAGGCGG", model_name="XGBoost", dataset_name="HeLa")
     res_hct = predictor.predict_single("CTTGCTCGCGCAGGACGAGGCGG", model_name="XGBoost", dataset_name="HCT116")
-    res_hek = predictor.predict_single("CTTGCTCGCGCAGGACGAGGCGG", model_name="SVM", dataset_name="HEK293")
+    res_a375 = predictor.predict_single("CTTGCTCGCGCAGGACGAGGCGG", model_name="SVM", dataset_name="A375")
     res_hl60 = predictor.predict_single("CTTGCTCGCGCAGGACGAGGCGG", model_name="Ridge Linear Regression", dataset_name="HL60")
 
     assert res_hela["dataset_used"] == "HeLa"
     assert res_hct["dataset_used"] == "HCT116"
-    assert res_hek["dataset_used"] == "HEK293"
+    assert res_a375["dataset_used"] == "A375"
     assert res_hl60["dataset_used"] == "HL60"
+
+    # Verify legacy alias resolves to canonical A375 with zero biological false claim
+    res_alias = predictor.predict_single("CTTGCTCGCGCAGGACGAGGCGG", model_name="SVM", dataset_name="HEK293")
+    assert res_alias["dataset_used"] == "A375"
+    assert res_alias["dataset_key"] == "a375"
+    assert res_alias["relative_efficacy_score"] == res_a375["relative_efficacy_score"]
 
     # Verify scores are generated and valid
     assert 0.0 <= res_hela["relative_efficacy_score"] <= 100.0
@@ -276,7 +282,7 @@ def test_holdout_integrity_report_and_ensemble():
     # 3. Predict with Weighted Ensemble
     from backend.app.models.predictor import predictor
     predictor.load_artifacts()
-    for cell in ["HeLa", "HCT116", "HEK293", "HL60"]:
+    for cell in ["HeLa", "HCT116", "A375", "HL60"]:
         res = predictor.predict_single("CTTGCTCGCGCAGGACGAGGCGG", model_name="Weighted Ensemble", dataset_name=cell)
         assert res["model_used"] == "Weighted Ensemble"
         assert 0.0 <= res["relative_efficacy_score"] <= 100.0
@@ -355,7 +361,7 @@ def test_dual_task_predictor_inference():
     predictor.load_artifacts()
 
     seq = "GACCGTGCCCTCGAACACGTGGG"
-    for ds in ["HeLa", "HCT116", "HEK293", "HL60"]:
+    for ds in ["HeLa", "HCT116", "A375", "HL60"]:
         res = predictor.predict_single(seq, model_name="XGBoost", dataset_name=ds)
         # Regression fields
         assert "predicted_efficiency_score" in res

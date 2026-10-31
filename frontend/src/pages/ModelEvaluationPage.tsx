@@ -37,7 +37,7 @@ ChartJS.register(
 const DATASET_KEYS = [
   { key: 'hela', name: 'HeLa', samples: 8101, type: 'Viability Screen (Hart 2015)' },
   { key: 'hct116', name: 'HCT116', samples: 4239, type: 'Viability Screen (Hart 2015)' },
-  { key: 'hek293', name: 'A375', samples: 2333, type: 'Drug Resistance Tiling (Doench 2016)' },
+  { key: 'a375', name: 'A375', samples: 2333, type: 'Drug Resistance Tiling (Doench 2016)' },
   { key: 'hl60', name: 'HL60', samples: 2076, type: 'Viability Screen (Xu 2015)' },
 ];
 

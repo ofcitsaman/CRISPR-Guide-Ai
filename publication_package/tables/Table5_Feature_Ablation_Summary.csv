@@ -13,13 +13,13 @@ hct116,HCT116,Position-Specific 1-mer & 2-mer (444),444,0.3471,0.0332,0.6917,0.0
 hct116,HCT116,Global k-mers & Gapped Dinucleotides (128),128,0.242,0.0636,0.6425,0.0313,0.3129,0.6885
 hct116,HCT116,Protospacer-Only (Positions 1-20),552,0.3561,0.0399,0.69,0.0328,0.3471,0.7101
 hct116,HCT116,PAM-Only (Positions 21-23),48,0.094,0.0841,0.5507,0.0284,0.1103,0.5971
-hek293,A375 (Doench 2016),Full Feature Space (600),600,0.1971,0.0681,0.5294,0.0354,0.1748,0.5578
-hek293,A375 (Doench 2016),Historical Baseline (593),593,0.1947,0.0711,0.5253,0.0361,0.168,0.5559
-hek293,A375 (Doench 2016),Basic Composition & Biophysical (28),28,0.1917,0.0386,0.5572,0.0343,0.1243,0.5144
-hek293,A375 (Doench 2016),Position-Specific 1-mer & 2-mer (444),444,0.1769,0.0533,0.521,0.0405,0.1671,0.5349
-hek293,A375 (Doench 2016),Global k-mers & Gapped Dinucleotides (128),128,0.227,0.072,0.5496,0.0282,0.1307,0.5708
-hek293,A375 (Doench 2016),Protospacer-Only (Positions 1-20),552,0.1968,0.068,0.5295,0.0354,0.1745,0.5577
-hek293,A375 (Doench 2016),PAM-Only (Positions 21-23),48,0.0524,0.0749,0.5023,0.036,0.0831,0.4819
+a375,A375 (Doench 2016),Full Feature Space (600),600,0.1971,0.0681,0.5294,0.0354,0.1748,0.5578
+a375,A375 (Doench 2016),Historical Baseline (593),593,0.1947,0.0711,0.5253,0.0361,0.168,0.5559
+a375,A375 (Doench 2016),Basic Composition & Biophysical (28),28,0.1917,0.0386,0.5572,0.0343,0.1243,0.5144
+a375,A375 (Doench 2016),Position-Specific 1-mer & 2-mer (444),444,0.1769,0.0533,0.521,0.0405,0.1671,0.5349
+a375,A375 (Doench 2016),Global k-mers & Gapped Dinucleotides (128),128,0.227,0.072,0.5496,0.0282,0.1307,0.5708
+a375,A375 (Doench 2016),Protospacer-Only (Positions 1-20),552,0.1968,0.068,0.5295,0.0354,0.1745,0.5577
+a375,A375 (Doench 2016),PAM-Only (Positions 21-23),48,0.0524,0.0749,0.5023,0.036,0.0831,0.4819
 hl60,HL60,Full Feature Space (600),600,0.3373,0.0706,0.7966,0.0323,0.3876,0.7822
 hl60,HL60,Historical Baseline (593),593,0.3376,0.0684,0.7984,0.0329,0.3828,0.7808
 hl60,HL60,Basic Composition & Biophysical (28),28,0.2446,0.0492,0.7153,0.0378,0.309,0.7235

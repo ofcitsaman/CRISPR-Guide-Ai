@@ -1214,5 +1214,309 @@
         "optimized": 0.2009
       }
     }
+  },
+  "a375": {
+    "Ridge Linear Regression": {
+      "cv_pearson": {
+        "baseline": 0.218,
+        "optimized": 0.218,
+        "abs_diff": 0.0,
+        "pct_diff": 0.0
+      },
+      "cv_roc_auc": {
+        "baseline": 0.567,
+        "optimized": 0.5643,
+        "abs_diff": -0.0027,
+        "pct_diff": -0.48
+      },
+      "holdout_pearson": {
+        "baseline": 0.1748,
+        "optimized": 0.1808,
+        "abs_diff": 0.006,
+        "pct_diff": 3.43
+      },
+      "holdout_spearman": {
+        "baseline": 0.0932,
+        "optimized": 0.1247,
+        "abs_diff": 0.0315,
+        "pct_diff": 33.8
+      },
+      "holdout_roc_auc": {
+        "baseline": 0.5523,
+        "optimized": 0.5709,
+        "abs_diff": 0.0186,
+        "pct_diff": 3.37
+      },
+      "holdout_pr_auc": {
+        "baseline": 0.6498,
+        "optimized": 0.6598,
+        "abs_diff": 0.01,
+        "pct_diff": 1.54
+      },
+      "holdout_accuracy": {
+        "baseline": 0.5054,
+        "optimized": 0.5375,
+        "abs_diff": 0.0321,
+        "pct_diff": 6.35
+      },
+      "holdout_f1": {
+        "baseline": 0.5682,
+        "optimized": 0.4732,
+        "abs_diff": -0.095,
+        "pct_diff": -16.72
+      },
+      "holdout_specificity": {
+        "baseline": 0.4375,
+        "optimized": 0.8021,
+        "abs_diff": 0.3646,
+        "pct_diff": 83.34
+      },
+      "holdout_rmse": {
+        "baseline": 0.1223,
+        "optimized": 0.1211,
+        "abs_diff": -0.0012,
+        "pct_diff": -0.98
+      },
+      "holdout_r2": {
+        "baseline": 0.0009,
+        "optimized": 0.0216,
+        "abs_diff": 0.0207,
+        "pct_diff": 2300.0
+      }
+    },
+    "Random Forest": {
+      "cv_pearson": {
+        "baseline": 0.2743,
+        "optimized": 0.246,
+        "abs_diff": -0.0283,
+        "pct_diff": -10.32
+      },
+      "cv_roc_auc": {
+        "baseline": 0.5924,
+        "optimized": 0.5686,
+        "abs_diff": -0.0238,
+        "pct_diff": -4.02
+      },
+      "holdout_pearson": {
+        "baseline": 0.2207,
+        "optimized": 0.2068,
+        "abs_diff": -0.0139,
+        "pct_diff": -6.3
+      },
+      "holdout_spearman": {
+        "baseline": 0.1646,
+        "optimized": 0.174,
+        "abs_diff": 0.0094,
+        "pct_diff": 5.71
+      },
+      "holdout_roc_auc": {
+        "baseline": 0.5943,
+        "optimized": 0.5918,
+        "abs_diff": -0.0025,
+        "pct_diff": -0.42
+      },
+      "holdout_pr_auc": {
+        "baseline": 0.6673,
+        "optimized": 0.6656,
+        "abs_diff": -0.0017,
+        "pct_diff": -0.25
+      },
+      "holdout_accuracy": {
+        "baseline": 0.591,
+        "optimized": 0.5268,
+        "abs_diff": -0.0642,
+        "pct_diff": -10.86
+      },
+      "holdout_f1": {
+        "baseline": 0.6801,
+        "optimized": 0.4675,
+        "abs_diff": -0.2126,
+        "pct_diff": -31.26
+      },
+      "holdout_specificity": {
+        "baseline": 0.3802,
+        "optimized": 0.776,
+        "abs_diff": 0.3958,
+        "pct_diff": 104.1
+      },
+      "holdout_rmse": {
+        "baseline": 0.1195,
+        "optimized": 0.12,
+        "abs_diff": 0.0005,
+        "pct_diff": 0.42
+      },
+      "holdout_r2": {
+        "baseline": 0.0459,
+        "optimized": 0.0379,
+        "abs_diff": -0.008,
+        "pct_diff": -17.43
+      }
+    },
+    "XGBoost": {
+      "cv_pearson": {
+        "baseline": 0.2651,
+        "optimized": 0.2469,
+        "abs_diff": -0.0182,
+        "pct_diff": -6.87
+      },
+      "cv_roc_auc": {
+        "baseline": 0.5985,
+        "optimized": 0.5834,
+        "abs_diff": -0.0151,
+        "pct_diff": -2.52
+      },
+      "holdout_pearson": {
+        "baseline": 0.2583,
+        "optimized": 0.1818,
+        "abs_diff": -0.0765,
+        "pct_diff": -29.62
+      },
+      "holdout_spearman": {
+        "baseline": 0.17,
+        "optimized": 0.1102,
+        "abs_diff": -0.0598,
+        "pct_diff": -35.18
+      },
+      "holdout_roc_auc": {
+        "baseline": 0.5922,
+        "optimized": 0.561,
+        "abs_diff": -0.0312,
+        "pct_diff": -5.27
+      },
+      "holdout_pr_auc": {
+        "baseline": 0.6705,
+        "optimized": 0.6572,
+        "abs_diff": -0.0133,
+        "pct_diff": -1.98
+      },
+      "holdout_accuracy": {
+        "baseline": 0.5396,
+        "optimized": 0.5075,
+        "abs_diff": -0.0321,
+        "pct_diff": -5.95
+      },
+      "holdout_f1": {
+        "baseline": 0.5493,
+        "optimized": 0.439,
+        "abs_diff": -0.1103,
+        "pct_diff": -20.08
+      },
+      "holdout_specificity": {
+        "baseline": 0.6302,
+        "optimized": 0.7656,
+        "abs_diff": 0.1354,
+        "pct_diff": 21.49
+      },
+      "holdout_rmse": {
+        "baseline": 0.1186,
+        "optimized": 0.1208,
+        "abs_diff": 0.0022,
+        "pct_diff": 1.85
+      },
+      "holdout_r2": {
+        "baseline": 0.0612,
+        "optimized": 0.025,
+        "abs_diff": -0.0362,
+        "pct_diff": -59.15
+      }
+    },
+    "SVM": {
+      "cv_pearson": {
+        "baseline": 0.2474,
+        "optimized": 0.1955,
+        "abs_diff": -0.0519,
+        "pct_diff": -20.98
+      },
+      "cv_roc_auc": {
+        "baseline": 0.577,
+        "optimized": 0.5472,
+        "abs_diff": -0.0298,
+        "pct_diff": -5.16
+      },
+      "holdout_pearson": {
+        "baseline": 0.2047,
+        "optimized": 0.1875,
+        "abs_diff": -0.0172,
+        "pct_diff": -8.4
+      },
+      "holdout_spearman": {
+        "baseline": 0.1597,
+        "optimized": 0.1552,
+        "abs_diff": -0.0045,
+        "pct_diff": -2.82
+      },
+      "holdout_roc_auc": {
+        "baseline": 0.5679,
+        "optimized": 0.5732,
+        "abs_diff": 0.0053,
+        "pct_diff": 0.93
+      },
+      "holdout_pr_auc": {
+        "baseline": 0.6555,
+        "optimized": 0.6641,
+        "abs_diff": 0.0086,
+        "pct_diff": 1.31
+      },
+      "holdout_accuracy": {
+        "baseline": 0.5203,
+        "optimized": 0.5011,
+        "abs_diff": -0.0192,
+        "pct_diff": -3.69
+      },
+      "holdout_f1": {
+        "baseline": 0.5088,
+        "optimized": 0.401,
+        "abs_diff": -0.1078,
+        "pct_diff": -21.19
+      },
+      "holdout_specificity": {
+        "baseline": 0.6615,
+        "optimized": 0.8125,
+        "abs_diff": 0.151,
+        "pct_diff": 22.83
+      },
+      "holdout_rmse": {
+        "baseline": 0.1241,
+        "optimized": 0.1239,
+        "abs_diff": -0.0002,
+        "pct_diff": -0.16
+      },
+      "holdout_r2": {
+        "baseline": -0.0285,
+        "optimized": -0.0255,
+        "abs_diff": 0.003,
+        "pct_diff": 10.53
+      }
+    },
+    "Weighted Ensemble": {
+      "cv_pearson": {
+        "baseline": null,
+        "optimized": 0.2562
+      },
+      "cv_roc_auc": {
+        "baseline": null,
+        "optimized": 0.5736
+      },
+      "holdout_pearson": {
+        "baseline": 0.2583,
+        "optimized": 0.2171
+      },
+      "holdout_roc_auc": {
+        "baseline": 0.5922,
+        "optimized": 0.5906
+      },
+      "holdout_pr_auc": {
+        "baseline": 0.6705,
+        "optimized": 0.6682
+      },
+      "holdout_rmse": {
+        "baseline": 0.1186,
+        "optimized": 0.1196
+      },
+      "holdout_r2": {
+        "baseline": 0.0612,
+        "optimized": 0.0444
+      }
+    }
   }
 }

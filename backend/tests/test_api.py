@@ -34,7 +34,7 @@ def test_health():
 
 
 def test_predict_dataset_specific():
-    for dataset in ["HeLa", "HCT116", "HEK293", "HL60"]:
+    for dataset in ["HeLa", "HCT116", "A375", "HL60"]:
         payload = {
             "sequence": "CTTGCTCGCGCAGGACGAGGCGG",
             "model_name": "XGBoost",
@@ -49,6 +49,19 @@ def test_predict_dataset_specific():
         assert 0.0 <= res["relative_efficacy_score"] <= 100.0
         assert "verification_metrics" in res
         assert "roc_curve" in res["verification_metrics"]
+
+    # Verify that legacy alias HEK293 resolves to canonical A375
+    alias_resp = client.post("/api/predict", json={
+        "sequence": "CTTGCTCGCGCAGGACGAGGCGG",
+        "model_name": "XGBoost",
+        "dataset_name": "HEK293"
+    })
+    assert alias_resp.status_code == 200
+    alias_res = alias_resp.json()["data"]
+    assert alias_res["dataset_used"] == "A375"
+    assert alias_res["dataset_key"] == "a375"
+    assert alias_res["legacy_alias_used"] == "hek293"
+    assert "A375" in alias_res["biological_cell_line"]
 
 
 def test_predict_svm():
@@ -134,6 +147,7 @@ def test_metrics_endpoint():
     assert "datasets" in data
     assert "hela" in data["datasets"]
     assert "hct116" in data["datasets"]
+    assert "a375" in data["datasets"]
     assert "hek293" in data["datasets"]
     assert "hl60" in data["datasets"]
 
@@ -166,5 +180,6 @@ def test_dataset_info_endpoint():
     cell_ids = [c["id"] for c in data["cell_lines"]]
     assert "hela" in cell_ids
     assert "hct116" in cell_ids
+    assert "a375" in cell_ids
     assert "hek293" in cell_ids
     assert "hl60" in cell_ids

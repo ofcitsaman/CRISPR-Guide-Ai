@@ -80,12 +80,13 @@ EXPERIMENTS_DIR = os.path.join(BASE_DIR, "experiments")
 BASELINE_DIR = os.path.join(EXPERIMENTS_DIR, "baseline")
 RANDOM_SEED = 42
 
-CELL_LINES = ["hela", "hct116", "hek293", "hl60"]
+CELL_LINES = ["hela", "hct116", "a375", "hl60"]
 CELL_DISPLAY_NAMES = {
     "hela": "HeLa",
     "hct116": "HCT116",
-    "hek293": "HEK293",
-    "hl60": "HL60"
+    "a375": "A375",
+    "hl60": "HL60",
+    "hek293": "A375 (Legacy Alias: HEK293)"
 }
 
 # Regression Model Families
@@ -129,6 +130,14 @@ OPTIMIZED_CONFIGS = {
         "xgb": {"n_estimators": 200, "max_depth": 4, "learning_rate": 0.03, "subsample": 0.85, "colsample_bytree": 0.7, "min_child_weight": 2, "reg_alpha": 0.5, "reg_lambda": 3.0},
         "svr": {"kernel": "rbf", "C": 1.0, "epsilon": 0.05, "gamma": "scale"},
         "ensemble_weights": {"Ridge Linear Regression": 0.3802, "Random Forest": 0.3145, "XGBoost": 0.1639, "SVM": 0.1414}
+    },
+    "a375": {
+        "selected_k": 50,
+        "ridge": {"alpha": 300.0},
+        "rf": {"n_estimators": 200, "max_depth": 16, "max_features": 0.35, "min_samples_leaf": 1, "min_samples_split": 2},
+        "xgb": {"n_estimators": 200, "max_depth": 3, "learning_rate": 0.03, "subsample": 0.85, "colsample_bytree": 0.8, "min_child_weight": 2, "reg_alpha": 0.1, "reg_lambda": 2.0},
+        "svr": {"kernel": "rbf", "C": 2.0, "epsilon": 0.08, "gamma": 0.005},
+        "ensemble_weights": {"Ridge Linear Regression": 0.3464, "Random Forest": 0.5420, "XGBoost": 0.0, "SVM": 0.1116}
     },
     "hek293": {
         "selected_k": 50,

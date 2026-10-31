@@ -4,7 +4,7 @@ Exposes dataset-specific endpoints for:
 - Single guide prediction with verification metrics & ROC points
 - Batch guide prediction & ranking (JSON and CSV upload)
 - Model descriptions (Ridge, Random Forest, XGBoost, SVM/SVR)
-- Dataset provenance (HeLa, HCT116, HEK293, HL60)
+- Dataset provenance (HeLa, HCT116, A375, HL60)
 - 100-Fold Cross-Validation & Final 20% Holdout evaluation metrics
 - Feature importance attribution
 """
@@ -29,7 +29,7 @@ router = APIRouter()
 class PredictRequest(BaseModel):
     sequence: str = Field(..., description="sgRNA nucleotide sequence (20 nt guide or 23 nt guide+PAM)")
     model_name: Optional[str] = Field("XGBoost", description="Model: 'Random Forest', 'XGBoost', 'SVM', or 'Ridge Linear Regression'")
-    dataset_name: Optional[str] = Field("HeLa", description="Cell line dataset: 'HeLa', 'HCT116', 'HEK293', or 'HL60'")
+    dataset_name: Optional[str] = Field("HeLa", description="Cell line dataset: 'HeLa', 'HCT116', 'A375', or 'HL60' (legacy alias 'HEK293' mapped to A375)")
 
 
 class BatchGuideItem(BaseModel):
@@ -56,7 +56,8 @@ def health_check():
         "status": "healthy",
         "service": "CRISPR Guide AI",
         "models_loaded": predictor._is_loaded,
-        "available_datasets": ["HeLa", "HCT116", "A375", "HL60", "HEK293"],
+        "available_datasets": ["HeLa", "HCT116", "A375", "HL60"],
+        "legacy_aliases": {"HEK293": "A375", "HEK293T": "A375"},
         "available_models": ["Ridge Linear Regression", "Random Forest", "XGBoost", "SVM", "Weighted Ensemble"],
         "available_regression_models": ["Ridge Linear Regression", "Random Forest", "XGBoost", "SVM", "Weighted Ensemble"],
         "available_classification_models": [
@@ -356,7 +357,7 @@ def get_dataset_info():
 
 @router.get("/metrics")
 def get_metrics(
-    dataset: Optional[str] = Query(None, description="Optional cell line filter: 'hela', 'hct116', 'hek293', 'hl60'"),
+    dataset: Optional[str] = Query(None, description="Optional cell line filter: 'hela', 'hct116', 'a375', 'hl60' (legacy alias 'hek293' accepted)"),
     task: Optional[str] = Query(None, description="Optional task filter: 'regression', 'classification'")
 ):
     """Returns dataset-specific 100-fold CV and final 20% holdout metrics."""

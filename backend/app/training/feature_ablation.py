@@ -32,7 +32,7 @@ SAVED_MODELS_DIR = os.path.join(BASE_DIR, "backend", "saved_models")
 EXPERIMENTS_DIR = os.path.join(BASE_DIR, "experiments")
 OUTPUT_PATH = os.path.join(EXPERIMENTS_DIR, "feature_ablation_report.json")
 
-CELL_LINES = ["hela", "hct116", "hek293", "hl60"]
+CELL_LINES = ["hela", "hct116", "a375", "hl60"]
 RANDOM_SEED = 42
 
 

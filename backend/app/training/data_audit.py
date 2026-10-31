@@ -21,9 +21,10 @@ RAW_DIR = os.path.join(BASE_DIR, "backend", "data", "raw")
 PROCESSED_DIR = os.path.join(BASE_DIR, "backend", "data", "processed")
 OUTPUT_REPORT_PATH = os.path.join(BASE_DIR, "backend", "data", "data_quality_report.json")
 
-CELL_LINES = ["hela", "hct116", "hek293", "hl60"]
+CELL_LINES = ["hela", "hct116", "a375", "hl60"]
 REP_CELL_MAP = {
     "hct116": "hct116",
+    "a375": "hek293t",    # Historical DeepCRISPR filename for A375
     "hek293": "hek293t",
     "hela": "hela",
     "hl60": "hl60"

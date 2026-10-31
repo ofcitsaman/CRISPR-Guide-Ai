@@ -1,6 +1,9 @@
 {
-  "cell_line": "hek293",
-  "display_name": "HEK293",
+  "cell_line": "a375",
+  "canonical_id": "a375",
+  "display_name": "A375 (Doench 2016)",
+  "legacy_alias": "hek293",
+  "provenance_note": "Legacy benchmark files misattributed these 2,333 records as HEK293T; definitively reclassified to A375.",
   "total_samples": 2333,
   "unique_sequences": 2333,
   "positive_labels": 1374,

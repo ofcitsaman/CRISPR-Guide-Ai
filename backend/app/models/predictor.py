@@ -27,8 +27,8 @@ DATASET_DISPLAY_NAMES = {
     "hela": "HeLa",
     "hct116": "HCT116",
     "a375": "A375",
-    "hek293": "HEK293",
-    "hl60": "HL60"
+    "hl60": "HL60",
+    "hek293": "A375"  # Historical alias mapping to verified A375 biological identity
 }
 
 MODEL_CANONICAL_NAMES = {
@@ -87,14 +87,15 @@ PAIRING_CLF_TO_REG = {
 
 
 def normalize_dataset_name(name: Optional[str]) -> str:
-    """Normalizes dataset name to canonical key ('hela', 'hct116', 'a375', 'hek293', 'hl60')."""
+    """Normalizes dataset name to canonical key ('hela', 'hct116', 'a375', 'hl60')."""
     if not name:
         return "hela"
     cleaned = str(name).strip().lower().replace("-", "").replace("_", "").replace(" ", "")
     if "a375" in cleaned or "doench" in cleaned:
         return "a375"
     if "hek" in cleaned or "293" in cleaned:
-        return "hek293"
+        # Resolves historical misattribution alias to verified canonical A375
+        return "a375"
     for k in ["hela", "hct116", "hl60"]:
         if k in cleaned:
             return k
@@ -234,15 +235,18 @@ class CRISPRPredictor:
 
     def load_artifacts(self):
         """Loads all dataset-specific models and global metrics into memory."""
-        print("Loading dataset-specific model artifacts (HeLa, HCT116, A375/HEK293, HL60)...")
-        for cell in ["hela", "hct116", "hek293", "hl60"]:
+        print("Loading dataset-specific model artifacts (HeLa, HCT116, A375, HL60)...")
+        for cell in ["hela", "hct116", "a375", "hl60"]:
             try:
                 self.load_dataset_artifacts(cell)
             except Exception as e:
                 print(f"Warning: Could not load artifacts for {cell}: {e}")
         
-        # Link verified A375 key to the same artifacts
-        if "hek293" in self.dataset_artifacts:
+        # Backward-compatibility alias: register hek293 pointing to a375 artifacts
+        if "a375" in self.dataset_artifacts:
+            self.dataset_artifacts["hek293"] = dict(self.dataset_artifacts["a375"])
+            self.dataset_artifacts["hek293"]["display_name"] = "A375"
+        elif "hek293" in self.dataset_artifacts:
             self.dataset_artifacts["a375"] = dict(self.dataset_artifacts["hek293"])
             self.dataset_artifacts["a375"]["display_name"] = "A375"
 
@@ -254,7 +258,9 @@ class CRISPRPredictor:
         if os.path.exists(top_metrics_path):
             with open(top_metrics_path, "r") as f:
                 self.global_metrics = json.load(f)
-            if "datasets" in self.global_metrics and "hek293" in self.global_metrics["datasets"]:
+            if "datasets" in self.global_metrics and "a375" in self.global_metrics["datasets"]:
+                self.global_metrics["datasets"]["hek293"] = self.global_metrics["datasets"]["a375"]
+            elif "datasets" in self.global_metrics and "hek293" in self.global_metrics["datasets"]:
                 self.global_metrics["datasets"]["a375"] = self.global_metrics["datasets"]["hek293"]
 
         self._is_loaded = len(self.dataset_artifacts) > 0
@@ -273,6 +279,9 @@ class CRISPRPredictor:
         """
         if not self._is_loaded:
             self.load_artifacts()
+
+        requested_raw = str(dataset_name).strip() if dataset_name else "HeLa"
+        is_legacy_alias = bool("hek" in requested_raw.lower() or "293" in requested_raw.lower())
 
         dataset_key = normalize_dataset_name(dataset_name)
         canonical_model = normalize_model_name(model_name)
@@ -441,7 +450,9 @@ class CRISPRPredictor:
             "was_extended_with_pam": was_extended,
             "sequence_length": len(validated_seq),
             "dataset_used": dataset_display,
+            "biological_cell_line": "A375 (Human Melanoma, Doench 2016)" if dataset_key == "a375" else dataset_display,
             "dataset_key": dataset_key,
+            "legacy_alias_used": "hek293" if is_legacy_alias else None,
             "model_used": canonical_model,
             "predicted_efficiency_score": round(bounded_score, 4),
             "relative_efficacy_score": relative_efficacy,
@@ -503,6 +514,9 @@ class CRISPRPredictor:
         """Executes batch predictions for a list of guide sequences with ranking."""
         if not self._is_loaded:
             self.load_artifacts()
+
+        requested_raw = str(dataset_name).strip() if dataset_name else "HeLa"
+        is_legacy_alias = bool("hek" in requested_raw.lower() or "293" in requested_raw.lower())
 
         dataset_key = normalize_dataset_name(dataset_name)
         canonical_model = normalize_model_name(model_name)

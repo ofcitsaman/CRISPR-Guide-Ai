@@ -1,0 +1,31 @@
+{
+  "cell_line": "a375",
+  "canonical_id": "a375",
+  "display_name": "A375 (Doench 2016)",
+  "organism": "Homo sapiens",
+  "cell_type": "Malignant Melanoma",
+  "target_genes": [
+    "MED12",
+    "NF1",
+    "NF2",
+    "TADA2B",
+    "CUL3",
+    "TADA1",
+    "CCDC101",
+    "HPRT1"
+  ],
+  "total_samples": 2333,
+  "unique_sequences": 2333,
+  "positive_labels": 1374,
+  "negative_labels": 959,
+  "development_pool_count": 1866,
+  "final_holdout_count": 467,
+  "cv_folds": 100,
+  "sequence_overlap_count": 0,
+  "random_seed": 42,
+  "legacy_aliases": [
+    "hek293",
+    "hek293t"
+  ],
+  "provenance_note": "Identified as the 8-gene targeted screen of Doench et al. (Nature Biotechnology 2016). Previously misattributed as HEK293T in legacy DeepCRISPR benchmark."
+}

@@ -17,10 +17,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 RAW_DIR = os.path.join(BASE_DIR, "data", "raw")
 PROCESSED_DIR = os.path.join(BASE_DIR, "data", "processed")
 
-CELL_LINES = ["hct116", "hek293", "hela", "hl60"]
+CELL_LINES = ["hct116", "a375", "hela", "hl60"]
+# Mapping to historical raw benchmark files
+RAW_CSV_MAP = {
+    "hct116": "hct116",
+    "a375": "hek293",     # CRISPRpredSEQ legacy filename
+    "hela": "hela",
+    "hl60": "hl60"
+}
 REP_CELL_MAP = {
     "hct116": "hct116",
-    "hek293": "hek293t",
+    "a375": "hek293t",    # DeepCRISPR legacy filename
     "hela": "hela",
     "hl60": "hl60"
 }
