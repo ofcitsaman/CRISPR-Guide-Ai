@@ -39,9 +39,10 @@ def download_raw_data():
 
     # 1. Download CSVs with binary labels (from CRISPRpredSEQ repository)
     for cell in CELL_LINES:
-        csv_path = os.path.join(RAW_DIR, f"{cell}.csv")
+        raw_name = RAW_CSV_MAP[cell]
+        csv_path = os.path.join(RAW_DIR, f"{raw_name}.csv")
         if not os.path.exists(csv_path):
-            url = f"https://raw.githubusercontent.com/Rafid013/CRISPRpredSEQ/master/Data/{cell}.csv"
+            url = f"https://raw.githubusercontent.com/Rafid013/CRISPRpredSEQ/master/Data/{raw_name}.csv"
             print(f"Downloading {url} -> {csv_path}...")
             urllib.request.urlretrieve(url, csv_path)
 
@@ -69,12 +70,17 @@ def validate_and_merge_data() -> pd.DataFrame:
     - Length must be 23 nucleotides (20-nt guide + 3-nt PAM)
     - Characters must be strictly A, C, G, T
     - Merges continuous efficiency scores and binary labels
+    - Rejects missing score matches without inventing synthetic targets
     """
     records = []
     valid_nucleotides = set("ACGT")
 
     for cell in CELL_LINES:
-        csv_path = os.path.join(RAW_DIR, f"{cell}.csv")
+        raw_name = RAW_CSV_MAP[cell]
+        csv_path = os.path.join(RAW_DIR, f"{raw_name}.csv")
+        if not os.path.exists(csv_path) and os.path.exists(os.path.join(RAW_DIR, f"{cell}.csv")):
+            csv_path = os.path.join(RAW_DIR, f"{cell}.csv")
+
         rep_path = os.path.join(RAW_DIR, f"{REP_CELL_MAP[cell]}.repisgt")
 
         csv_df = pd.read_csv(csv_path)
@@ -105,8 +111,10 @@ def validate_and_merge_data() -> pd.DataFrame:
                 end = rep_info["end"]
                 strand = rep_info["strand"]
             else:
-                eff_score = float(label)
-                chrom, start, end, strand = "unknown", 0, 0, "+"
+                raise ValueError(
+                    f"Integrity Error: Sequence {seq} in {cell} (from {raw_name}.csv) has no matching entry "
+                    f"in regression benchmark ({REP_CELL_MAP[cell]}.repisgt). Synthetic score imputation is disallowed."
+                )
 
             records.append({
                 "sgRNA": seq,

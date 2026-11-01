@@ -59,6 +59,11 @@ def test_never_incorrectly_exposed_as_hek293t():
     data = resp.json()
     cell_lines = data["cell_lines"]
     
+    # Must contain exactly 4 canonical cell lines
+    assert len(cell_lines) == 4
+    assert not any(c["id"] in ("hek293", "hek293t") for c in cell_lines)
+    assert "legacy_compatibility_aliases" in data
+
     # Check A375 entry
     a375_entry = next((c for c in cell_lines if c["id"] == "a375"), None)
     assert a375_entry is not None
@@ -126,17 +131,34 @@ def test_frontend_backend_canonical_consistency():
 
 
 def test_historical_aliases_cannot_create_false_identity():
-    """Requirement 6: Historical aliases ('hek293', 'hek293t') cannot silently create false biological identity."""
+    """Requirement 6: Historical aliases ('hek293', 'hek293t') cannot silently create false biological identity.
+    Ambiguous 'HEK293' / 'HEK293T' requests raise an informative error, whereas explicit
+    'legacy_hek293_a375' safely routes to canonical A375 models with legacy tracing.
+    """
     for alias in ["HEK293", "hek293", "HEK293T", "hek293t"]:
-        # Query predictor
-        res = predictor.predict_single("GAGTCCGAGCAGAAGAAGAACGG", model_name="XGBoost", dataset_name=alias)
-        # Must resolve to A375
-        assert res["dataset_used"] == "A375"
-        assert res["dataset_key"] == "a375"
-        assert res["legacy_alias_used"] in ["hek293", "hek293t"]
-        assert "A375" in res["biological_cell_line"]
-        assert "Melanoma" in res["biological_cell_line"]
-        assert "Kidney" not in res["biological_cell_line"]
+        # Query predictor directly - must raise ValueError explaining the A375 Doench 2016 reclassification
+        with pytest.raises(ValueError) as excinfo:
+            predictor.predict_single("GAGTCCGAGCAGAAGAAGAACGG", model_name="XGBoost", dataset_name=alias)
+        assert "Ambiguous dataset identifier" in str(excinfo.value)
+        assert "A375 human melanoma" in str(excinfo.value)
+
+        # Query API directly - must return 400 Bad Request
+        api_resp = client.post("/api/predict", json={
+            "sequence": "GAGTCCGAGCAGAAGAAGAACGG",
+            "model_name": "XGBoost",
+            "dataset_name": alias
+        })
+        assert api_resp.status_code == 400
+        assert "Ambiguous dataset identifier" in api_resp.json()["detail"]
+
+    # Explicit backward-compatibility alias must resolve cleanly to A375
+    res_legacy = predictor.predict_single("GAGTCCGAGCAGAAGAAGAACGG", model_name="XGBoost", dataset_name="legacy_hek293_a375")
+    assert res_legacy["dataset_used"] == "A375"
+    assert res_legacy["dataset_key"] == "a375"
+    assert res_legacy["legacy_alias_used"] == "legacy_hek293_a375"
+    assert "A375" in res_legacy["biological_cell_line"]
+    assert "Melanoma" in res_legacy["biological_cell_line"]
+    assert "Kidney" not in res_legacy["biological_cell_line"]
 
 
 def test_existing_model_predictions_remain_unchanged():
@@ -155,8 +177,8 @@ def test_existing_model_predictions_remain_unchanged():
     assert 0.0 <= res_xgb["relative_efficacy_score"] <= 100.0
     assert 0.0 <= res_ens["relative_efficacy_score"] <= 100.0
 
-    # Prediction through legacy alias 'hek293' must produce bit-for-bit identical results
-    res_alias = predictor.predict_single(test_seq, model_name="Weighted Ensemble", dataset_name="hek293")
+    # Prediction through explicit legacy alias 'legacy_hek293_a375' must produce bit-for-bit identical results
+    res_alias = predictor.predict_single(test_seq, model_name="Weighted Ensemble", dataset_name="legacy_hek293_a375")
     assert res_ens["relative_efficacy_score"] == res_alias["relative_efficacy_score"]
     assert res_ens["predicted_efficiency_score"] == res_alias["predicted_efficiency_score"]
     assert res_ens["classification_probability"] == res_alias["classification_probability"]

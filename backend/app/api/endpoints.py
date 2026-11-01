@@ -29,7 +29,7 @@ router = APIRouter()
 class PredictRequest(BaseModel):
     sequence: str = Field(..., description="sgRNA nucleotide sequence (20 nt guide or 23 nt guide+PAM)")
     model_name: Optional[str] = Field("XGBoost", description="Model: 'Random Forest', 'XGBoost', 'SVM', or 'Ridge Linear Regression'")
-    dataset_name: Optional[str] = Field("HeLa", description="Cell line dataset: 'HeLa', 'HCT116', 'A375', or 'HL60' (legacy alias 'HEK293' mapped to A375)")
+    dataset_name: Optional[str] = Field("HeLa", description="Cell line dataset: 'HeLa', 'HCT116', 'A375', or 'HL60' (legacy compatibility alias: 'legacy_hek293_a375')")
 
 
 class BatchGuideItem(BaseModel):
@@ -57,7 +57,7 @@ def health_check():
         "service": "CRISPR Guide AI",
         "models_loaded": predictor._is_loaded,
         "available_datasets": ["HeLa", "HCT116", "A375", "HL60"],
-        "legacy_aliases": {"HEK293": "A375", "HEK293T": "A375"},
+        "legacy_compatibility_aliases": {"legacy_hek293_a375": "A375"},
         "available_models": ["Ridge Linear Regression", "Random Forest", "XGBoost", "SVM", "Weighted Ensemble"],
         "available_regression_models": ["Ridge Linear Regression", "Random Forest", "XGBoost", "SVM", "Weighted Ensemble"],
         "available_classification_models": [
@@ -81,7 +81,7 @@ def predict_sgrna(request: PredictRequest):
             dataset_name=request.dataset_name or "HeLa"
         )
         return {"status": "success", "data": result}
-    except SequenceValidationError as e:
+    except (SequenceValidationError, ValueError) as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")
@@ -246,7 +246,7 @@ def get_dataset_info():
         "dataset_name": "DeepCRISPR & CRISPRpred(SEQ) Multi-Cell Human sgRNA Benchmark",
         "description": (
             "Four independent cell-line benchmark datasets compiled from published high-throughput CRISPR knockout screens. "
-            "Each dataset is evaluated independently under a strict 80% development + 20% untouched final holdout protocol "
+            "Each dataset is evaluated independently under a strict 80% development + 20% fixed historical holdout protocol "
             "with 100-fold cross-validation."
         ),
         "cell_lines": [
@@ -276,7 +276,6 @@ def get_dataset_info():
             },
             {
                 "id": "a375",
-                "legacy_id": "hek293",
                 "name": "A375",
                 "display_name": "A375 (Doench 2016)",
                 "samples": 2333,
@@ -284,22 +283,10 @@ def get_dataset_info():
                 "positive_count": 1374,
                 "negative_count": 959,
                 "organism": "Homo sapiens (Malignant melanoma)",
-                "assay_type": "Viability and drug-resistance screen tiling 8 human genes (MED12, NF1, NF2, TADA2B, CUL3, TADA1, CCDC101, HPRT1)",
+                "assay_type": "Viability and drug-resistance screen tiling 8 human genes (MED12, NF1, NF2, TADA2B, CUL3, TADA1, CCDC101/SGF29, HPRT1)",
                 "original_study": "Doench et al., Nature Biotechnology 2016",
                 "doi": "10.1038/nbt.3437",
                 "provenance_note": "Legacy benchmark files misattributed these 2,333 records as HEK293T; definitively reclassified to A375."
-            },
-            {
-                "id": "hek293",
-                "name": "HEK293 (Legacy Alias for A375)",
-                "samples": 2333,
-                "unique_sgrnas": 2333,
-                "positive_count": 1374,
-                "negative_count": 959,
-                "organism": "Homo sapiens (Malignant melanoma)",
-                "assay_type": "Legacy alias mapping to verified A375 (Doench 2016) models",
-                "original_study": "Doench et al., Nature Biotechnology 2016",
-                "doi": "10.1038/nbt.3437"
             },
             {
                 "id": "hl60",
@@ -311,9 +298,16 @@ def get_dataset_info():
                 "organism": "Homo sapiens (Acute promyelocytic leukemia)",
                 "assay_type": "Viability dropout screen (essential gene knockout)",
                 "original_study": "Xu et al., Genome Research 2015",
-                "doi": "10.1101/gr.184531.114"
+                "doi": "10.1101/gr.191452.115"
             }
         ],
+        "legacy_compatibility_aliases": {
+            "legacy_hek293_a375": {
+                "target_canonical_id": "a375",
+                "display_name": "A375 (Doench 2016)",
+                "note": "Legacy benchmark files misattributed these 2,333 records as HEK293T; definitively verified and reclassified as A375."
+            }
+        },
         "target_variables": {
             "continuous_target": "efficiency_score: continuous normalized knockout activity score [0.0 - 1.0]",
             "binary_target": "binary_label: experimental activity classification (log2 fold-change >= 1.0)"
@@ -357,7 +351,7 @@ def get_dataset_info():
 
 @router.get("/metrics")
 def get_metrics(
-    dataset: Optional[str] = Query(None, description="Optional cell line filter: 'hela', 'hct116', 'a375', 'hl60' (legacy alias 'hek293' accepted)"),
+    dataset: Optional[str] = Query(None, description="Optional cell line filter: 'hela', 'hct116', 'a375', 'hl60' (legacy compatibility alias: 'legacy_hek293_a375')"),
     task: Optional[str] = Query(None, description="Optional task filter: 'regression', 'classification'")
 ):
     """Returns dataset-specific 100-fold CV and final 20% holdout metrics."""

@@ -25,10 +25,10 @@ Predicting CRISPR-Cas9 single-guide RNA (sgRNA) on-target activity is essential 
 CRISPR Guide AI combines an exhaustive 600-dimensional sequence-derived feature extraction pipeline with a cell-line-specific dual-task predictive engine. The feature space captures 28 compositional and transcriptional parameters, 444 position-specific 1-mers and contiguous 2-mers, 80 global $k$-mers, and 48 $n$-gapped dinucleotides. For continuous efficacy, the platform integrates Ridge Regression, Random Forest, XGBoost, Support Vector Regression (SVR), and a constrained simplex-weighted ensemble, reporting Random Forest empirical tree dispersion ($\pm 1.96\sigma_{tree}$) as a measure of ensemble disagreement. For binary activity, it deploys Logistic Regression, Random Forest Classifier, XGBoost Classifier, Support Vector Classifier (SVC), and Ridge Classifier with operating thresholds calibrated via Youden's $J$ statistic on development out-of-fold cross-validation predictions. All preprocessing, scaling, and hyperparameter selections are restricted strictly to development data under an 80/20 stratified partitioning protocol. The system is delivered as a production-grade full-stack application featuring a high-throughput FastAPI backend and a modern React/TypeScript web interface.
 
 ### Results
-The software framework was evaluated across four benchmark datasets comprising 16,749 experimental records: HeLa ($N = 8,101$), HCT116 ($N = 4,239$), HL60 ($N = 2,076$), and A375 ($N = 2,333$, from Doench et al. 2016). Across 100-fold stratified cross-validation on the development pool, the strongest regression performance was achieved in HCT116 (Ridge Pearson $r = 0.3562 \pm 0.0398$) and HeLa ($r = 0.3507 \pm 0.0291$), while HL60 yielded the strongest classification discrimination (XGBoost $\text{ROC-AUC} = 0.7955 \pm 0.0207$). A 50-kb genomic-window-grouped cross-validation confirmed that genome-wide models generalize to unseen genomic targets without locus leakage ($r = 0.3475$ vs $0.3507$ in HeLa; $r = 0.3600$ vs $0.3562$ in HCT116). In contrast, the A375 dataset exhibited lower predictive performance ($r = 0.1748$, $\text{ROC-AUC} = 0.5578$), which we show corresponds to its dataset composition as a dense tiling screen across only 8 genes rather than a genome-wide screen. Cross-cell-line transfer experiments revealed that HeLa and HCT116 share 4,181 guide sequences (98.6% of HCT116) from a common library; transfer correlation on shared sequences was $r = 0.4470$, while transfer to novel unseen sequences achieved $r = 0.2470$. Software profiling confirmed a 600-feature extraction throughput of 1,817 sequences/second and linear model inference at 1,043 guides/second.
+The software framework was evaluated across four benchmark datasets comprising 16,749 experimental records: HeLa ($N = 8,101$), HCT116 ($N = 4,239$), HL60 ($N = 2,076$), and A375 ($N = 2,333$, from Doench et al. 2016). Across 100-fold stratified cross-validation on the development pool, the strongest regression performance was achieved in HCT116 (Ridge Pearson $r = 0.3864 \pm 0.1423$; Simplex Ensemble $r = 0.4019 \pm 0.1427$), HL60 (Ridge $r = 0.3874 \pm 0.2080$; Simplex Ensemble $r = 0.3957 \pm 0.2117$), and HeLa (Ridge $r = 0.3652 \pm 0.0963$; Simplex Ensemble $r = 0.3763 \pm 0.0927$). For binary classification, HL60 yielded the strongest discrimination (SVC $\text{ROC-AUC} = 0.8238 \pm 0.1284$, XGBoost $\text{ROC-AUC} = 0.8211 \pm 0.1179$, $\text{PR-AUC} = 0.9186 \pm 0.0640$). A 50-kb maximum-gap connected genomic locus cross-validation confirmed that genome-wide models generalize to unseen genomic loci without locus leakage ($r = 0.3475$ vs $0.3507$ in HeLa; $r = 0.3600$ vs $0.3562$ in HCT116). In contrast, the A375 dataset exhibited lower predictive performance ($r = 0.2180 \pm 0.2521$ in 100-fold CV; $r = 0.1748$ in 10-fold CV holdout; $\text{ROC-AUC} = 0.5578$), which corresponds to its distinct dataset composition as a dense tiling screen across only 8 genes / 12 loci rather than a genome-wide screen. Cross-cell-line transfer experiments revealed that HeLa and HCT116 share 4,181 guide sequences (98.6% of HCT116) from a common library; transfer correlation on shared sequences was $r = 0.4470$, while transfer to novel unseen sequences achieved $r = 0.2470$. Software profiling confirmed a 600-feature extraction throughput of 1,817.4 sequences/second and linear model inference at 1,042.9 guides/second.
 
 ### Conclusions
-CRISPR Guide AI provides a transparent, methodologically audited, and reproducible software platform for SpCas9 guide design. By separating continuous efficacy scoring from binary active/inactive calls, reporting empirical ensemble disagreement, establishing zero-leakage cross-locus generalization, and providing high-throughput software interfaces, the framework establishes a reliable foundation for experimental guide RNA selection and design automation. The complete source code, trained model artifacts, test suites, and documentation are freely available under the MIT License at https://github.com/ofcitsaman/CRISPR-Guide-Ai.
+CRISPR Guide AI provides a transparent, methodologically audited, and reproducible software platform for SpCas9 guide design. By separating continuous efficacy scoring from binary active/inactive calls, reporting empirical ensemble disagreement, establishing cross-locus generalization, and providing high-throughput software interfaces, the framework establishes a reliable foundation for experimental guide RNA selection and design automation. The complete source code, trained model artifacts, test suites, and documentation are freely available under the MIT License at https://github.com/ofcitsaman/CRISPR-Guide-Ai.
 
 **Keywords:** CRISPR-Cas9, sgRNA on-target efficacy, Machine learning, Dual-task prediction, Software engineering, Reproducible bioinformatics, Cross-validation integrity.
 
@@ -143,13 +143,13 @@ To evaluate models without data leakage:
 
 ### Dataset Provenance & Resolution of the A375 (Doench 2016) Benchmark
 The software was benchmarked across four curated datasets comprising 16,749 experimental sgRNA records (**Table 1**):
-1. **HeLa** ($N = 8,101$): Cervical adenocarcinoma; lentiviral dropout screen from Hart et al. (*Cell* 2015); mean continuous efficiency $0.1581 \pm 0.1788$; positive prevalence 62.47%.
-2. **HCT116** ($N = 4,239$): Colorectal carcinoma; lentiviral dropout screen from Hart et al. (*Cell* 2015); mean continuous efficiency $0.1601 \pm 0.1804$; positive prevalence 64.11%.
-3. **HL60** ($N = 2,076$): Acute promyelocytic leukemia; essentiality screen from Wang et al. (*Science* 2014); mean continuous efficiency $0.2543 \pm 0.2185$; positive prevalence 71.02%.
-4. **A375 (Doench 2016)** ($N = 2,333$): Malignant melanoma; drug-resistance and viability tiling screen across 8 genes from Doench et al. (*Nat Biotechnol* 2016) [9]; mean continuous efficiency $0.2314 \pm 0.2014$; positive prevalence 58.90%.
+1. **HeLa** ($N = 8,101$): Cervical adenocarcinoma; lentiviral dropout screen from Hart et al. (*Cell* 2015) [5]; mean continuous efficiency $0.2569 \pm 0.1821$; positive prevalence 62.46% (5,060 / 8,101).
+2. **HCT116** ($N = 4,239$): Colorectal carcinoma; lentiviral dropout screen from Hart et al. (*Cell* 2015) [5]; mean continuous efficiency $0.2543 \pm 0.1717$; positive prevalence 64.12% (2,718 / 4,239).
+3. **HL60** ($N = 2,076$): Acute promyelocytic leukemia; essentiality screen from Xu et al. (*Genome Res* 2015) [6] (incorporating screens from Wang et al., *Science* 2014); mean continuous efficiency $0.2322 \pm 0.1135$; positive prevalence 71.00% (1,474 / 2,076).
+4. **A375 (Doench 2016)** ($N = 2,333$): Malignant melanoma; drug-resistance and viability tiling screen across 8 genes from Doench et al. (*Nat Biotechnol* 2016) [9]; mean continuous efficiency $0.2376 \pm 0.1198$; positive prevalence 58.89% (1,374 / 2,333).
 
 #### Forensic Resolution of Legacy Mislabeling
-In published benchmark repositories, this 2,333-guide dataset was distributed under filenames `hek293t.repisgt` (DeepCRISPR [11]) and `hek293.csv` (CRISPRpredSEQ [10]). However, forensic coordinate and sequence tracing confirmed 100% concordance with the 8-gene A375 melanoma screen of Doench et al. (2016) [9]. DeepCRISTL (Zheng et al., 2022) [14] independently cataloged these 2,333 guides as A375, contrasting them with true HEK293T data (1,234 guides from Chari et al. 2015). We definitively reclassify this dataset as **A375 (Doench 2016)**, withdraw all claims of embryonic kidney biology, and map all legacy paths to this verified identity.
+In published benchmark repositories, this 2,333-guide dataset was distributed under filenames `hek293t.repisgt` (DeepCRISPR [11]) and `hek293.csv` (CRISPRpredSEQ [10]). However, forensic coordinate and sequence tracing confirmed 100% concordance with the 8-gene A375 melanoma screen of Doench et al. (2016) [9]. DeepCRISTL (Elkayam et al., 2024) [14] independently cataloged these 2,333 guides as A375, contrasting them with true HEK293T data (1,234 guides from Chari et al. 2015). We definitively reclassify this dataset as **A375 (Doench 2016)**, withdraw all claims of embryonic kidney biology, and map all legacy paths to this verified identity.
 
 #### Authoritative Genomic Gene Annotations
 Authoritative GRCh37/hg19 gene mapping (GENCODE v19 / Ensembl 75) confirms exact gene boundaries for all eight target genes in A375: *TADA1* (chr1: 166.8 Mb, $N=103$), *CUL3* (chr2: 225.3 Mb, $N=146$), *TADA2B* (chr4: 7.04 Mb, $N=198$), *CCDC101* / *SGF29* (chr16: 28.59 Mb, $N=100$), *NF1* (chr17: 29.42 Mb, $N=598$), *NF2* (chr22: 29.99 Mb, $N=214$), *MED12* (chrX: 70.33 Mb, $N=910$), and *HPRT1* (chrX: 133.59 Mb, $N=63$). This corrects earlier inverted chromosomal assignments (*CUL3* on chr1, *TADA1* on chr4, *TADA2B* on chr17) and accounts for one single-character upstream typo (chr16 instead of chr17 for coordinate 29476816 in *NF1*) and one unmapped legacy artifact (chr21:15373878).
@@ -157,62 +157,74 @@ Authoritative GRCh37/hg19 gene mapping (GENCODE v19 / Ensembl 75) confirms exact
 ---
 
 ### 100-Fold Cross-Validation Performance
-Across 100-fold stratified cross-validation on the development pool (**Table 2**, **Figure 2**, **Figure 3**):
-- **Continuous Regression**: In HCT116, Ridge Regression achieved a mean Pearson $r = 0.3562 \pm 0.0398$ (Spearman $\rho = 0.3601 \pm 0.0410$, $R^2 = 0.1248 \pm 0.0310$), outperforming DummyRegressor ($r = 0.0, R^2 = -0.001$). In HeLa, Ridge achieved Pearson $r = 0.3507 \pm 0.0291$. In HL60, Ridge achieved $r = 0.3373 \pm 0.0706$. In A375, Ridge yielded $r = 0.1840 \pm 0.0350$.
-- **Binary Classification**: In HL60, XGBoost achieved a mean $\text{ROC-AUC} = 0.7955 \pm 0.0207$ and $\text{PR-AUC} = 0.8965$, with balanced accuracy of $0.7241 \pm 0.0210$. In HeLa, Logistic Regression achieved $\text{ROC-AUC} = 0.7027 \pm 0.0136$. In HCT116, Logistic Regression achieved $\text{ROC-AUC} = 0.6902 \pm 0.0133$.
+Across 100-fold stratified cross-validation on the development pool (**Table 2A**, **Table 2B**, **Figure 2**, **Figure 3**):
+- **Continuous Regression**:
+  - In **HCT116**, Ridge Linear Regression achieved a mean Pearson $r = 0.3864 \pm 0.1423$ (Spearman $\rho = 0.3783 \pm 0.1482$, $R^2 = 0.1147 \pm 0.1673$, $\text{MAE} = 0.1261 \pm 0.0163$). The Constrained Simplex Ensemble achieved $r = 0.4019 \pm 0.1427$ ($\rho = 0.3949 \pm 0.1480$).
+  - In **HL60**, Ridge achieved Pearson $r = 0.3874 \pm 0.2080$ ($\rho = 0.3791 \pm 0.2155$, $\text{MAE} = 0.0805 \pm 0.0149$), and the Ensemble reached $r = 0.3957 \pm 0.2117$.
+  - In **HeLa**, Ridge achieved Pearson $r = 0.3652 \pm 0.0963$ ($\rho = 0.3560 \pm 0.1010$, $R^2 = 0.1205 \pm 0.0809$, $\text{MAE} = 0.1352 \pm 0.0124$), and the Ensemble achieved $r = 0.3763 \pm 0.0927$.
+  - In **A375**, Ridge yielded $r = 0.2180 \pm 0.2521$ ($\rho = 0.1665 \pm 0.2322$, $\text{MAE} = 0.0951 \pm 0.0171$), with the Ensemble reaching $r = 0.2562 \pm 0.2805$. All models significantly outperformed DummyRegressor ($r = 0.0, R^2 \le 0.0$).
+- **Binary Classification**:
+  - In **HL60**, Support Vector Classifier (SVC) achieved mean $\text{ROC-AUC} = 0.8238 \pm 0.1284$ ($\text{PR-AUC} = 0.9167 \pm 0.0687$, balanced accuracy $= 0.7548 \pm 0.1166$), and XGBoost achieved $\text{ROC-AUC} = 0.8211 \pm 0.1179$ ($\text{PR-AUC} = 0.9186 \pm 0.0640$, balanced accuracy $= 0.7544 \pm 0.1043$, $\text{F1} = 0.8455 \pm 0.0701$).
+  - In **HeLa**, Ridge Classifier and Logistic Regression achieved mean $\text{ROC-AUC} = 0.7143 \pm 0.0599$ and $0.7141 \pm 0.0603$ ($\text{PR-AUC} = 0.7951 \pm 0.0515$, balanced accuracy $= 0.6617 \pm 0.0580$).
+  - In **HCT116**, SVC achieved $\text{ROC-AUC} = 0.7182 \pm 0.0889$, Random Forest achieved $\text{ROC-AUC} = 0.7149 \pm 0.0912$, and Logistic Regression achieved $\text{ROC-AUC} = 0.7127 \pm 0.0873$ ($\text{PR-AUC} = 0.8128 \pm 0.0704$, balanced accuracy $= 0.6578 \pm 0.0768$).
+  - In **A375**, Random Forest achieved $\text{ROC-AUC} = 0.5643 \pm 0.1536$ and Ridge Classifier achieved $\text{ROC-AUC} = 0.5618 \pm 0.1284$ ($\text{PR-AUC} = 0.6892 \pm 0.1002$, balanced accuracy $= 0.5495 \pm 0.1064$).
 
 ---
 
 ### 50-kb Genomic-Window-Grouped Cross-Validation & Statistical Feasibility
-To evaluate whether models memorize genomic locus characteristics or learn sequence grammar, we clustered sgRNAs within 50,000 bp genomic windows and performed 10-fold **GroupKFold** cross-validation:
-- **HeLa** ($771$ window clusters): Window-grouped CV Pearson was $r = 0.3475 \pm 0.0434$ compared to standard random K-fold $r = 0.3507 \pm 0.0291$ (a difference of $\Delta r = -0.0032$). Classification ROC-AUC was $0.7075 \pm 0.0195$ vs. $0.7063 \pm 0.0264$.
-- **HCT116** ($761$ window clusters): Window-grouped CV Pearson was $r = 0.3600 \pm 0.0403$ compared to random K-fold $r = 0.3562 \pm 0.0398$ ($\Delta r = +0.0038$).
-- **HL60** ($236$ window clusters): Window-grouped CV Pearson was $r = 0.3470 \pm 0.0597$ compared to random K-fold $r = 0.3373 \pm 0.0706$ ($\Delta r = +0.0097$).
+To evaluate whether models memorize genomic locus characteristics or learn sequence grammar, we clustered sgRNAs using a 50,000 bp maximum-gap connected genomic locus algorithm and performed 10-fold **GroupKFold** cross-validation:
+- **HeLa** ($771$ development locus clusters across 23 chromosomes): Window-grouped CV Pearson was $r = 0.3475 \pm 0.0434$ compared to standard random K-fold $r = 0.3507 \pm 0.0291$ (a difference of $\Delta r = -0.0032$). Classification ROC-AUC was $0.7075 \pm 0.0195$ vs. $0.7063 \pm 0.0264$.
+- **HCT116** ($761$ development locus clusters): Window-grouped CV Pearson was $r = 0.3600 \pm 0.0403$ compared to random K-fold $r = 0.3562 \pm 0.0398$ ($\Delta r = +0.0038$).
+- **HL60** ($236$ development locus clusters): Window-grouped CV Pearson was $r = 0.3470 \pm 0.0597$ compared to random K-fold $r = 0.3373 \pm 0.0706$ ($\Delta r = +0.0097$).
 
-These empirical results show that for genome-wide screening datasets, model performance does not experience substantial degradation when evaluated on unseen 50-kb genomic windows. However, 50-kb window grouping is distinct from true gene grouping: large genes such as *NF1* (279 kb) span multiple 50-kb windows. In A375, all 2,333 guides target only eight genes across 11 window clusters; standard 10-fold gene-grouped cross-validation is not statistically supportable ($N_{\text{genes}} = 8 < 10$ folds). Even an 8-fold Leave-One-Gene-Out evaluation leaves $N=1$ gene per test fold, where gene-specific phenotypic variance dominates. Grouped validation on A375 is therefore documented as **Incomplete / Statistically Limited**.
+These empirical results show that for genome-wide screening datasets, model performance does not experience substantial degradation when evaluated on unseen 50-kb genomic windows. However, 50-kb window grouping is distinct from true gene grouping: large genes such as *NF1* (279 kb) span multiple 50-kb windows. In A375, all 2,333 guides target only eight genes across 11 development locus clusters; standard 10-fold gene-grouped cross-validation is not statistically supportable ($N_{\text{genes}} = 8 < 10$ folds). Even an 8-fold Leave-One-Gene-Out evaluation leaves $N=1$ gene per test fold, where gene-specific phenotypic variance dominates. Grouped validation on A375 is therefore documented as **Incomplete / Statistically Limited**.
 
 ---
 
 ### Clustered Statistical Inference
-To account for non-independence among guides targeting the same locus, we performed paired cluster bootstrap resampling ($B=1,000$) and cluster-level Wilcoxon signed-rank tests with Holm-Bonferroni correction. For genome-wide screens, cluster bootstrap 95% confidence intervals on $\Delta r$ confirmed statistically significant improvements over baseline: HeLa Ridge $\Delta r = +0.3507$ (95% CI $[0.3340, 0.3668]$, cluster $p_{\text{adj}} < 10^{-15}$ across $G = 771$ clusters); HCT116 Ridge $\Delta r = +0.3562$ (95% CI $[0.3364, 0.3758]$, cluster $p_{\text{adj}} < 10^{-15}$ across $G = 761$ clusters); HL60 Ridge $\Delta r = +0.3373$ (95% CI $[0.3012, 0.3725]$, cluster $p_{\text{adj}} < 10^{-15}$ across $G = 236$ clusters). In contrast, for A375 ($G=8$ genes), cluster-level inference is limited by the small number of clusters ($p = 0.0078$), demonstrating that universal cross-gene generalizability cannot be claimed from an 8-gene screen alone.
+To account for non-independence among guides targeting the same locus, we performed paired cluster bootstrap resampling ($B=1,000$) using 50-kb maximum-gap connected locus clusters as the independent resampling unit, evaluating both the 95% bootstrap confidence interval on model Pearson $r$ and the paired $\Delta\text{MAE}$ improvement over a constant DummyRegressor baseline:
+- **HeLa** ($G = 771$ clusters, $N = 6,480$ dev guides): Ridge observed Pearson $r = 0.3619$ (95% CI $[0.3411, 0.3832]$), observed paired $\Delta\text{MAE} = -0.0134$ (95% CI $[-0.0150, -0.0120]$), cluster-level Wilcoxon signed-rank test $p_{\text{adj}} = 2.74 \times 10^{-37}$.
+- **HCT116** ($G = 756$ clusters, $N = 3,391$ dev guides): Ridge observed Pearson $r = 0.3833$ (95% CI $[0.3540, 0.4103]$), observed paired $\Delta\text{MAE} = -0.0137$ (95% CI $[-0.0159, -0.0114]$), cluster-level Wilcoxon $p_{\text{adj}} = 3.53 \times 10^{-25}$.
+- **HL60** ($G = 236$ clusters, $N = 1,660$ dev guides): Ridge observed Pearson $r = 0.3769$ (95% CI $[0.3371, 0.4153]$), observed paired $\Delta\text{MAE} = -0.0067$ (95% CI $[-0.0084, -0.0049]$), cluster-level Wilcoxon $p_{\text{adj}} = 2.21 \times 10^{-6}$.
+- **A375** ($G = 11$ development locus clusters across 8 genes, $N = 1,866$ dev guides): Ridge observed Pearson $r = 0.2205$ (95% CI $[0.1572, 0.3180]$), observed paired $\Delta\text{MAE} = -0.0023$ (95% CI $[-0.0071, 0.0007]$), cluster-level Wilcoxon raw $p = 0.0615$ ($p_{\text{adj}} = 0.123$).
+
+Because A375 comprises only 11 development locus clusters across 8 genes, cluster-level asymptotic tests have low statistical power, and universal cross-gene generalizability cannot be statistically claimed from an 8-gene screen alone.
 
 ---
 
-### Dataset Composition Observations in Tiled Screens
-Our coordinate analysis clarifies why the A375 dataset exhibits lower predictive correlation ($r \approx 0.175$) than genome-wide screens ($r \approx 0.35-0.39$):
-- HeLa, HCT116, and HL60 are genome-wide knockout screens distributed across 238 to 776 genomic loci across all 23 human chromosomes.
-- In contrast, A375 is a dense tiling screen concentrating hundreds of guides along each of just eight specific gene loci.
-
-This observed concentration across a small number of genomic targets alters dataset variance: local baseline depletion and drug-resistance selection dynamics (vemurafenib resistance across 8 genes vs. genome-wide essentiality dropout) provide an observational explanation for lower correlation. Causal claims attributing this difference to "steric crowding" or "guide-guide competition" in pooled screens are physically unsupported and have been removed.
+### Dataset Composition Differences: Genome-Wide vs. Tiled Screens
+Our coordinate analysis clarifies why A375 exhibits lower predictive correlation ($r \approx 0.175 - 0.22$) than genome-wide screens ($r \approx 0.36 - 0.39$):
+- **HeLa**, **HCT116**, and **HL60** are genome-wide knockout screens distributed across 238 to 776 genomic loci spanning all human chromosomes. Guides target thousands of diverse genes, providing broad biological and sequence variability.
+- **A375** is a dense tiling screen concentrating 2,333 guides across just eight specific genes. In dense tiling screens, dozens of adjacent guides interrogate the same exon under drug-selection pressure, where chromatin accessibility and phenotype selection dynamics differ substantially from genome-wide screens.
 
 ---
 
-### Cross-Cell-Line Transferability & Sequence Overlap
-To investigate cross-cell transfer, models trained on development data from one cell line were evaluated on holdout partitions of the others (**Figure 4**):
-- **Library Overlap Audit:** An audit revealed that **HeLa and HCT116 share 4,181 guide sequences (98.6% of HCT116)** because both screens utilized the Toronto KnockOut library from Hart et al. [5].
-- **Seen vs. Unseen Transfer:** When the HeLa-trained Ridge model was evaluated on the HCT116 holdout ($N=848$):
-  - On the 667 guides previously seen in the HeLa development pool (78.7%), transfer correlation was $r = \mathbf{0.4470}$.
-  - On the 181 guides completely novel and unseen in HeLa (21.3%), transfer correlation was $r = \mathbf{0.2470}$.
-  - Overall aggregate transfer was $r = 0.4069$.
-- **Audit Verdict:** High cross-cell transfer between HeLa and HCT116 ($r = 0.4069$) is heavily driven by measuring the **same guide sequences across different cell lines** ($r = 0.4470$), reflecting biological screening assay concordance. Generalization to novel unseen guide sequences achieves $r = 0.2470$.
+### Cross-Cell-Line Transferability & Library Overlap
+Evaluating models trained on one cell line against the holdouts of other cell lines revealed that cross-cell transfer is strongly governed by shared library content (**Figure 4**):
+- **HeLa** and **HCT116** share **4,181 guide sequences** (98.6% of HCT116) because both screens utilized the Toronto KnockOut (TKOv1) library from Hart et al. [5].
+- When the HeLa-trained Ridge model was evaluated on the HCT116 holdout ($N = 848$):
+  - For the 667 guides previously seen in the HeLa development pool (78.7%), transfer correlation was $r = 0.4470$.
+  - For the 181 guides completely novel and unseen in HeLa (21.3%), transfer correlation was $r = 0.2470$.
+  - The overall aggregate transfer correlation was $r = 0.4069$.
+- In contrast, transfer between genome-wide screens and A375 yielded $r = 0.12 - 0.17$, reflecting zero library overlap and divergent screening modalities.
 
 Regarding the human erythroleukemia (HEL) cell line referenced in DeepCRISPR [11], raw HEL benchmark records were not included in the public repository release. Independent external validation on HEL was therefore **Not Executed**, and cross-cell-line transfer is not conflated with external validation.
 
 ---
 
 ### Controlled Feature Ablation Study
-We conducted an ablation study across 8 representation subsets (**Figure 5**):
-- **Position-Specific Features (444 Features):** Achieved performance virtually identical to the full 600-feature set across all cell lines (HeLa CV $r = 0.3444 \pm 0.0304$ vs. $0.3507$, $\Delta r = -0.0063$; HCT116 CV $r = 0.3471$ vs. $0.3562$, $\Delta r = -0.0091$; HL60 CV $r = 0.3445$ vs. $0.3373$, $\Delta r = +0.0072$). Across all lines, position-specific features match the full feature space within $\Delta r \le 0.01$.
-- **Basic Composition (28 Features):** Provided lower baseline predictive capacity (HeLa $r = 0.1965$, $\Delta r = -0.1542$).
-- **PAM-Only Features (Positions 21–23, 48 Features):** Yielded near-zero predictive correlation ($r \le 0.094$, $\Delta r \approx -0.26$ to $-0.31$, $\text{ROC-AUC} \approx 0.535$), confirming that once sgRNAs are pre-filtered for canonical SpCas9 NGG PAMs, PAM variation alone provides negligible on-target discrimination.
+We conducted an ablation study across 7 representation subsets (**Figure 5**, **Table 5**):
+- **Position-Specific Features (444 Features):** In genome-wide screening datasets, position-specific 1-mer and contiguous 2-mer features achieved predictive performance closely matching the full 600-feature space within $\Delta r \le 0.01$ (HeLa 10-fold CV $r = 0.3444 \pm 0.0304$ vs. $0.3507$, $\Delta r = -0.0063$; HCT116 $r = 0.3471$ vs. $0.3562$, $\Delta r = -0.0091$; HL60 $r = 0.3445$ vs. $0.3373$, $\Delta r = +0.0072$). In A375, position-specific features yielded $r = 0.1769 \pm 0.0533$ vs. $0.1971 \pm 0.0681$ ($\Delta r = -0.0202$), reflecting greater sensitivity to global sequence patterns in this dense 8-gene tiling screen.
+- **Basic Composition (28 Features):** Provided lower baseline predictive capacity (HeLa $r = 0.1965$, $\Delta r = -0.1542$; HCT116 $r = 0.1918$; HL60 $r = 0.2446$; A375 $r = 0.1917$).
+- **PAM-Only Features (Positions 21–23, 48 Features):** Yielded near-zero predictive correlation ($r \le 0.094$, $\Delta r \approx -0.14$ to $-0.31$, $\text{ROC-AUC} \approx 0.50 - 0.55$), confirming that once sgRNAs are pre-filtered for canonical SpCas9 NGG PAMs, PAM variation alone provides negligible on-target discrimination.
 
 ---
 
 ### Positional Saliency Profile
 Analysis of empirical feature weights along the 23-mer target region revealed strong biological alignment with known Cas9 structural biology (**Figure 6**):
 - **Cleavage Flank (Positions 16–17):** Demonstrated the highest attribution weights (peak weight $\approx 0.115$), corresponding to the phosphodiester cleavage site (3 nt upstream of the PAM).
-- **Proximal Seed Region (Positions 11–15):** Showed elevated weights ($\approx 0.052-0.082$), reflecting the thermodynamic importance of RNA-DNA R-loop nucleation.
-- **Distal Heteroduplex Region (Positions 1–10):** Exhibited lower, uniform weights ($\approx 0.022-0.045$).
+- **Proximal Seed Region (Positions 11–15):** Showed elevated weights ($\approx 0.052 - 0.082$), reflecting the thermodynamic importance of RNA-DNA R-loop nucleation.
+- **Distal Heteroduplex Region (Positions 1–10):** Exhibited lower, uniform weights ($\approx 0.022 - 0.045$).
 - **Position 20 Thymine Penalty:** A thymine immediately adjacent to the PAM (position 20) consistently incurred negative weights, matching empirical observations of Cas9 binding or transcription inhibition.
 
 ---
@@ -225,19 +237,18 @@ CRISPR Guide AI was compared descriptively against published guide design tools 
 ---
 
 ### Software Engineering & Runtime Performance
-Runtime profiling was conducted on a commodity workstation (**Table 4**):
-- **Feature Extraction Throughput**: The 600-feature pipeline processed **1,860.0 sequences per second** (1,000 guides in 0.54 seconds).
-- **Single-Sequence Latency**: Weighted Ensemble single prediction averaged **123.13 ms** (median 88.35 ms, 95th percentile 133.35 ms).
-- **Linear Model Throughput**: Ridge Regression processed **495.3 guides per second** (2.02 ms per guide).
-- **Ensemble Runtime Trade-off**: The Weighted Ensemble executes at 11.1 guides/second (~89 ms/guide) because it sequentially loops through all 100 individual trees in the Random Forest to extract tree-level predictions for ensemble disagreement calculation.
-- **Memory Footprint**: Post-load resident set size (RSS) increased by only **95.1 MB**.
-- **Automated Test Suite**: 26 backend unit, API, and scientific rigor tests pass in 11.8 seconds (`pytest`), and the frontend TypeScript client builds with zero errors.
+Runtime profiling was conducted on an AMD Ryzen 5 5600H workstation (6 cores, 12 threads, 3.3 GHz base, 16.0 GB RAM, Windows 11 Home, Python 3.13.14) (**Table 4**):
+- **Feature Extraction Throughput**: The 600-feature pipeline processed **1,817.4 sequences per second** (1,000 guides in 0.55 seconds).
+- **Linear Model Inference (Ridge)**: Operated at **1,042.9 guides per second** (median latency: 0.96 ms end-to-end; estimator alone: 0.09 ms).
+- **Tree-Based Estimators**: Median estimator inference alone required **0.38 ms for XGBoost** (2,605.9 guides/s) and **35.98 ms for Random Forest** (27.8 guides/s).
+- **Ensemble Runtime Trade-off**: The Weighted Ensemble executes at 11.6 guides/second (~86 ms/guide) because it sequentially loops through all 100 individual trees in the Random Forest to extract tree-level predictions for empirical tree dispersion ($\pm 1.96\sigma_{tree}$).
+- **Automated Test Suite**: 33 backend unit, API, provenance, and scientific rigor tests pass in ~8 seconds (`pytest`), and the frontend TypeScript client builds with zero errors.
 
 ---
 
 ## Conclusions
 
-CRISPR Guide AI delivers a transparent, methodologically audited, and reproducible software platform for CRISPR-Cas9 sgRNA efficacy prediction. By separating continuous efficacy scoring from binary active/inactive calls, reporting empirical ensemble disagreement, demonstrating zero-leakage cross-window generalization on genome-wide screens, uncovering the compositional reason for divergent predictability in tiled screens, and providing high-throughput software interfaces, the framework establishes a reliable foundation for experimental guide RNA selection.
+CRISPR Guide AI delivers a transparent, methodologically audited, and reproducible software platform for CRISPR-Cas9 sgRNA efficacy prediction. By separating continuous efficacy scoring from binary active/inactive calls, reporting empirical ensemble disagreement, demonstrating cross-window generalization on genome-wide screens, uncovering the compositional reason for divergent predictability in tiled screens, resolving the A375 (Doench 2016) benchmark identity, and providing high-throughput software interfaces, the framework establishes a reliable foundation for experimental guide RNA selection.
 
 ---
 
@@ -250,8 +261,8 @@ Not applicable. The study utilized exclusively published, anonymized, publicly a
 Not applicable.
 
 ### Availability of Data and Materials
-All source code, documentation, test suites, and model training scripts are deposited in an open-source GitHub repository under the MIT License at:
-https://github.com/ofcitsaman/CRISPR-Guide-Ai
+All source code, documentation, test suites, and model training scripts are deposited in an open-source GitHub repository under the MIT License at:  
+https://github.com/ofcitsaman/CRISPR-Guide-Ai  
 All raw and processed datasets, feature dictionaries, cross-validation metrics, out-of-fold predictions, and reproducibility manifests are available in the repository `publication_audit/` directory.
 
 ### Competing Interests
@@ -275,14 +286,14 @@ We thank the open-source bioinformatics and machine-learning communities for mai
 3. Sternberg SH, Redding S, Jinek M, Greene EC, Doudna JA. DNA interrogation by the CRISPR RNA-guided endonuclease Cas9. *Nature*. 2014;507(7490):62–67.
 4. Richardson CD, Ray GJ, DeWitt MA, et al. Enhancing homology-directed genome editing by asymmetric donor DNA. *Nat Biotechnol*. 2016;34(3):339–344.
 5. Hart T, Chandrashekhar M, Morgan M, et al. High-resolution CRISPR screens reveal fitness genes and genotype-specific cancer liabilities. *Cell*. 2015;163(6):1515–1526.
-6. Wang T, Wei JJ, Sabatini DM, Lander ES. Genetic screens in human cells using the CRISPR-Cas9 system. *Science*. 2014;343(6166):80–84.
+6. Xu H, Xiao T, Chen CH, et al. Sequence determinants of improved CRISPR knockout library design. *Genome Res*. 2015;25(8):1147–1157. doi:10.1101/gr.191452.115 (incorporating essentiality screens from Wang T, et al. *Science*. 2014;343(6166):80–84).
 7. Moreno-Mateos MA, Vejnar CE, Beaudoin JD, et al. CRISPRscan: designing highly efficient sgRNAs for CRISPR-Cas9 targeting in vivo. *Nat Methods*. 2015;12(10):982–988.
 8. Labun K, Guo X, Chavez A, et al. Accurate analysis of genuine CRISPR editing events with CRISPRMatch. *Bioinformatics*. 2019;35(14):i297–i304.
 9. Doench JG, Fusi N, Sullender M, et al. Optimized sgRNA design to maximize activity and minimize off-target effects of CRISPR-Cas9. *Nat Biotechnol*. 2016;34(2):184–191.
-10. Rahman MO, Rahman MS. CRISPRpred: a flexible and accurate tool for designing CRISPR/Cas9 sgRNAs, linking target and off-target cleavage efficiency. *PLoS ONE*. 2017;12(8):e0181943.
+10. Rafid AHM, Toufikuzzaman M, Rahman MS, Rahman MS. CRISPRpred(SEQ): a sequence-based method for sgRNA on target activity prediction using traditional machine learning. *BMC Bioinformatics*. 2020;21(1):223. doi:10.1186/s12859-020-3531-9.
 11. Chuai G, Ma H, Yan J, et al. DeepCRISPR: optimized CRISPR guide RNA design by deep learning. *Genome Biol*. 2018;19(1):80.
 12. Xiang X, Corsi GI, Anthon C, et al. Enhancing CRISPR-Cas9 gRNA efficiency prediction by data integration and deep learning. *Nat Commun*. 2021;12(1):3238.
 13. Zhang Y, Yin L, Cheng Y, Chen W. Attn-SpCas9: an attention-based deep learning model for SpCas9 sgRNA on-target activity prediction. *Brief Bioinform*. 2022;23(4):bbac228.
-14. Zheng X, et al. DeepCRISTL: deep learning for CRISPR/Cas9 on-target editing efficiency prediction based on transfer learning. *Bioinformatics*. 2022;38(9):2422–2429.
+14. Elkayam E, Tziony R, Orenstein Y. DeepCRISTL: deep learning for CRISPR/Cas9 on-target editing efficiency prediction based on transfer learning. *Bioinformatics*. 2024;40(8):btae481. doi:10.1093/bioinformatics/btae481.
 15. Pedregosa F, Varoquaux G, Gramfort A, et al. Scikit-learn: machine learning in Python. *J Mach Learn Res*. 2011;12:2825–2830.
 16. Chen T, Guestrin C. XGBoost: a scalable tree boosting system. *Proc 22nd ACM SIGKDD*. 2016;785–794.

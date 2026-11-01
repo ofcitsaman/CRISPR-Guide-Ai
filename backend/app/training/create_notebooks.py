@@ -112,7 +112,7 @@ nb2_cells = [
     md_cell("""# CRISPR Guide AI: Notebook 02 - Feature Engineering Engine
 
 ### Objective:
-Extract 593 biologically motivated sequence features from 23-mer guide RNAs:
+Extract 600 biologically motivated sequence features from 23-mer guide RNAs:
 1. Basic sequence composition (A, C, G, T counts and percentages, overall GC and AT)
 2. Sub-region GC content: PAM-distal (positions 1-10) vs. PAM-proximal Seed region (positions 11-20)
 3. Transcription termination hazards (poly-T motifs, e.g. TTTT in U6/H1 promoters)

@@ -27,8 +27,7 @@ DATASET_DISPLAY_NAMES = {
     "hela": "HeLa",
     "hct116": "HCT116",
     "a375": "A375",
-    "hl60": "HL60",
-    "hek293": "A375"  # Historical alias mapping to verified A375 biological identity
+    "hl60": "HL60"
 }
 
 MODEL_CANONICAL_NAMES = {
@@ -87,19 +86,37 @@ PAIRING_CLF_TO_REG = {
 
 
 def normalize_dataset_name(name: Optional[str]) -> str:
-    """Normalizes dataset name to canonical key ('hela', 'hct116', 'a375', 'hl60')."""
+    """Normalizes dataset name to canonical key ('hela', 'hct116', 'a375', 'hl60').
+    Rejects ambiguous historical 'hek293' / 'hek293t' requests with an informative error.
+    Explicit backward-compatibility alias 'legacy_hek293_a375' maps safely to 'a375'.
+    """
     if not name:
         return "hela"
-    cleaned = str(name).strip().lower().replace("-", "").replace("_", "").replace(" ", "")
+    raw_str = str(name).strip()
+    cleaned = raw_str.lower().replace("-", "").replace("_", "").replace(" ", "")
+    
+    # Explicit legacy backward-compatibility identifier
+    if cleaned in ("legacyhek293a375", "legacyhek293", "legacyhek293t", "legacyhek", "legacy_hek293_a375"):
+        return "a375"
+        
     if "a375" in cleaned or "doench" in cleaned:
         return "a375"
+    if "hela" in cleaned:
+        return "hela"
+    if "hct116" in cleaned or "hct" in cleaned:
+        return "hct116"
+    if "hl60" in cleaned or "hl" in cleaned:
+        return "hl60"
+        
     if "hek" in cleaned or "293" in cleaned:
-        # Resolves historical misattribution alias to verified canonical A375
-        return "a375"
-    for k in ["hela", "hct116", "hl60"]:
-        if k in cleaned:
-            return k
-    return "hela"
+        raise ValueError(
+            f"Ambiguous dataset identifier '{raw_str}'. The legacy 2,333-guide dataset previously misattributed to HEK293/HEK293T "
+            "has been definitively verified as A375 human melanoma (Doench et al., Nature Biotechnology 2016). "
+            "No genuine HEK293T dataset (e.g. Chari et al. 2015, 1,234 guides) is loaded in this system. "
+            "Please specify 'A375' directly (or 'legacy_hek293_a375' if executing legacy compatibility workflows)."
+        )
+        
+    raise ValueError(f"Unknown dataset '{raw_str}'. Available canonical datasets are: HeLa, HCT116, A375, HL60.")
 
 
 def normalize_model_name(name: Optional[str]) -> str:
@@ -242,14 +259,6 @@ class CRISPRPredictor:
             except Exception as e:
                 print(f"Warning: Could not load artifacts for {cell}: {e}")
         
-        # Backward-compatibility alias: register hek293 pointing to a375 artifacts
-        if "a375" in self.dataset_artifacts:
-            self.dataset_artifacts["hek293"] = dict(self.dataset_artifacts["a375"])
-            self.dataset_artifacts["hek293"]["display_name"] = "A375"
-        elif "hek293" in self.dataset_artifacts:
-            self.dataset_artifacts["a375"] = dict(self.dataset_artifacts["hek293"])
-            self.dataset_artifacts["a375"]["display_name"] = "A375"
-
         # Load top-level metrics if present
         top_metrics_path = os.path.join(SAVED_MODELS_DIR, "all_datasets_metrics.json")
         if not os.path.exists(top_metrics_path):
@@ -258,10 +267,6 @@ class CRISPRPredictor:
         if os.path.exists(top_metrics_path):
             with open(top_metrics_path, "r") as f:
                 self.global_metrics = json.load(f)
-            if "datasets" in self.global_metrics and "a375" in self.global_metrics["datasets"]:
-                self.global_metrics["datasets"]["hek293"] = self.global_metrics["datasets"]["a375"]
-            elif "datasets" in self.global_metrics and "hek293" in self.global_metrics["datasets"]:
-                self.global_metrics["datasets"]["a375"] = self.global_metrics["datasets"]["hek293"]
 
         self._is_loaded = len(self.dataset_artifacts) > 0
         print(f"CRISPR prediction models loaded successfully. Available datasets: {list(self.dataset_artifacts.keys())}")
@@ -452,7 +457,7 @@ class CRISPRPredictor:
             "dataset_used": dataset_display,
             "biological_cell_line": "A375 (Human Melanoma, Doench 2016)" if dataset_key == "a375" else dataset_display,
             "dataset_key": dataset_key,
-            "legacy_alias_used": "hek293" if is_legacy_alias else None,
+            "legacy_alias_used": "legacy_hek293_a375" if is_legacy_alias else None,
             "model_used": canonical_model,
             "predicted_efficiency_score": round(bounded_score, 4),
             "relative_efficacy_score": relative_efficacy,

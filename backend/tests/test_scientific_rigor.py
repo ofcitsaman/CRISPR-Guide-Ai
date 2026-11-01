@@ -142,8 +142,12 @@ def test_dataset_isolation_in_predictor():
     assert res_a375["dataset_used"] == "A375"
     assert res_hl60["dataset_used"] == "HL60"
 
-    # Verify legacy alias resolves to canonical A375 with zero biological false claim
-    res_alias = predictor.predict_single("CTTGCTCGCGCAGGACGAGGCGG", model_name="SVM", dataset_name="HEK293")
+    # Verify ambiguous alias raises ValueError explaining reclassification
+    with pytest.raises(ValueError):
+        predictor.predict_single("CTTGCTCGCGCAGGACGAGGCGG", model_name="SVM", dataset_name="HEK293")
+
+    # Verify explicit legacy compatibility alias resolves to canonical A375 with zero biological false claim
+    res_alias = predictor.predict_single("CTTGCTCGCGCAGGACGAGGCGG", model_name="SVM", dataset_name="legacy_hek293_a375")
     assert res_alias["dataset_used"] == "A375"
     assert res_alias["dataset_key"] == "a375"
     assert res_alias["relative_efficacy_score"] == res_a375["relative_efficacy_score"]

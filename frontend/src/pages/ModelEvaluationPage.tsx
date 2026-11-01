@@ -220,7 +220,7 @@ export const ModelEvaluationPage: React.FC = () => {
 
         <p className="text-xs text-slate-600 leading-relaxed">
           For each cell line independently, <strong>80% of the dataset is reserved for development</strong> and{' '}
-          <strong>20% is held completely untouched for final validation</strong>. Within the 80% development pool,{' '}
+          <strong>20% is held as a fixed historical validation holdout partition</strong>. Within the 80% development pool,{' '}
           <strong>100-fold cross-validation</strong> is executed (each fold trains on ~99% and validates on ~1% of development data with fold-specific scaler fitting).
           Operating classification thresholds are determined solely from out-of-fold development predictions via Youden&apos;s J statistic and frozen before final holdout evaluation.
         </p>
@@ -236,7 +236,7 @@ export const ModelEvaluationPage: React.FC = () => {
               <strong className="text-indigo-700">{summary.development_pool_count.toLocaleString()}</strong>
             </div>
             <div>
-              <span className="text-slate-400 text-[10px] block font-sans">20% Untouched Holdout:</span>
+              <span className="text-slate-400 text-[10px] block font-sans">20% Fixed Holdout:</span>
               <strong className="text-emerald-700">{summary.final_holdout_count.toLocaleString()}</strong>
             </div>
             <div>
@@ -427,7 +427,7 @@ export const ModelEvaluationPage: React.FC = () => {
             </h3>
           </div>
           <span className="text-[10px] text-slate-400">
-            Real True Positive vs. False Positive Rates on untouched 20% holdout
+            Real True Positive vs. False Positive Rates on fixed historical 20% holdout
           </span>
         </div>
 

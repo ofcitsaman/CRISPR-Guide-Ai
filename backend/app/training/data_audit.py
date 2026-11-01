@@ -22,10 +22,15 @@ PROCESSED_DIR = os.path.join(BASE_DIR, "backend", "data", "processed")
 OUTPUT_REPORT_PATH = os.path.join(BASE_DIR, "backend", "data", "data_quality_report.json")
 
 CELL_LINES = ["hela", "hct116", "a375", "hl60"]
+RAW_CSV_MAP = {
+    "hct116": "hct116",
+    "a375": "hek293",     # CRISPRpredSEQ legacy filename
+    "hela": "hela",
+    "hl60": "hl60"
+}
 REP_CELL_MAP = {
     "hct116": "hct116",
     "a375": "hek293t",    # Historical DeepCRISPR filename for A375
-    "hek293": "hek293t",
     "hela": "hela",
     "hl60": "hl60"
 }
@@ -48,7 +53,11 @@ def run_data_audit():
 
     for cell in CELL_LINES:
         print(f"\n[AUDITING DATASET] {cell.upper()}...")
-        csv_path = os.path.join(RAW_DIR, f"{cell}.csv")
+        raw_name = RAW_CSV_MAP.get(cell, cell)
+        csv_path = os.path.join(RAW_DIR, f"{raw_name}.csv")
+        if not os.path.exists(csv_path) and os.path.exists(os.path.join(RAW_DIR, f"{cell}.csv")):
+            csv_path = os.path.join(RAW_DIR, f"{cell}.csv")
+
         rep_path = os.path.join(RAW_DIR, f"{REP_CELL_MAP[cell]}.repisgt")
         proc_path = os.path.join(PROCESSED_DIR, f"{cell}.csv")
 

@@ -50,17 +50,26 @@ def test_predict_dataset_specific():
         assert "verification_metrics" in res
         assert "roc_curve" in res["verification_metrics"]
 
-    # Verify that legacy alias HEK293 resolves to canonical A375
-    alias_resp = client.post("/api/predict", json={
+    # Verify that ambiguous legacy alias HEK293 returns 400 Bad Request
+    ambig_resp = client.post("/api/predict", json={
         "sequence": "CTTGCTCGCGCAGGACGAGGCGG",
         "model_name": "XGBoost",
         "dataset_name": "HEK293"
+    })
+    assert ambig_resp.status_code == 400
+    assert "Ambiguous dataset identifier" in ambig_resp.json()["detail"]
+
+    # Verify that explicit legacy compatibility alias resolves to canonical A375
+    alias_resp = client.post("/api/predict", json={
+        "sequence": "CTTGCTCGCGCAGGACGAGGCGG",
+        "model_name": "XGBoost",
+        "dataset_name": "legacy_hek293_a375"
     })
     assert alias_resp.status_code == 200
     alias_res = alias_resp.json()["data"]
     assert alias_res["dataset_used"] == "A375"
     assert alias_res["dataset_key"] == "a375"
-    assert alias_res["legacy_alias_used"] == "hek293"
+    assert alias_res["legacy_alias_used"] == "legacy_hek293_a375"
     assert "A375" in alias_res["biological_cell_line"]
 
 
@@ -148,8 +157,9 @@ def test_metrics_endpoint():
     assert "hela" in data["datasets"]
     assert "hct116" in data["datasets"]
     assert "a375" in data["datasets"]
-    assert "hek293" in data["datasets"]
     assert "hl60" in data["datasets"]
+    assert "hek293" not in data["datasets"]
+    assert set(data["datasets"].keys()) == {"hela", "hct116", "a375", "hl60"}
 
     # Check model presence in HeLa
     hela_models = data["datasets"]["hela"]["models"]
@@ -177,9 +187,8 @@ def test_dataset_info_endpoint():
     assert response.status_code == 200
     data = response.json()
     assert "cell_lines" in data
+    assert len(data["cell_lines"]) == 4
     cell_ids = [c["id"] for c in data["cell_lines"]]
-    assert "hela" in cell_ids
-    assert "hct116" in cell_ids
-    assert "a375" in cell_ids
-    assert "hek293" in cell_ids
-    assert "hl60" in cell_ids
+    assert set(cell_ids) == {"hela", "hct116", "a375", "hl60"}
+    assert "hek293" not in cell_ids
+    assert "legacy_compatibility_aliases" in data

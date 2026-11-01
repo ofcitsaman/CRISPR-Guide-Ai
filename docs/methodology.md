@@ -13,15 +13,16 @@ Recognition and cleavage proceed through well-defined biophysical phases:
 ---
 
 ## 2. Feature Engineering Architecture
-Our framework extracts **593 biologically grounded sequence features** from each 23-mer sequence ($S = s_1 s_2 \dots s_{23}$):
+Our framework extracts **600 biologically grounded sequence features** from each 23-mer sequence ($S = s_1 s_2 \dots s_{23}$):
 
-### A. Basic Sequence & Sub-Region Composition (19 features)
+### A. Basic Sequence & Biophysical Composition (28 features)
 - Base counts and frequencies: $f_b = \frac{1}{23}\sum_{i=1}^{23}\mathbb{I}(s_i = b)$ for $b \in \{A, C, G, T\}$.
 - Overall GC content ($f_G + f_C$) and AT content ($f_A + f_T$).
-- Distal GC content (positions 1–10) vs. Seed GC content (positions 11–20).
-- Cleavage site flanking GC content (positions 16–18).
-- Poly-T homopolymer length and transcription terminator flag ($\mathbb{I}(\text{"TTTT"} \in S)$), which triggers premature RNA polymerase III termination in U6/H1 guide expression cassettes.
-- PAM motif indicators (positions 21–23).
+- Sub-region GC properties: PAM-distal GC (positions 1–10), PAM-proximal seed GC (positions 11–20), cleavage-flank GC (positions 16–18), core seed GC (positions 15–20), distal-seed GC difference, and cleavage-seed GC product.
+- Homopolymer repeat runs: maximum consecutive A, C, G, and T runs.
+- Poly-T transcription termination motif flag ($\mathbb{I}(\text{"TTTT"} \in S)$), which triggers premature RNA polymerase III termination in U6/H1 guide expression cassettes.
+- Shannon sequence entropy ($H = -\sum_b p_b \log_2 p_b$).
+- PAM motif indicators (positions 21–23, canonical SpCas9 `NGG`).
 
 ### B. Position-Specific Features (PSF, 444 features)
 - **1-mer Positional Identity**: 92 binary indicators $\mathbb{I}(s_i = b)$ for $i \in \{1, \dots, 23\}$ and $b \in \{A, C, G, T\}$.
@@ -67,4 +68,4 @@ Using Radial Basis Function (RBF) kernel $K(\mathbf{x}_i, \mathbf{x}_j) = \exp(-
 2. **80/20 Sequence-Disjoint Outer Split**: Zero sequence overlap is strictly enforced between the 80% development pool and the 20% final validation holdout set ($\text{Overlap} = 0$).
 3. **100-Fold Stratified Cross-Validation on Development Pool**: Preprocessing transformers (`StandardScaler`, `SelectKBest`) are fitted strictly on each fold's training slice.
 4. **Out-of-Fold (OOF) Prediction & Threshold Optimization**: Operating threshold $\theta^*$ is selected via Youden's $J = \text{TPR} - \text{FPR}$ on out-of-fold continuous predictions and frozen before evaluating the holdout set.
-5. **Final Validation on Untouched 20% Holdout**: Models are trained on the complete 80% development pool and evaluated once on the untouched 20% holdout.
+5. **Final Validation on Fixed Historical 20% Holdout**: Models are trained on the complete 80% development pool and evaluated once on the fixed historical 20% holdout partition.

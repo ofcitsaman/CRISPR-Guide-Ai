@@ -515,7 +515,7 @@ export const PredictPage: React.FC = () => {
 
                 {/* Important Distinction Note */}
                 <p className="text-[10px] text-slate-500 italic">
-                  Note: The verification table above reflects model performance across the independent 80% development pool (100-fold CV) and untouched 20% validation holdout, not metrics computed on the single query sequence.
+                  Note: The verification table above reflects model performance across the independent 80% development pool (100-fold CV) and fixed historical 20% validation holdout, not metrics computed on the single query sequence.
                 </p>
 
                 {/* Real ROC Curve Graph */}
