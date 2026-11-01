@@ -71,9 +71,25 @@ experiments/
 publication_audit/
 backend/independent_audit.py
 SCIENTIFIC_VALIDATION.md
-backend/data/raw/*.repisgt
 
-# Duplicate Manuscript Drafts (keep only FINAL_REVIEW.docx)
-publication_package/CRISPR_Guide_AI_BMC_Manuscript.docx
-publication_package/CRISPR_Guide_AI_BMC_Manuscript_REVISED.docx
+# Raw and Legacy Data (kept locally)
+backend/data/raw/
+backend/data/processed/hek293.csv
+
+# Legacy Duplicate Models (kept locally, A375 is canonical)
+backend/saved_models/hek293/
+
+# Internal Audit / Scratch Reports in saved_models (kept locally)
+backend/saved_models/audit_metrics.json
+backend/saved_models/baseline_metrics.json
+backend/saved_models/feature_names.json
+backend/saved_models/independent_audit_report.json
+backend/saved_models/research_data.json
+
+# Local Test Scratch Files (kept locally)
+backend/tests/model_verification_results.json
+backend/tests/verify_inference.py
+
+# Compiled Binary Manuscripts (kept locally; Markdown & tables/figures tracked)
+publication_package/*.docx
 
